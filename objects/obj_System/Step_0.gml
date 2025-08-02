@@ -1,6 +1,6 @@
 #region Startup
 
-#region Volume
+#region Volume setting
 
 if (startupState == 0) {
 	if (global.leftKey) {global.volumeLevel -= 0.01};
@@ -10,12 +10,13 @@ if (startupState == 0) {
 		startupState++;
 		instance_destroy(obj_Textbox);
 		create_textbox(2,false,fa_center,true,true,330,-90); //create a textbox for controls adjustment
+		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step
 	}
 }
 
 #endregion
 
-#region rebind zone
+#region Rebind setting
 
 if (startupState == 1) {
 	//if a key is pressed and they're being rebound,
