@@ -10,3 +10,4 @@ if (keyboard_check_pressed(vk_anykey) && key_rebind_count < 7 && rebind_mode) {
 
 else if (keyboard_check_pressed(vk_space)) {rebind_mode = true}
 
+jumpKeyPressed = keyboard_check_pressed(global.keyIndex[4]);

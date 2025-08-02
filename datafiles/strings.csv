@@ -1,10 +1,10 @@
-~STARTUP~
-"Press Left or Right to adjust volume,\nthen Z to proceed."
-"Press Space to rebind controls.\n(arrow keys to move, Z to jump, X to interact, and Enter to pause by default)"
-Press your UP key
-Press your DOWN key
-Press your LEFT key
-Press your RIGHT key
-Press your JUMP key
-Press your INTERACT key
-Press your PAUSE key
+~STARTUP~,
+,"Press Left or Right to adjust volume,\Nthen Z to proceed."
+,"Press Space to rebind controls.\n(arrow keys to move, Z to jump, X to interact, and Enter to pause by default)"
+,Press your UP key
+,Press your DOWN key
+,Press your LEFT key
+,Press your RIGHT key
+,Press your JUMP key
+,Press your INTERACT key
+,Press your PAUSE key

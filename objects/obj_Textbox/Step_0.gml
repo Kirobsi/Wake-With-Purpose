@@ -7,7 +7,7 @@ y = camera_get_view_y(view_camera[0])
 
 #region Text Crawl
 
-for (var i = 0; i < textSpeed; i++) {
+for (var i = 0; i < global.textSpeed; i++) {
 	currentStringDrawn = string_concat(currentStringDrawn, string_char_at(currentString, currentStringDrawnNo));
 	currentStringDrawnNo++;
 }
@@ -16,11 +16,10 @@ for (var i = 0; i < textSpeed; i++) {
 
 #region Press Z for Next String
 
-if(keyboard_check_pressed(ord("Z")))
-{
+if(obj_System.jumpKeyPressed) {
     dialogueRow += 1;
-	if (global.loadedDialogueStrings[# 0, dialogueRow] == "Die") {instance_destroy()}
-    currentString = global.loadedDialogueStrings[# 1, dialogueRow];
+	if (global.allStrings[# 0, dialogueRow] == "Die") {instance_destroy()}
+    currentString = global.allStrings[# 1, dialogueRow];
     currentStringDrawn = "";
     currentStringDrawnNo = 1;
 }

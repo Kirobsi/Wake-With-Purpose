@@ -1,4 +1,4 @@
-if (obj_kiwi.y - y < 260) {
+if (obj_System.y - y < 260) {
 //Draw the 450px wide, 200px tall text box
 	draw_rectangle(x + 150, y + 350, x + 810, y + 480, true);
 	
