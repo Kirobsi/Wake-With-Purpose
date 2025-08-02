@@ -31,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Textbox",
+    "path":"sprites/spr_Textbox/spr_Textbox.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

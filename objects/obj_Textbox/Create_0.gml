@@ -1,8 +1,5 @@
 #region Initialize Text Stuff
 
-//Load dialogue CSV
-dialogueRow = 0;
-
 //Current string to draw
 currentStringDrawn = "";
 

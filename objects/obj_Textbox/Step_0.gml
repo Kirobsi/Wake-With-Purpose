@@ -1,7 +1,8 @@
-#region 
+#region Set position properly
 
-x = camera_get_view_x(view_camera[0])
-y = camera_get_view_y(view_camera[0])
+x = camera_get_view_x(view_camera[0]) + 150
+y = camera_get_view_y(view_camera[0]) + 350
+
 
 #endregion
 
@@ -14,9 +15,9 @@ for (var i = 0; i < global.textSpeed; i++) {
 
 #endregion
 
-#region Press Z for Next String
+#region Press jump to advance
 
-if(obj_System.jumpKeyPressed) {
+if(global.jumpKeyPressed && canAdvance) {
     dialogueRow += 1;
 	if (global.allStrings[# 0, dialogueRow] == "Die") {instance_destroy()}
     currentString = global.allStrings[# 1, dialogueRow];

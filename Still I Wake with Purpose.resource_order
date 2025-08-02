@@ -6,5 +6,6 @@
   "ResourceOrderSettings":[
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
     {"name":"obj_Textbox","order":2,"path":"objects/obj_Textbox/obj_Textbox.yy",},
+    {"name":"spr_Textbox","order":3,"path":"sprites/spr_Textbox/spr_Textbox.yy",},
   ],
 }
