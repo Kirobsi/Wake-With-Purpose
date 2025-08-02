@@ -3,8 +3,8 @@ if (keyboard_check_pressed(vk_anykey) && key_rebind_count < 7 && rebind_mode) {
 	key_rebind_count++;
 	if (key_rebind_count > 6)
 	{
-		key_rebind_count = 0
-		rebind_mode = false
+		key_rebind_count = 0;
+		rebind_mode = false;
 	}
 }
 
