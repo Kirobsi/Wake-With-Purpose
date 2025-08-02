@@ -15,5 +15,3 @@ currentStringDrawn = "";
 currentStringDrawnNo = 1;
 
 #endregion
-
-//bubby
