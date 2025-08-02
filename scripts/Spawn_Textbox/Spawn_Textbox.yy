@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Spawn_Textbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Spawn_Textbox",
+  "parent":{
+    "name":"GameManager",
+    "path":"folders/GameManager.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

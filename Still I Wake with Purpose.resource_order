@@ -1,0 +1,10 @@
+{
+  "FolderOrderSettings":[
+    {"name":"GameManager","order":2,"path":"folders/GameManager.yy",},
+    {"name":"MiscAssets","order":3,"path":"folders/MiscAssets.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
+    {"name":"obj_Textbox","order":2,"path":"objects/obj_Textbox/obj_Textbox.yy",},
+  ],
+}
