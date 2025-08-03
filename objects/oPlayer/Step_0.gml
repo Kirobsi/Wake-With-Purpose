@@ -1,0 +1,62 @@
+#region Horizontal Movement
+
+if(global.leftKey)
+{
+	phy_speed_x = lerp(phy_speed_x, -4, 0.3);
+}
+else if(global.rightKey)
+{
+	phy_speed_x = lerp(phy_speed_x, 4, 0.3);
+}
+else
+{
+	phy_speed_x = lerp(phy_speed_x, 0, 0.3);
+}
+
+#endregion
+
+#region Jumping
+
+if(global.jumpKeyPressed)
+{
+	phy_speed_y -= 7;
+}
+else if(global.jumpKeyReleased && phy_speed_y < 0)
+{
+	phy_speed_y = 0;
+}
+
+#endregion
+
+#region Stick to Ground
+
+//if(physics_test_overlap(x, y + 1, 0, oTerrain))
+//{
+//	phy_speed_y = 0;
+//}
+
+#endregion
+
+#region Animation
+
+if(abs(phy_speed_x) > 1)
+{
+	sprite_index = sPlayerWalk;
+	image_xscale = sign(phy_speed_x) * 2;
+}
+else
+{
+	sprite_index = sPlayerStand;
+}
+
+//Invincibility frames flash
+if(alarm[0] != -1)
+{
+	image_blend = c_blue;
+}
+else
+{
+	image_blend = c_white;
+}
+
+#endregion
