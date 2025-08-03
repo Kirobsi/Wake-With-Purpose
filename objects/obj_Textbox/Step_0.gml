@@ -21,18 +21,37 @@ if (currentStringDrawnNo < string_length(currentString) + 1) {
 
 #region Dialogue Options
 
-//else if (global.allStrings[# 2, dialogueRow])
+else if (global.allStrings[# 2, dialogueRow] != "" && canOptions) {
+	talkOptionsPosition = 0;
+	
+	for (var i = 1; i * 2 < ds_grid_width(global.allStrings); i++;) {
+		if (global.allStrings[# i * 2, dialogueRow] == "") {
+			canOptions = false;
+			break
+		}
+		talkOptions = i;
+	}
+	
+	canOptions = false;
+}
+
+
+#endregion
 
 
 #region Press jump to advance
 
 if(global.jumpKeyPressed && canAdvance) {
-    dialogueRow ++;
+    if (talkOptions > 0) {
+		dialogueRow = real(global.allStrings[# ((talkOptionsPosition + 1) * 2) + 1, dialogueRow])
+		talkOptions = 0;
+	} else {dialogueRow ++;}
 	if (global.allStrings[# 0, dialogueRow] == "Die") {
 		instance_destroy();	//stop if 'end conversation' code
-		return
+		return	//prevent rest of this code from running
 	}
-	if (global.allStrings[# 0, dialogueRow] == "goto") {dialogueRow = real(global.allStrings[# 1, dialogueRow])};
+	
+	else if (global.allStrings[# 0, dialogueRow] == "goto") {dialogueRow = real(global.allStrings[# 1, dialogueRow])};
     currentString = global.allStrings[# 1, dialogueRow];
     currentStringDrawn = "";
     currentStringDrawnNo = 1;
@@ -45,6 +64,16 @@ if(global.jumpKeyPressed && canAdvance) {
 		pronounString = global.allStrings[# 1, 14 - real(pronounChecker)];
 		characterName = global.allStrings[# 0, 14 - real(pronounChecker)];
 	}
+	
+	talkOptions = 0;
+	canOptions = true;
+}
+
+if (talkOptions != 0) {
+	if (global.upKey) {talkOptionsPosition++;}
+	if (global.downKey) {talkOptionsPosition--;}
+	if (talkOptionsPosition > talkOptions - 1) {talkOptionsPosition = 0;}
+	else if (talkOptionsPosition < 0) {talkOptionsPosition = talkOptions - 1;}
 }
 
 #endregion

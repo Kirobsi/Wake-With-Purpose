@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"GameManager","folderPath":"folders/GameManager.yy","name":"GameManager","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"TextboxSprites","folderPath":"folders/GameManager/TextboxSprites.yy","name":"TextboxSprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"MiscAssets","folderPath":"folders/MiscAssets.yy","name":"MiscAssets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -31,6 +32,7 @@
     {"id":{"name":"obj_Textbox","path":"objects/obj_Textbox/obj_Textbox.yy",},},
     {"id":{"name":"Startup","path":"rooms/Startup/Startup.yy",},},
     {"id":{"name":"Spawn_Textbox","path":"scripts/Spawn_Textbox/Spawn_Textbox.yy",},},
+    {"id":{"name":"spr_TalkOption","path":"sprites/spr_TalkOption/spr_TalkOption.yy",},},
     {"id":{"name":"spr_Textbox","path":"sprites/spr_Textbox/spr_Textbox.yy",},},
   ],
   "resourceType":"GMProject",

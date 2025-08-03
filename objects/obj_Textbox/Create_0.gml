@@ -1,6 +1,5 @@
 #region Initialize Text Stuff
 
-//Current string to draw
 currentStringDrawn = "";
 pronounChecker = global.allStrings[# 0, dialogueRow]
 
@@ -12,6 +11,12 @@ else {
 	pronounString = "";
 	characterName = "";
 }
+
+canOptions = true;
+talkOptions = 0;
+talkOptionsPosition = 0;
+talkOptHeight = 33;
+talkOptGap = 4;
 
 
 //How many characters of the current string should be drawn

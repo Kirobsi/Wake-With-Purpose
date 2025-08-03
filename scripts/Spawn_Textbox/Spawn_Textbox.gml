@@ -6,7 +6,7 @@
 /// @param {bool} _positionOverride Whether to ignore the textbox's & dynamic positioning
 /// @param {real} position_x The text's x position relative to the camera
 /// @param {real} position_y The text's y position relative to the camera
-function create_textbox(text_row, _hasBackground = true, _hAlignment = fa_left, _canAdvance = true, _positionOverride = false, position_x = 7, position_y = 7){
+function create_textbox(text_row, _hasBackground = true, _hAlignment = fa_left, _canAdvance = true, _positionOverride = false, position_x = 7, position_y = 7) {
 	instance_create_layer(0, 0, "UI", obj_Textbox, {
 		dialogueRow : text_row,
 		currentString : global.allStrings[# 1, text_row],

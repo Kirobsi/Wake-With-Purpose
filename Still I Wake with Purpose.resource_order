@@ -1,12 +1,13 @@
 {
   "FolderOrderSettings":[
     {"name":"GameManager","order":2,"path":"folders/GameManager.yy",},
+    {"name":"TextboxSprites","order":4,"path":"folders/GameManager/TextboxSprites.yy",},
     {"name":"MiscAssets","order":3,"path":"folders/MiscAssets.yy",},
     {"name":"Player","order":4,"path":"folders/Player.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
     {"name":"obj_Textbox","order":2,"path":"objects/obj_Textbox/obj_Textbox.yy",},
-    {"name":"spr_Textbox","order":3,"path":"sprites/spr_Textbox/spr_Textbox.yy",},
+    {"name":"spr_TalkOption","order":1,"path":"sprites/spr_TalkOption/spr_TalkOption.yy",},
   ],
 }
