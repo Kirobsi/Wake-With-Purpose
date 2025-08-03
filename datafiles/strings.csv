@@ -1,7 +1,7 @@
 ~STARTUP~,,,,,
-,"Press Left or Right to adjust volume,
-then Z to proceed.",,,,
-,"Press Space to rebind controls, or Jump to proceed.
+,"Up/Down change volume by 10, Left/Right by 1.
+Press Jump to proceed.",,,,
+,"Press Interact to rebind controls, or Jump to proceed.
 (arrow keys to move, Z to jump, X to interact, and Enter to pause by default)",,,,
 ,Press your UP key,,,,
 ,Press your DOWN key,,,,
@@ -23,5 +23,6 @@ Kiwi,Doe/Doe,,,,
 goto,23,,,,
 2,o-oh...... I mean I guess haha ...,,,,
 2,"you're fatter than me,.. *gay hair twirl*",,,,
-1,w-well..... I guess we should touch our bellies together .. since we're so fat....,,,,
+1,w-well..... I guess we should touch our bellies together .. since we're so fat.... ahahaha ..,,,,
+2,.......................................................................................... ya ..,,,,
 Die,,,,,

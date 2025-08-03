@@ -23,6 +23,7 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -35,6 +36,7 @@
     {"id":{"name":"MainText","path":"fonts/MainText/MainText.yy",},},
     {"id":{"name":"obj_System","path":"objects/obj_System/obj_System.yy",},},
     {"id":{"name":"obj_Textbox","path":"objects/obj_Textbox/obj_Textbox.yy",},},
+    {"id":{"name":"obj_VolumeKnob","path":"objects/obj_VolumeKnob/obj_VolumeKnob.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oDamager","path":"objects/oDamager/oDamager.yy",},},
     {"id":{"name":"oIngredient","path":"objects/oIngredient/oIngredient.yy",},},

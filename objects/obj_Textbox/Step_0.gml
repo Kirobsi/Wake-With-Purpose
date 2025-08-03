@@ -70,8 +70,8 @@ if(global.jumpKeyPressed && canAdvance) {
 }
 
 if (talkOptions != 0) {
-	if (global.upKey) {talkOptionsPosition++;}
-	if (global.downKey) {talkOptionsPosition--;}
+	if (global.upKeyPressed) {talkOptionsPosition++;}
+	if (global.downKeyPressed) {talkOptionsPosition--;}
 	if (talkOptionsPosition > talkOptions - 1) {talkOptionsPosition = 0;}
 	else if (talkOptionsPosition < 0) {talkOptionsPosition = talkOptions - 1;}
 }

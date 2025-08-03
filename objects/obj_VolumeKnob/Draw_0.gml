@@ -1,0 +1,1 @@
+draw_text(480, 180, "Volume: " + string(floor(global.volumeLevel * 100)) + "%");

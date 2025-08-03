@@ -17,11 +17,7 @@ else
 
 #region Jumping
 
-if(global.jumpKeyPressed)
-{
-	phy_speed_y -= 7;
-}
-else if(global.jumpKeyReleased && phy_speed_y < 0)
+if(global.jumpKeyReleased && phy_speed_y < 0)
 {
 	phy_speed_y = 0;
 }

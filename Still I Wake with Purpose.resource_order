@@ -14,6 +14,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
     {"name":"obj_Textbox","order":2,"path":"objects/obj_Textbox/obj_Textbox.yy",},
+    {"name":"obj_VolumeKnob","order":6,"path":"objects/obj_VolumeKnob/obj_VolumeKnob.yy",},
     {"name":"oCamera","order":2,"path":"objects/oCamera/oCamera.yy",},
     {"name":"oDamager","order":3,"path":"objects/oDamager/oDamager.yy",},
     {"name":"oLostIngredient","order":6,"path":"objects/oLostIngredient/oLostIngredient.yy",},

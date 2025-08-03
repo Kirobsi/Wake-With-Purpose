@@ -7,4 +7,8 @@ rebind_mode = false;	//variable to track whether rebinding is active
 
 global.allStrings = load_csv("strings.csv"); //load strings file
 global.textSpeed = 3; //Default text scroll speed
-create_textbox(1,false,fa_center,false,true,330,-90); //create a textbox just for volume control
+create_textbox(2,false,fa_center,true,true,330,-120,900); //create a textbox for controls adjustment
+
+draw_set_font(MainText);
+draw_set_halign(fa_center);
+draw_set_colour(c_white);
