@@ -1,12 +1,27 @@
-~STARTUP~,
+~STARTUP~,,,,,
 ,"Press Left or Right to adjust volume,
-then Z to proceed."
+then Z to proceed.",,,,
 ,"Press Space to rebind controls, or Jump to proceed.
-(arrow keys to move, Z to jump, X to interact, and Enter to pause by default)"
-,Press your UP key
-,Press your DOWN key
-,Press your LEFT key
-,Press your RIGHT key
-,Press your JUMP key
-,Press your INTERACT key
-,Press your PAUSE key
+(arrow keys to move, Z to jump, X to interact, and Enter to pause by default)",,,,
+,Press your UP key,,,,
+,Press your DOWN key,,,,
+,Press your LEFT key,,,,
+,Press your RIGHT key,,,,
+,Press your JUMP key,,,,
+,Press your INTERACT key,,,,
+,Press your PAUSE key,,,,
+,,,,,
+~NAME/PRONOUNS~,,,,,
+Siblif,She/Her,,,,
+Kiwi,Doe/Doe,,,,
+,,,,,
+~DIALOGUE~,,,,,
+2,Hello!,,,,
+1,Hi!,I'm Kiwi!,18,you're kinda fat ...... *blushe*,21
+2,Hi Kiwi!,,,,
+2,"You're... quite fat, you know,... *blushe*",,,,
+goto,23,,,,
+2,o-oh...... I mean I guess haha ...,,,,
+2,"you're fatter than me,.. *gay hair twirl*",,,,
+1,w-well..... I guess we should touch our bellies together .. since we're so fat....,,,,
+Die,,,,,

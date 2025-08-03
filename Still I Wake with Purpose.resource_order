@@ -2,6 +2,7 @@
   "FolderOrderSettings":[
     {"name":"GameManager","order":2,"path":"folders/GameManager.yy",},
     {"name":"MiscAssets","order":3,"path":"folders/MiscAssets.yy",},
+    {"name":"Player","order":4,"path":"folders/Player.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},

@@ -36,5 +36,5 @@
     "path":"sprites/spr_Textbox/spr_Textbox.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

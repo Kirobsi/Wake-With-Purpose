@@ -39,11 +39,23 @@ if (startupState == 1) {
 	}
 
 	else if (global.jumpKeyPressed) {
-		startupState++;
+		startupState = 10;
 		instance_destroy(obj_Textbox);
 	}
 }
 
 #endregion
+
+#endregion
+
+if (keyboard_check_pressed(vk_f1)) {
+	create_textbox(16);
+}
+
+#region DEBUG GAME RESET, REMOVE FOR RELEASE
+
+if (keyboard_check_pressed(vk_f2)) {
+	game_restart();
+}
 
 #endregion

@@ -12,19 +12,19 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7f68afd2-a1ca-4c87-8dd6-fb4d2a957439","name":"7f68afd2-a1ca-4c87-8dd6-fb4d2a957439","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7f19a8ce-ea96-4834-81dc-a02662e41364","name":"7f19a8ce-ea96-4834-81dc-a02662e41364","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1b9d3139-303b-4874-a976-99ae7712f1ed","name":"1b9d3139-303b-4874-a976-99ae7712f1ed","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"f78a14c1-6137-4bca-85cd-bc0ed1859175","name":"f78a14c1-6137-4bca-85cd-bc0ed1859175","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":170,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"313b7051-c4b2-46bc-a422-5db803b044e7","blendMode":0,"displayName":"default","isLocked":false,"name":"313b7051-c4b2-46bc-a422-5db803b044e7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1334d733-9fe8-4f0d-bf88-c70acdfc6f83","blendMode":0,"displayName":"default","isLocked":false,"name":"1334d733-9fe8-4f0d-bf88-c70acdfc6f83","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_Textbox",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"GameManager",
     "path":"folders/GameManager.yy",
@@ -72,17 +72,17 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7f68afd2-a1ca-4c87-8dd6-fb4d2a957439","path":"sprites/spr_Textbox/spr_Textbox.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d93bf63e-3580-4050-9c1c-6b285760b45d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1b9d3139-303b-4874-a976-99ae7712f1ed","path":"sprites/spr_Textbox/spr_Textbox.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"6afc0fa8-425a-4df8-a37b-382640555f95","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7f19a8ce-ea96-4834-81dc-a02662e41364","path":"sprites/spr_Textbox/spr_Textbox.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3ea113cd-c46d-48f1-b2b5-2a47b71d98f0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f78a14c1-6137-4bca-85cd-bc0ed1859175","path":"sprites/spr_Textbox/spr_Textbox.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"572ae5be-30cf-4bba-b08d-17d986820d2e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":1,
+    "yorigin":34,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
