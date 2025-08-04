@@ -37,7 +37,6 @@ else if (global.allStrings[# 2, dialogueRow] != "" && canOptions) {
 	canOptions = false;
 }
 
-
 #endregion
 
 
