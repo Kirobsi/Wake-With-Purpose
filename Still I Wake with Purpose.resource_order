@@ -10,6 +10,7 @@
     {"name":"Stage","order":5,"path":"folders/Stage.yy",},
     {"name":"Cave","order":1,"path":"folders/Stage/Cave.yy",},
     {"name":"Common","order":2,"path":"folders/Stage/Common.yy",},
+    {"name":"Beach","order":3,"path":"folders/Stage/Beach.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
@@ -30,6 +31,7 @@
     {"name":"sNone","order":5,"path":"sprites/sNone/sNone.yy",},
     {"name":"sPlayerWalk","order":1,"path":"sprites/sPlayerWalk/sPlayerWalk.yy",},
     {"name":"spr_TalkOption","order":1,"path":"sprites/spr_TalkOption/spr_TalkOption.yy",},
+    {"name":"Sprite13","order":1,"path":"sprites/Sprite13/Sprite13.yy",},
     {"name":"sSlot","order":3,"path":"sprites/sSlot/sSlot.yy",},
     {"name":"sTerrain","order":1,"path":"sprites/sTerrain/sTerrain.yy",},
     {"name":"tilespriteCave","order":2,"path":"sprites/tilespriteCave/tilespriteCave.yy",},
