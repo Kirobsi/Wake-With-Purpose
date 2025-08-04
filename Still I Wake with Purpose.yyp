@@ -23,7 +23,6 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -45,7 +44,9 @@
     {"id":{"name":"oTerrain","path":"objects/oTerrain/oTerrain.yy",},},
     {"id":{"name":"rmStartup","path":"rooms/rmStartup/rmStartup.yy",},},
     {"id":{"name":"stageCave","path":"rooms/stageCave/stageCave.yy",},},
+    {"id":{"name":"Music_Player","path":"scripts/Music_Player/Music_Player.yy",},},
     {"id":{"name":"Spawn_Textbox","path":"scripts/Spawn_Textbox/Spawn_Textbox.yy",},},
+    {"id":{"name":"mus_Home","path":"sounds/mus_Home/mus_Home.yy",},},
     {"id":{"name":"sDamager","path":"sprites/sDamager/sDamager.yy",},},
     {"id":{"name":"sLost","path":"sprites/sLost/sLost.yy",},},
     {"id":{"name":"sMushroom","path":"sprites/sMushroom/sMushroom.yy",},},

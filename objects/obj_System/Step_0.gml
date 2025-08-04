@@ -36,11 +36,12 @@ if (startupState == 0) {
 #region Volume setting
 
 else if (startupState == 1) {
-	if (global.leftKeyPressed) {global.volumeLevel -= 0.01};
-	if (global.rightKeyPressed) {global.volumeLevel += 0.01};
-	if (global.upKeyPressed) {global.volumeLevel += 0.1};
-	if (global.downKeyPressed) {global.volumeLevel -= 0.1};
-	global.volumeLevel = clamp(global.volumeLevel, 0, 1);
+	if (global.leftKeyPressed) {global.volumeLevel -= 1};
+	if (global.rightKeyPressed) {global.volumeLevel += 1};
+	if (global.upKeyPressed) {global.volumeLevel += 10};
+	if (global.downKeyPressed) {global.volumeLevel -= 10};
+	global.volumeLevel = clamp(global.volumeLevel, 0, 100);
+	audio_group_set_gain(audiogroup_default,global.volumeLevel / 100,10)
 	if (global.jumpKeyPressed) {
 		startupState = 10;
 		instance_destroy(obj_Textbox);
@@ -50,7 +51,6 @@ else if (startupState == 1) {
 }
 
 #endregion
-
 
 #endregion
 
@@ -62,7 +62,7 @@ if (keyboard_check_pressed(vk_f1)) {
 	create_textbox(16);
 }
 
-if (keyboard_check_pressed(vk_f2)) {
+else if (keyboard_check_pressed(vk_f2)) {
 	game_restart();
 }
 

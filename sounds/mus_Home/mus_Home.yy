@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_Home",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":132.7416,
+  "name":"mus_Home",
+  "parent":{
+    "name":"MiscAssets",
+    "path":"folders/MiscAssets.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_Home.ogg",
+  "type":1,
+  "volume":1.0,
+}

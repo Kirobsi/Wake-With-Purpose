@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Music_Player",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Music_Player",
+  "parent":{
+    "name":"GameManager",
+    "path":"folders/GameManager.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

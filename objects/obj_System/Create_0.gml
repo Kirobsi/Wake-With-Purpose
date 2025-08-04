@@ -1,5 +1,5 @@
 startupState = 0; //to track how far through boot you are
-global.volumeLevel = 0.1; //default volume of the game
+global.volumeLevel = 30; //default volume of the game
 
 global.keyIndex = [ 38,40,37,39,90,88,13 ];	//array for storing all the 'key codes.' [ Up, Down, Left, Right, Jump, Interact, Pause ]
 key_rebind_count = 0;	//variable to track how many keys have been rebound
@@ -12,3 +12,6 @@ create_textbox(2,false,fa_center,true,true,330,-120,900); //create a textbox for
 draw_set_font(MainText);
 draw_set_halign(fa_center);
 draw_set_colour(c_white);
+
+musicToDelete = "";
+play_song_home();
