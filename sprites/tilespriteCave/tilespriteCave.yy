@@ -14,12 +14,13 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"027d4717-e32f-44c7-96f6-ff54f417d7a1","name":"027d4717-e32f-44c7-96f6-ff54f417d7a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":32,
+  "gridY":32,
   "height":128,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"11ac2bd4-fa67-42cc-b839-13472272e3f6","blendMode":0,"displayName":"default","isLocked":false,"name":"11ac2bd4-fa67-42cc-b839-13472272e3f6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3172e607-2745-4782-8a9e-c4fde696c60b","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"3172e607-2745-4782-8a9e-c4fde696c60b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"11ac2bd4-fa67-42cc-b839-13472272e3f6","blendMode":0,"displayName":"default","isLocked":false,"name":"11ac2bd4-fa67-42cc-b839-13472272e3f6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"tilespriteCave",
   "nineSlice":null,

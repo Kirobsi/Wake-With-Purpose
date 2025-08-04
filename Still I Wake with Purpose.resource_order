@@ -8,9 +8,9 @@
     {"name":"Player","order":4,"path":"folders/Player.yy",},
     {"name":"Sprite","order":1,"path":"folders/Player/Sprite.yy",},
     {"name":"Stage","order":5,"path":"folders/Stage.yy",},
+    {"name":"Beach","order":3,"path":"folders/Stage/Beach.yy",},
     {"name":"Cave","order":1,"path":"folders/Stage/Cave.yy",},
     {"name":"Common","order":2,"path":"folders/Stage/Common.yy",},
-    {"name":"Beach","order":3,"path":"folders/Stage/Beach.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
@@ -20,6 +20,7 @@
     {"name":"oDamager","order":3,"path":"objects/oDamager/oDamager.yy",},
     {"name":"oLostIngredient","order":6,"path":"objects/oLostIngredient/oLostIngredient.yy",},
     {"name":"oPlayer","order":2,"path":"objects/oPlayer/oPlayer.yy",},
+    {"name":"rmBeach","order":2,"path":"rooms/rmBeach/rmBeach.yy",},
     {"name":"rmStartup","order":4,"path":"rooms/rmStartup/rmStartup.yy",},
     {"name":"stageCave","order":1,"path":"rooms/stageCave/stageCave.yy",},
     {"name":"Music_Player","order":7,"path":"scripts/Music_Player/Music_Player.yy",},

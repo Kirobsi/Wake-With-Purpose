@@ -18,13 +18,12 @@
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprite","folderPath":"folders/Player/Sprite.yy","name":"Sprite","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Stage","folderPath":"folders/Stage.yy","name":"Stage","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Beach","folderPath":"folders/Stage/Beach.yy","name":"Beach","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Cave","folderPath":"folders/Stage/Cave.yy","name":"Cave","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Common","folderPath":"folders/Stage/Common.yy","name":"Common","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Beach","folderPath":"folders/Stage/Beach.yy","name":"Beach","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":0,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -45,6 +44,7 @@
     {"id":{"name":"oLostIngredient","path":"objects/oLostIngredient/oLostIngredient.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oTerrain","path":"objects/oTerrain/oTerrain.yy",},},
+    {"id":{"name":"rmBeach","path":"rooms/rmBeach/rmBeach.yy",},},
     {"id":{"name":"rmStartup","path":"rooms/rmStartup/rmStartup.yy",},},
     {"id":{"name":"stageCave","path":"rooms/stageCave/stageCave.yy",},},
     {"id":{"name":"Music_Player","path":"scripts/Music_Player/Music_Player.yy",},},
@@ -70,6 +70,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rmStartup","path":"rooms/rmStartup/rmStartup.yy",},},
     {"roomId":{"name":"stageCave","path":"rooms/stageCave/stageCave.yy",},},
+    {"roomId":{"name":"rmBeach","path":"rooms/rmBeach/rmBeach.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
