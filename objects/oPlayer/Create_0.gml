@@ -6,6 +6,7 @@ image_yscale = 2;
 phy_fixed_rotation = true;
 
 jumping = false;
+holding = false;
 
 #region Initialize Inventory
 
