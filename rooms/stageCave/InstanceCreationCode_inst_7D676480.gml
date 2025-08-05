@@ -1,0 +1,1 @@
+attachedgate = yellowgate1;
