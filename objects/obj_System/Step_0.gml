@@ -78,6 +78,8 @@ else if (keyboard_check_pressed(vk_f2)) {
 }
 
 else if (keyboard_check_pressed(vk_f3)) {
+	instance_destroy(obj_Textbox);
+	global.canControlPlayer = true;
 	room_goto(stageCave);
 }
 
