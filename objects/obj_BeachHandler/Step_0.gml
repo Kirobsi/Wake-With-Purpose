@@ -7,9 +7,9 @@ if (drawAlpha > 0) {
 #endregion
 
 
-#region
+#region Initial Siblif encounter
 
-if (fadeInSiblif) {
+if (fadeInSiblif && localState == 0) {
 	if (siblifAlpha < 1) {
 		siblifAlpha += 0.02;
 	}
@@ -17,8 +17,14 @@ if (fadeInSiblif) {
 	else {
 		siblifAlpha = 1;
 		fadeInSiblif = false;
-		
+		alarm_set(1, 30);
 	}
+}
+
+else if (localState == 1) {
+	localState = 2;
+/* in case Siblif gets an overworld sprite for her default size,
+   I'll have beach 1 be more interactive! but I don't know yet. Best to reserve the space for it */
 }
 
 #endregion

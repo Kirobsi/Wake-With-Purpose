@@ -1,7 +1,7 @@
 #region Set position properly
 
 x = camera_get_view_x(view_camera[0]) + 150;
-y = camera_get_view_y(view_camera[0]) + 350;
+y = camera_get_view_y(view_camera[0]) + 391;
 visible = true;
 if (global.allStrings[# 0, dialogueRow] == "0") {image_index = 2;}
 else {image_index = 1;}
@@ -13,9 +13,15 @@ image_index *= hasBackground;
 #region Text Crawl
 
 if (currentStringDrawnNo < string_length(currentString) + 1) {
-	for (var i = 0; i < global.textSpeed; i++) {
-		currentStringDrawn = string_concat(currentStringDrawn, string_char_at(currentString, currentStringDrawnNo));
-		currentStringDrawnNo++;
+	if (global.textSpeed != 0) {
+		for (var i = 0; i < global.textSpeed; i++) {
+			currentStringDrawn = string_concat(currentStringDrawn, string_char_at(currentString, currentStringDrawnNo));
+			currentStringDrawnNo++;
+		}
+	}
+	else {
+		currentStringDrawn = currentString;
+		currentStringDrawnNo = string_length(currentString) + 1;
 	}
 }
 
@@ -42,7 +48,7 @@ else if (global.allStrings[# 2, dialogueRow] != "" && canOptions) {
 
 #region Press jump to advance
 
-if(global.jumpKeyPressed && canAdvance && (global.gameState == 0 || global.gameState == 1 || currentStringDrawnNo >= string_length(currentString) + 1)) {
+if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStringDrawnNo >= string_length(currentString) + 1)) {
     if (talkOptions > 0) {
 		dialogueRow = real(global.allStrings[# ((talkOptionsPosition + 1) * 2) + 1, dialogueRow])
 		talkOptions = 0;
@@ -63,8 +69,8 @@ if(global.jumpKeyPressed && canAdvance && (global.gameState == 0 || global.gameS
 	pronounChecker = global.allStrings[# 0, dialogueRow]
 
 	if (pronounChecker != "") {
-		pronounString = global.allStrings[# 1, 14 - real(pronounChecker)];
-		characterName = global.allStrings[# 0, 14 - real(pronounChecker)];
+		pronounString = global.allStrings[# 1, 16 - real(pronounChecker)];
+		characterName = global.allStrings[# 0, 16 - real(pronounChecker)];
 	}
 	
 	talkOptions = 0;

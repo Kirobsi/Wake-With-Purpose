@@ -1,0 +1,1 @@
+if(oPlayer.phy_speed_y != 0) currentspeed = abs(oPlayer.phy_speed_y);
