@@ -13,20 +13,39 @@ if (global.gameState == 0) {
 			key_rebind_count = 0;
 			rebind_mode = false;
 			instance_destroy(obj_Textbox);
-			create_textbox(2,false,false,fa_center,true,true,330,-120,900); //recreate textbox
+			create_textbox(2,false,false,fa_center,true,330,-160,900); //recreate textbox
 		}
 	}
 
-	else if (global.interactKeyPressed && !rebind_mode) {
+	else if ((global.interactKeyPressed || keyboard_check_pressed(vk_f8)) && !rebind_mode) {
 		rebind_mode = true; //enable rebind mode if not currently active
 		global.jumpKeyPressed = true; //advance string
 	}
 
 	else if (global.jumpKeyPressed) {
+		global.gameState = 0.5;
+		instance_destroy(obj_Textbox);
+		instance_create_layer(x, y, "UI", obj_TextSpeedKnob)
+		create_textbox(10,false,false,fa_center,true,330,-130,900);
+	}
+}
+
+#endregion
+
+
+#region Text Speed startup
+
+else if (global.gameState == 0.5) {
+	if (global.leftKeyPressed) {global.textSpeed -= 1};
+	if (global.rightKeyPressed) {global.textSpeed += 1};
+	global.textSpeed = clamp(global.textSpeed, 0, 10);
+	
+	if (global.jumpKeyPressed) {
 		global.gameState = 1;
 		instance_destroy(obj_Textbox);
+		instance_destroy(obj_TextSpeedKnob);
 		instance_create_layer(x, y, "UI", obj_VolumeKnob)
-		create_textbox(1,false,false,fa_center,true,true,330,-90,900);
+		create_textbox(1,false,false,fa_center,true,330,-130,900);
 	}
 }
 
@@ -43,7 +62,7 @@ else if (global.gameState == 1) {
 	global.volumeLevel = clamp(global.volumeLevel, 0, 100);
 	audio_group_set_gain(audiogroup_default,global.volumeLevel / 100,10)
 	if (global.jumpKeyPressed) {
-		global.gameState = -1;
+		global.gameState = 9999;
 		instance_destroy(obj_Textbox);
 		instance_destroy(obj_VolumeKnob);
 		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step

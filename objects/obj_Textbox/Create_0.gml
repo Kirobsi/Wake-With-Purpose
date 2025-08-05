@@ -4,8 +4,8 @@ currentStringDrawn = "";
 pronounChecker = global.allStrings[# 0, dialogueRow]
 
 if (pronounChecker != "") {
-	pronounString = global.allStrings[# 1, 15 - real(pronounChecker)];
-	characterName = global.allStrings[# 0, 15 - real(pronounChecker)];
+	pronounString = global.allStrings[# 1, 16 - real(pronounChecker)];
+	characterName = global.allStrings[# 0, 16 - real(pronounChecker)];
 }
 else {
 	pronounString = "";
