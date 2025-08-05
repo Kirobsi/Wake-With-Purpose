@@ -17,7 +17,7 @@ if (fadeInSiblif) {
 	else {
 		siblifAlpha = 1;
 		fadeInSiblif = false;
-		
+		alarm_set(1, 30);
 	}
 }
 
