@@ -29,6 +29,8 @@
     {"name":"oRock","order":3,"path":"objects/oRock/oRock.yy",},
     {"name":"oSpring","order":8,"path":"objects/oSpring/oSpring.yy",},
     {"name":"oStalagtite","order":6,"path":"objects/oStalagtite/oStalagtite.yy",},
+    {"name":"oYellowButton","order":18,"path":"objects/oYellowButton/oYellowButton.yy",},
+    {"name":"oYellowGate","order":19,"path":"objects/oYellowGate/oYellowGate.yy",},
     {"name":"rmBeach","order":2,"path":"rooms/rmBeach/rmBeach.yy",},
     {"name":"rmStartup","order":4,"path":"rooms/rmStartup/rmStartup.yy",},
     {"name":"stageCave","order":1,"path":"rooms/stageCave/stageCave.yy",},
@@ -57,6 +59,8 @@
     {"name":"sStalagtite","order":5,"path":"sprites/sStalagtite/sStalagtite.yy",},
     {"name":"sTerrain","order":1,"path":"sprites/sTerrain/sTerrain.yy",},
     {"name":"sWarningSign","order":9,"path":"sprites/sWarningSign/sWarningSign.yy",},
+    {"name":"sYellowButton","order":16,"path":"sprites/sYellowButton/sYellowButton.yy",},
+    {"name":"sYellowGate","order":17,"path":"sprites/sYellowGate/sYellowGate.yy",},
     {"name":"tilespriteCave","order":2,"path":"sprites/tilespriteCave/tilespriteCave.yy",},
   ],
 }
