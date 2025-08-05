@@ -19,11 +19,13 @@ global.hideInventory = true;
 
 beachState = 0;
 
-global.siblifBellyStage = 1;
+global.siblifBaseStage = 0;
+
+global.siblifBellyStage = 0;
 global.siblifBellyCalories = 0;
 
-global.siblifBoobStage = 1;
+global.siblifBoobStage = 0;
 global.siblifBoobCalories = 0;
 
-global.siblifButtStage = 1;
+global.siblifButtStage = 0;
 global.siblifButtCalories = 0;
