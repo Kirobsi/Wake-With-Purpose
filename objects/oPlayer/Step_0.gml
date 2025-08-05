@@ -1,10 +1,10 @@
 #region Horizontal Movement
 
-if(global.leftKey)
+if(global.leftKey && global.canControlPlayer)
 {
 	phy_speed_x = lerp(phy_speed_x, -4, 0.3);
 }
-else if(global.rightKey)
+else if(global.rightKey && global.canControlPlayer)
 {
 	phy_speed_x = lerp(phy_speed_x, 4, 0.3);
 }
@@ -17,14 +17,19 @@ else
 
 #region Release Jump
 
-if(global.jumpKeyReleased && phy_speed_y < 0 && jumping = true)
+if(global.jumpKeyReleased && phy_speed_y < 0 && jumping = true && !touchedSpring)
 {
 	phy_speed_y = 0;
 }
 
-if(phy_speed_y >= 0)
+#endregion
+
+#region Clear 'jumping' when on ground
+
+if((position_meeting(x-8,y+1,oTerrain) || position_meeting(x+7,y+1,oTerrain)) && !jumpDelay)
 {
 	jumping = false;
+	touchedSpring = false;
 }
 
 #endregion
@@ -59,5 +64,12 @@ else
 {
 	image_blend = c_white;
 }
+
+#endregion
+
+
+#region Clear jumpDelay
+
+jumpDelay = false;
 
 #endregion

@@ -1,1 +1,1 @@
-gameState = 2;
+create_textbox(16);

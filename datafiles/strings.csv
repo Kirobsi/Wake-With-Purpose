@@ -1,43 +1,31 @@
-~STARTUP~,,,,,
+~STARTUP~,
 ,"Up/Down to change volume by 10%, Left/Right by 1%.
-Press Jump to proceed.",,,,
+Press Jump to proceed."
 ,"Press Interact to rebind controls, or Jump to proceed.
-(arrow keys to move, Z to jump, X to interact, and Enter to pause by default)",,,,
-,Press your UP key,,,,
-,Press your DOWN key,,,,
-,Press your LEFT key,,,,
-,Press your RIGHT key,,,,
-,Press your JUMP key,,,,
-,Press your INTERACT key,,,,
-,Press your PAUSE key,,,,
-,,,,,
-~NAME/PRONOUNS~,,,,,
-Siblif,She/Her,,,,
-Kiwi,Doe/Doe,,,,
-,,,,,
-~DIALOGUE~,,,,,
-2,...Are you okay?,,,,
-2,"I heard something loud, so I swam up here. It's hard to tell from underwater, though.",,,,
-2,"But you do look unconscious, so... I think I was right.",,,,
-Die,,,,,
-2,...,,,,
-2,Well- that's not looking good.,,,,
-2,Yeah...,,,,
-0,...,,,,
-0,You wake slowly,,,,
-,,w-well.... nevermind..,27,could we.... kiss too?..,31
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-Die,,,,,
+(arrow keys to move, Z to jump, X to interact, and Enter to pause by default)"
+,Press your UP key
+,Press your DOWN key
+,Press your LEFT key
+,Press your RIGHT key
+,Press your JUMP key
+,Press your INTERACT key
+,Press your PAUSE key
+,
+~NAME/PRONOUNS~,
+Siblif,She/Her
+Kiwi,Doe/Doe
+,
+~DIALOGUE~,
+0,...
+0,..................
+0,"You wake slowly, the ambience of the sea coming into focus. You feel somewhat sore all over."
+0,"Sand covers much of your front, unpleasant grit embedding itself into your skin."
+0,"After a moment to sit up, you look over yourself."
+0,"Your enormous belly heaves significantly in front of you, topped with breasts that might make a skinny person jealous, proportionately small though they may be."
+0,"Hoof-tipped arms droop halfway down your torso while holding them straight, difficult a maneuver as that is at such a size."
+0,"Your legs are dimpled, doughy columns that jiggle profusely on most movement."
+0,"Same as usual, and you don't spot anything concerning. Seems you're good."
+0,"...Might as well take a moment to squish your upper arm, too. Such a delightfully soft mass of blubber!"
+0,"""...Are you okay?"""
+0,"Startled, you swiftly turn around, taking a look at the voice's source, as well as the surroundings you've neglected."
+Die,
