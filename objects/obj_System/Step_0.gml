@@ -43,12 +43,22 @@ else if (global.gameState == 1) {
 	global.volumeLevel = clamp(global.volumeLevel, 0, 100);
 	audio_group_set_gain(audiogroup_default,global.volumeLevel / 100,10)
 	if (global.jumpKeyPressed) {
-		global.gameState = 2;
+		global.gameState = -1;
 		instance_destroy(obj_Textbox);
 		instance_destroy(obj_VolumeKnob);
 		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step
-		alarm_set(0,45)
+		alarm_set(0, 45);	//show first real textbox
 	}
+}
+
+#endregion
+
+
+#region Beach startup
+
+if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
+	global.gameState = 2;
+	room_goto(rmBeach);
 }
 
 #endregion

@@ -1,4 +1,5 @@
 global.gameState = 0; //to track how far through boot you are
+global.cycles = 1;	//which cycle the player/game is on
 global.volumeLevel = 30; //default volume of the game
 audio_group_set_gain(audiogroup_default, global.volumeLevel / 100, 10) //actually use the volume
 
