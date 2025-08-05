@@ -34,6 +34,7 @@
   "name":"Still I Wake with Purpose",
   "resources":[
     {"id":{"name":"MainText","path":"fonts/MainText/MainText.yy",},},
+    {"id":{"name":"obj_BeachHandler","path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},},
     {"id":{"name":"obj_System","path":"objects/obj_System/obj_System.yy",},},
     {"id":{"name":"obj_Tent","path":"objects/obj_Tent/obj_Tent.yy",},},
     {"id":{"name":"obj_Textbox","path":"objects/obj_Textbox/obj_Textbox.yy",},},

@@ -2,7 +2,7 @@
 
 #region Controls startup
 
-if (gameState == 0) {
+if (global.gameState == 0) {
 	//if a key is pressed and they're being rebound,
 	if (keyboard_check_pressed(vk_anykey) && rebind_mode) {
 		global.keyIndex[key_rebind_count] = keyboard_key; //set pressed key to its respective input
@@ -13,7 +13,7 @@ if (gameState == 0) {
 			key_rebind_count = 0;
 			rebind_mode = false;
 			instance_destroy(obj_Textbox);
-			create_textbox(2,false,fa_center,true,true,330,-120,900); //recreate textbox
+			create_textbox(2,false,false,fa_center,true,true,330,-120,900); //recreate textbox
 		}
 	}
 
@@ -23,10 +23,10 @@ if (gameState == 0) {
 	}
 
 	else if (global.jumpKeyPressed) {
-		gameState = 1;
+		global.gameState = 1;
 		instance_destroy(obj_Textbox);
 		instance_create_layer(x, y, "UI", obj_VolumeKnob)
-		create_textbox(1,false,fa_center,true,true,330,-90,900);
+		create_textbox(1,false,false,fa_center,true,true,330,-90,900);
 	}
 }
 
@@ -35,7 +35,7 @@ if (gameState == 0) {
 
 #region Volume startup
 
-else if (gameState == 1) {
+else if (global.gameState == 1) {
 	if (global.leftKeyPressed) {global.volumeLevel -= 1};
 	if (global.rightKeyPressed) {global.volumeLevel += 1};
 	if (global.upKeyPressed) {global.volumeLevel += 10};
@@ -43,22 +43,12 @@ else if (gameState == 1) {
 	global.volumeLevel = clamp(global.volumeLevel, 0, 100);
 	audio_group_set_gain(audiogroup_default,global.volumeLevel / 100,10)
 	if (global.jumpKeyPressed) {
-		gameState = -1;
+		global.gameState = 2;
 		instance_destroy(obj_Textbox);
 		instance_destroy(obj_VolumeKnob);
 		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step
 		alarm_set(0,45)
-		room_goto(rmBeach)
 	}
-}
-
-#endregion
-
-
-#region Start Cycle 1
-
-else if (gameState == 2) {
-	play_song_home();
 }
 
 #endregion

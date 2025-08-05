@@ -1,0 +1,1 @@
+global.canControlPlayer = autoRestoreControl;

@@ -3,8 +3,8 @@ draw_set_halign(hAlignment);
 draw_self();
 											  
 draw_text_ext(x + xOffset, y + yOffset, currentStringDrawn, 24, boxWidth);	//draw string
-draw_text_ext(x + xOffset, y + yOffset - 35, characterName, 24, boxWidth);	//draw name
-draw_text_ext(x + xOffset + 93, y + yOffset - 35, pronounString, 24, 110)	//draw pronouns
+draw_text_ext(x + xOffset, y + yOffset - 42, characterName, 24, boxWidth);	//draw name
+draw_text_ext(x + xOffset + 86, y + yOffset - 42, pronounString, 24, 110)	//draw pronouns
 
 #region Dialogue Option Rendering
 
