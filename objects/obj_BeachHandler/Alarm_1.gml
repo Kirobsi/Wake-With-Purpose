@@ -1,3 +1,3 @@
-///@description First textbox with gfx
-create_textbox(27);
+///@description First textbox with portrait
+create_textbox(28);
 play_song_home();
