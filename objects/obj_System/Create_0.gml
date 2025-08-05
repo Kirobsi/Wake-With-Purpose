@@ -15,8 +15,15 @@ draw_set_font(MainText);
 draw_set_halign(fa_center);
 draw_set_colour(c_white);
 
-musicToDelete = "";
-
 global.hideInventory = true;
 
 beachState = 0;
+
+global.siblifBellyStage = 1;
+global.siblifBellyCalories = 0;
+
+global.siblifBoobStage = 1;
+global.siblifBoobCalories = 0;
+
+global.siblifButtStage = 1;
+global.siblifButtCalories = 0;
