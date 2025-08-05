@@ -87,9 +87,9 @@ if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
 
 #region Siblif Calorie Conversion
 
-global.siblifBoobStage = global.siblifBoobCalories / 1500;
-global.siblifBellyStage = global.siblifBellyCalories / 1500;
-global.siblifButtStage = global.siblifButtCalories / 1500;
+global.siblifBoobStage = floor(global.siblifBoobCalories / 1500);
+global.siblifBellyStage = floor(global.siblifBellyCalories / 1500);
+global.siblifButtStage = floor(global.siblifButtCalories / 1500);
 
 #endregion
 

@@ -25,6 +25,9 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":".~lock.other_strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.other_strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -38,6 +41,7 @@
     {"id":{"name":"obj_BeachHandler","path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},},
     {"id":{"name":"obj_System","path":"objects/obj_System/obj_System.yy",},},
     {"id":{"name":"obj_Tent","path":"objects/obj_Tent/obj_Tent.yy",},},
+    {"id":{"name":"obj_Textbox_Misc","path":"objects/obj_Textbox_Misc/obj_Textbox_Misc.yy",},},
     {"id":{"name":"obj_Textbox","path":"objects/obj_Textbox/obj_Textbox.yy",},},
     {"id":{"name":"obj_TextSpeedKnob","path":"objects/obj_TextSpeedKnob/obj_TextSpeedKnob.yy",},},
     {"id":{"name":"obj_VolumeKnob","path":"objects/obj_VolumeKnob/obj_VolumeKnob.yy",},},

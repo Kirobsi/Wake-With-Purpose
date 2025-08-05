@@ -16,6 +16,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_BeachHandler","order":3,"path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
+    {"name":"obj_Textbox_Misc","order":9,"path":"objects/obj_Textbox_Misc/obj_Textbox_Misc.yy",},
     {"name":"obj_Textbox","order":2,"path":"objects/obj_Textbox/obj_Textbox.yy",},
     {"name":"obj_TextSpeedKnob","order":8,"path":"objects/obj_TextSpeedKnob/obj_TextSpeedKnob.yy",},
     {"name":"obj_VolumeKnob","order":6,"path":"objects/obj_VolumeKnob/obj_VolumeKnob.yy",},

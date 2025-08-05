@@ -1,0 +1,1 @@
+if (global.interactKeyPressed && place_meeting(x,y,oPlayer)) {create_misc_textbox(13)}
