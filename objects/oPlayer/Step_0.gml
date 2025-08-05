@@ -15,11 +15,16 @@ else
 
 #endregion
 
-#region Jumping
+#region Release Jump
 
-if(global.jumpKeyReleased && phy_speed_y < 0)
+if(global.jumpKeyReleased && phy_speed_y < 0 && jumping = true)
 {
 	phy_speed_y = 0;
+}
+
+if(phy_speed_y >= 0)
+{
+	jumping = false;
 }
 
 #endregion

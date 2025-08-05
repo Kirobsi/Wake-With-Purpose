@@ -3,7 +3,7 @@
   "%Name":"tilespriteCave",
   "bboxMode":0,
   "bbox_bottom":127,
-  "bbox_left":64,
+  "bbox_left":32,
   "bbox_right":191,
   "bbox_top":0,
   "collisionKind":1,
