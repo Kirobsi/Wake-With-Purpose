@@ -42,7 +42,7 @@ else if (global.allStrings[# 2, dialogueRow] != "" && canOptions) {
 
 #region Press jump to advance
 
-else if(global.jumpKeyPressed && canAdvance) {
+if(global.jumpKeyPressed && canAdvance && (global.gameState == 0 || global.gameState == 1 || currentStringDrawnNo >= string_length(currentString) + 1)) {
     if (talkOptions > 0) {
 		dialogueRow = real(global.allStrings[# ((talkOptionsPosition + 1) * 2) + 1, dialogueRow])
 		talkOptions = 0;
