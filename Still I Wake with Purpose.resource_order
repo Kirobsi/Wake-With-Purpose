@@ -16,6 +16,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_BeachHandler","order":3,"path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
+    {"name":"obj_Textbox_Misc","order":9,"path":"objects/obj_Textbox_Misc/obj_Textbox_Misc.yy",},
     {"name":"obj_Textbox","order":2,"path":"objects/obj_Textbox/obj_Textbox.yy",},
     {"name":"obj_TextSpeedKnob","order":8,"path":"objects/obj_TextSpeedKnob/obj_TextSpeedKnob.yy",},
     {"name":"obj_VolumeKnob","order":6,"path":"objects/obj_VolumeKnob/obj_VolumeKnob.yy",},
@@ -25,6 +26,7 @@
     {"name":"oCrackedWall","order":11,"path":"objects/oCrackedWall/oCrackedWall.yy",},
     {"name":"oDamager","order":3,"path":"objects/oDamager/oDamager.yy",},
     {"name":"oLostIngredient","order":6,"path":"objects/oLostIngredient/oLostIngredient.yy",},
+    {"name":"oMinerMan","order":22,"path":"objects/oMinerMan/oMinerMan.yy",},
     {"name":"oPlayer","order":2,"path":"objects/oPlayer/oPlayer.yy",},
     {"name":"oRock","order":3,"path":"objects/oRock/oRock.yy",},
     {"name":"oSpring","order":8,"path":"objects/oSpring/oSpring.yy",},
@@ -41,6 +43,7 @@
     {"name":"sCrackedWall","order":10,"path":"sprites/sCrackedWall/sCrackedWall.yy",},
     {"name":"sDamager","order":4,"path":"sprites/sDamager/sDamager.yy",},
     {"name":"sLost","order":4,"path":"sprites/sLost/sLost.yy",},
+    {"name":"sMinerMan","order":21,"path":"sprites/sMinerMan/sMinerMan.yy",},
     {"name":"sMushroom","order":1,"path":"sprites/sMushroom/sMushroom.yy",},
     {"name":"sMushroomAlt","order":2,"path":"sprites/sMushroomAlt/sMushroomAlt.yy",},
     {"name":"sNone","order":5,"path":"sprites/sNone/sNone.yy",},
