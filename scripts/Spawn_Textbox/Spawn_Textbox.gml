@@ -34,7 +34,7 @@ function create_textbox(text_row, _autoRestoreControl = true, _hasBackground = t
 function create_misc_textbox(text_row, _autoRestoreControl = true, _hasBackground = true, _hAlignment = fa_left, _canAdvance = true, position_x = 14, position_y = 14, _width = 631) {
 	instance_create_layer(0, 0, "UI", obj_Textbox_Misc, {
 		dialogueRow : text_row,
-		currentString : global.allStrings[# 1, text_row],
+		currentString : global.miscStrings[# 1, text_row],
 		autoRestoreControl : _autoRestoreControl,
 		hasBackground : _hasBackground,
 		hAlignment : _hAlignment,

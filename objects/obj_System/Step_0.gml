@@ -91,6 +91,10 @@ global.siblifBoobStage = floor(global.siblifBoobCalories / 1500);
 global.siblifBellyStage = floor(global.siblifBellyCalories / 1500);
 global.siblifButtStage = floor(global.siblifButtCalories / 1500);
 
+if (keyboard_check_pressed(ord(1))) {global.siblifBoobCalories += 100}
+if (keyboard_check_pressed(ord(2))) {global.siblifBellyCalories += 100}
+if (keyboard_check_pressed(ord(3))) {global.siblifButtCalories += 100}
+
 #endregion
 
 
