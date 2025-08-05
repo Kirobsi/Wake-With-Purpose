@@ -19,13 +19,5 @@ global.hideInventory = true;
 
 beachState = 0;
 
-global.siblifBaseStage = 0;
-
-global.siblifBellyStage = 0;
-global.siblifBellyCalories = 0;
-
-global.siblifBoobStage = 0;
-global.siblifBoobCalories = 0;
-
-global.siblifButtStage = 0;
-global.siblifButtCalories = 0;
+global.siblifFatStage = [0, 0, 0, 0];			//boob, belly, butt, base
+global.siblifCalories = [0, 0, 0, 0, 0, 0, 0];	//boob, belly, butt, total, bonusboob, bonusbelly, bonusbutt
