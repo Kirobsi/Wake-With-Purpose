@@ -16,8 +16,15 @@ draw_set_halign(fa_center);
 draw_set_colour(c_white);
 
 global.hideInventory = true;
+/// Make copy of inventory to store it for different instances of oPlayer
+for (var i = 0; i < 10; i++) {
+	invCopy[i][0] = "Nothing";	//item name
+	invCopy[i][1] = sNone;		//item sprite
+	invCopy[i][2] = 3;			//item calorie type
+	invCopy[i][3] = 0;			//item calorie count
+}
 
 beachState = 0;
 
 global.siblifFatStage = [0, 0, 0, 0];			//boob, belly, butt, base
-global.siblifCalories = [0, 0, 0, 0, 0, 0, 0];	//boob, belly, butt, total, bonusboob, bonusbelly, bonusbutt
+global.siblifCalories = [0, 0, 0, 0];	//boob, belly, butt, total, bonusboob, bonusbelly, bonusbutt

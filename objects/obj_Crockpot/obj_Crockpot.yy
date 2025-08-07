@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Tent",
+  "%Name":"obj_Crockpot",
   "eventList":[],
   "managed":true,
-  "name":"obj_Tent",
+  "name":"obj_Crockpot",
   "overriddenProperties":[],
   "parent":{
     "name":"Beach",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Tent",
-    "path":"sprites/spr_Tent/spr_Tent.yy",
+    "name":"spr_Crockpot",
+    "path":"sprites/spr_Crockpot/spr_Crockpot.yy",
   },
   "spriteMaskId":null,
   "visible":true,

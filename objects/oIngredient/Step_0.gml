@@ -1,7 +1,12 @@
 if(place_meeting(x, y, oPlayer))
 {
 	showtext = true;
-	if(global.interactKey)
+	_string = "Press Interact to take ";
+	if (oPlayer.filledslots > 9) {
+		_string = "Too full to take ";
+	}
+	
+	else if(global.interactKey)
 	{
 		oPlayer.inv[oPlayer.filledslots][0] = name;
 		oPlayer.inv[oPlayer.filledslots][1] = sprite_index;

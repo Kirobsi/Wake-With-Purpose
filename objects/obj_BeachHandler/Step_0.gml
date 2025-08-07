@@ -1,3 +1,29 @@
+
+#region Siblif Calorie Conversions
+
+global.siblifCalories[3] = global.siblifCalories[0] + global.siblifCalories[1] + global.siblifCalories[2];
+
+if (global.siblifCalories[3] >= 6000) {
+	global.siblifFatStage[3] = 2;
+}
+
+else if (global.siblifCalories[3] >= 4500) {
+	global.siblifFatStage[3] = 1;
+}
+
+for (var i = 0; i < 3; i++) {
+	global.siblifFatStage[i] = floor((global.siblifCalories[i]) / 1500);
+}
+
+if (keyboard_check_pressed(ord(1))) {global.siblifCalories[0] += 500}
+if (keyboard_check_pressed(ord(2))) {global.siblifCalories[1] += 500}
+if (keyboard_check_pressed(ord(3))) {global.siblifCalories[2] += 500}
+
+//show_debug_message(global.siblifCalories)
+
+#endregion
+
+
 #region Fade in
 
 if (fadeFromBlack) {
@@ -7,6 +33,7 @@ if (fadeFromBlack) {
 	else {
 		drawAlpha = 0;
 		fadeFromBlack = false;
+		if (localState == 0) {create_textbox(28);}
 	}
 }
 
@@ -16,6 +43,7 @@ if (fadeFromBlack) {
 #region Fade from Beach to Tent
 
 if (fadeToTent) {
+	global.hideInventory = true;
 	if (tentAlpha < 1) {
 		tentAlpha += 0.02;
 	}
@@ -37,6 +65,7 @@ if (fadeFromTent) {
 	else {
 		tentAlpha = 0;
 		fadeFromTent = false;
+		global.hideInventory = false;
 	}
 }
 
@@ -53,7 +82,6 @@ if (fadeInSiblif) {
 	else {
 		siblifAlpha = 1;
 		fadeInSiblif = false;
-		if (localState == 0) {alarm_set(1, 30);}
 	}
 }
 
