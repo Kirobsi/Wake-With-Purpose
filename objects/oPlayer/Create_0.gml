@@ -12,26 +12,12 @@ holding = false;
 
 #region Initialize Inventory
 
-inv[0][0] = "Nothing";
-inv[0][1] = sNone;
-inv[1][0] = "Nothing";
-inv[1][1] = sNone;
-inv[2][0] = "Nothing";
-inv[2][1] = sNone;
-inv[3][0] = "Nothing";
-inv[3][1] = sNone;
-inv[4][0] = "Nothing";
-inv[4][1] = sNone;
-inv[5][0] = "Nothing";
-inv[5][1] = sNone;
-inv[6][0] = "Nothing";
-inv[6][1] = sNone;
-inv[7][0] = "Nothing";
-inv[7][1] = sNone;
-inv[8][0] = "Nothing";
-inv[8][1] = sNone;
-inv[9][0] = "Nothing";
-inv[9][1] = sNone;
+for (var i = 0; i < 10; i++) {
+	inv[i][0] = "Nothing";	//item name
+	inv[i][1] = sNone;		//item sprite
+	inv[i][2] = 3;			//item calorie type
+	inv[i][3] = 0;			//item calorie count
+}
 
 filledslots = 0;
 

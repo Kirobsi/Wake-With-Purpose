@@ -85,7 +85,7 @@ if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
 #endregion
 
 
-#region Siblif Calorie Conversion
+#region Siblif Calorie Conversions
 
 global.siblifCalories[3] = global.siblifCalories[0] + global.siblifCalories[1] + global.siblifCalories[2];
 
@@ -111,7 +111,7 @@ if (keyboard_check_pressed(ord(1))) {global.siblifCalories[0] += 500}
 if (keyboard_check_pressed(ord(2))) {global.siblifCalories[1] += 500}
 if (keyboard_check_pressed(ord(3))) {global.siblifCalories[2] += 500}
 
-show_debug_message(global.siblifCalories)
+//show_debug_message(global.siblifCalories)
 
 #endregion
 
