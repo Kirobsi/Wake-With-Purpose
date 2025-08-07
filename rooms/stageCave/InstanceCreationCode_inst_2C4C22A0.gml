@@ -1,3 +1,3 @@
-sprite_index = sMushroomAlt;
+sprite_index = sPeach;
 
-name = "Hoehohe Mumshroom";
+name = "Peach";
