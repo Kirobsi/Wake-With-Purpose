@@ -26,7 +26,6 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"LiberationSerifFontLicense.txt","CopyToMask":-1,"filePath":"datafiles","name":"LiberationSerifFontLicense.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -53,6 +52,7 @@
     {"id":{"name":"oCavePhaseBlocker","path":"objects/oCavePhaseBlocker/oCavePhaseBlocker.yy",},},
     {"id":{"name":"oCrackedWall","path":"objects/oCrackedWall/oCrackedWall.yy",},},
     {"id":{"name":"oDamager","path":"objects/oDamager/oDamager.yy",},},
+    {"id":{"name":"oGiantVine","path":"objects/oGiantVine/oGiantVine.yy",},},
     {"id":{"name":"oIngredient","path":"objects/oIngredient/oIngredient.yy",},},
     {"id":{"name":"oIngredientFalling","path":"objects/oIngredientFalling/oIngredientFalling.yy",},},
     {"id":{"name":"oLeaveArea","path":"objects/oLeaveArea/oLeaveArea.yy",},},
@@ -79,6 +79,7 @@
     {"id":{"name":"sCavePhaseBlocker","path":"sprites/sCavePhaseBlocker/sCavePhaseBlocker.yy",},},
     {"id":{"name":"sCrackedWall","path":"sprites/sCrackedWall/sCrackedWall.yy",},},
     {"id":{"name":"sDamager","path":"sprites/sDamager/sDamager.yy",},},
+    {"id":{"name":"sGiantVine","path":"sprites/sGiantVine/sGiantVine.yy",},},
     {"id":{"name":"sLeaveArea","path":"sprites/sLeaveArea/sLeaveArea.yy",},},
     {"id":{"name":"sLost","path":"sprites/sLost/sLost.yy",},},
     {"id":{"name":"sMinerMan","path":"sprites/sMinerMan/sMinerMan.yy",},},
