@@ -5,3 +5,6 @@ if(localState == 1)
 	//Allow passage to phase 2 area
 	instance_destroy(oCavePhaseBlocker);
 }
+
+foodTaken = obj_System.caveFoodTaken;
+deleteFood = true;
