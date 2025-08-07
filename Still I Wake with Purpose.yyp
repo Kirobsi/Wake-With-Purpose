@@ -26,6 +26,7 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"LiberationSerifFontLicense.txt","CopyToMask":-1,"filePath":"datafiles","name":"LiberationSerifFontLicense.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -41,6 +42,7 @@
     {"id":{"name":"obj_BeachHandler","path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},},
     {"id":{"name":"obj_CaveHandler","path":"objects/obj_CaveHandler/obj_CaveHandler.yy",},},
     {"id":{"name":"obj_Crockpot","path":"objects/obj_Crockpot/obj_Crockpot.yy",},},
+    {"id":{"name":"obj_JungleHandler","path":"objects/obj_JungleHandler/obj_JungleHandler.yy",},},
     {"id":{"name":"obj_System","path":"objects/obj_System/obj_System.yy",},},
     {"id":{"name":"obj_Textbox_Misc","path":"objects/obj_Textbox_Misc/obj_Textbox_Misc.yy",},},
     {"id":{"name":"obj_Textbox","path":"objects/obj_Textbox/obj_Textbox.yy",},},
@@ -73,6 +75,7 @@
     {"id":{"name":"Music_Player","path":"scripts/Music_Player/Music_Player.yy",},},
     {"id":{"name":"Spawn_Textbox","path":"scripts/Spawn_Textbox/Spawn_Textbox.yy",},},
     {"id":{"name":"mus_Home","path":"sounds/mus_Home/mus_Home.yy",},},
+    {"id":{"name":"snd_PlrLand","path":"sounds/snd_PlrLand/snd_PlrLand.yy",},},
     {"id":{"name":"sBomb","path":"sprites/sBomb/sBomb.yy",},},
     {"id":{"name":"sBombExploding","path":"sprites/sBombExploding/sBombExploding.yy",},},
     {"id":{"name":"sCarrot","path":"sprites/sCarrot/sCarrot.yy",},},

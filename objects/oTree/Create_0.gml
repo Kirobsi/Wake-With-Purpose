@@ -1,1 +1,1 @@
-currentspeed = 0;
+peakspeed = 0;

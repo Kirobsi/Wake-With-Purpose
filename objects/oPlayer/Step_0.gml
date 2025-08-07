@@ -26,10 +26,15 @@ if(global.jumpKeyReleased && phy_speed_y < 0 && jumping = true && !touchedSpring
 
 #region Clear 'jumping' when on ground
 
-if((position_meeting(x-8,y+1,oTerrain) || position_meeting(x+7,y+1,oTerrain)) && !jumpDelay)
+if(!(position_meeting(x-8,y+1,oTerrain) || position_meeting(x+7,y+1,oTerrain)))
 {
+	jumping = true;
+}
+
+else if (!jumpDelay && jumping) {
 	jumping = false;
 	touchedSpring = false;
+	audio_play_sound(snd_PlrLand,0,0)
 }
 
 #endregion

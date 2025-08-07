@@ -13,9 +13,9 @@ if(place_meeting(x, y, oPlayer))
 		oPlayer.filledslots += 1;
 			
 		if (instance_exists(obj_CaveHandler)) {
-			array_push(obj_CaveHandler.foodTaken, id);
+			array_push(obj_System.caveFoodTaken, id);
 			show_debug_message("fuck !!! my ingerroidin")
-			show_debug_message(obj_CaveHandler.foodTaken)
+			show_debug_message(obj_System.caveFoodTaken)
 		}
 			
 		instance_destroy();

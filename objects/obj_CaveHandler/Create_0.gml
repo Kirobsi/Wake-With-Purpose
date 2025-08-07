@@ -6,5 +6,4 @@ if(localState == 1)
 	instance_destroy(oCavePhaseBlocker);
 }
 
-foodTaken = obj_System.caveFoodTaken;
 deleteFood = true;

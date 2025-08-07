@@ -1,6 +1,7 @@
-if(place_meeting(x, y, oPlayer))
+if(place_meeting(x, y-16, oPlayer))
 {
-	if(currentspeed > 0)
+	if (peakspeed < oPlayer.phy_speed_y) {peakspeed = oPlayer.phy_speed_y}
+	if(peakspeed > 3 && !oPlayer.jumping)
 	{
 		if(place_meeting(x, y, oIngredientFalling))
 		{
@@ -12,10 +13,15 @@ if(place_meeting(x, y, oPlayer))
 			    for (var i = 0; i < _num; ++i;)
 			    {
 			        _list[| i].falling = true;
+					_list[| i].ysp = peakspeed;
 			    }
 			}
 			
 			ds_list_destroy(_list);
 		}
+		
+		peakspeed = 0;
 	}
 }
+
+else {peakspeed = 0}

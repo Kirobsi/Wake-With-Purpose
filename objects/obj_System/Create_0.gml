@@ -30,8 +30,8 @@ jungleState = 0;
 mountainState = 0;
 
 caveFoodTaken = [0];
-jungleFoodTaken = [];
-mountainFoodTaken = [];
+jungleFoodTaken = [0];
+mountainFoodTaken = [0];
 
 global.siblifFatStage = [0, 0, 0, 0];	//boob, belly, butt, base
 global.siblifCalories = [0, 0, 0, 0];	//boob, belly, butt, total

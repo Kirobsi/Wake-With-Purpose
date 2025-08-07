@@ -17,6 +17,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_BeachHandler","order":3,"path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},
     {"name":"obj_CaveHandler","order":25,"path":"objects/obj_CaveHandler/obj_CaveHandler.yy",},
+    {"name":"obj_JungleHandler","order":7,"path":"objects/obj_JungleHandler/obj_JungleHandler.yy",},
     {"name":"obj_System","order":1,"path":"objects/obj_System/obj_System.yy",},
     {"name":"obj_Textbox_Misc","order":9,"path":"objects/obj_Textbox_Misc/obj_Textbox_Misc.yy",},
     {"name":"obj_Textbox","order":2,"path":"objects/obj_Textbox/obj_Textbox.yy",},
@@ -45,6 +46,7 @@
     {"name":"stageCave","order":1,"path":"rooms/stageCave/stageCave.yy",},
     {"name":"Music_Player","order":7,"path":"scripts/Music_Player/Music_Player.yy",},
     {"name":"mus_Home","order":1,"path":"sounds/mus_Home/mus_Home.yy",},
+    {"name":"snd_PlrLand","order":3,"path":"sounds/snd_PlrLand/snd_PlrLand.yy",},
     {"name":"sBomb","order":12,"path":"sprites/sBomb/sBomb.yy",},
     {"name":"sBombExploding","order":14,"path":"sprites/sBombExploding/sBombExploding.yy",},
     {"name":"sCarrot","order":7,"path":"sprites/sCarrot/sCarrot.yy",},
