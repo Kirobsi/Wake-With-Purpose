@@ -87,11 +87,7 @@ if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
 
 #region DEBUG FUNCTIONS, REMOVE FOR RELEASE
 
-if (keyboard_check_pressed(vk_f1)) {
-	create_textbox(16);
-}
-
-else if (keyboard_check_pressed(vk_f2)) {
+if (keyboard_check_pressed(vk_f2)) {
 	game_restart();
 }
 

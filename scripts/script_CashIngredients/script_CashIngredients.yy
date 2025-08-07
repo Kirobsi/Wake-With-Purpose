@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"script_CashIngredients",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"script_CashIngredients",
+  "parent":{
+    "name":"Beach",
+    "path":"folders/Stage/Beach.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

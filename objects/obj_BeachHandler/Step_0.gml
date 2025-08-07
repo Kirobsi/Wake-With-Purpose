@@ -85,6 +85,17 @@ if (fadeInSiblif) {
 	}
 }
 
+else if (fadeOutSiblif) {
+	if (siblifAlpha > 0) {
+		siblifAlpha -= 0.02;
+	}
+
+	else {
+		siblifAlpha = 0;
+		fadeOutSiblif = false;
+	}
+}
+
 if (localState == 1) {
 	localState = 2;
 /* in case Siblif gets an overworld sprite for her default size,
@@ -110,8 +121,18 @@ if (localState == 2 && !fadeFromBlack) {
 #region Cash in
 
 if (localState == 3) {
-	//cash_in_food();
+	obj_Crockpot.canInteract = true;
 	localState = 4;
+	
+	/// Determine how many real items the player has
+	_filledslots = 10;
+	for (var i = 0; i < 10; i++) {
+		if (oPlayer.inv[i][0] == "Lost" || oPlayer.inv[i][0] == "Nothing") {
+			_filledslots--;
+		}
+		else {array_push(slotsToCashIn, i)}
+	}
+	show_debug_message(_filledslots);
 }
 
 #endregion
@@ -120,6 +141,7 @@ if (localState == 3) {
 #region Tent interact
 
 if (localState == 4 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+	obj_Crockpot.canInteract = false;
 	fadeToTent = true;
 	create_textbox(72, false);
 }
@@ -131,24 +153,36 @@ else if (localState == 5) {
 }
 
 else if (localState == 7) {
-	/// Determine how many real items the player has
-	_filledslots = 10;
-	for (var i = 0; i < 10; i++) {
-		if (oPlayer.inv[i][0] == "Lost" || oPlayer.inv[i][0] == "Nothing") {
-			_filledslots--;
-		}
-		else {array_push(slotsToCashIn, i)}
-	}
-	show_debug_message(_filledslots);
-	
 	if (_filledslots > 7) {create_textbox(80)}
 	else if (_filledslots > 4) {create_textbox(85)}
 	else if (_filledslots > 0) {create_textbox(89)}
 	localState = 8;
 }
 
-else if (localState == 8) {
-	_filledslots = -1;
+else if (localState == 9) {
+	fadeFromTent = true;
+	fadeOutSiblif = true;
+	localState = 10;
+}
+
+else if (localState == 10) {
+	obj_Crockpot.canInteract = true;
+	localState = 11;
+}
+
+else if (localState == 12 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+	fadeToTent = true;
+	alarm_set(1,49);
+	create_textbox(103, false);
+}
+
+else if (localState == 13) {
+	fadeInSiblif = true;
+	localState++;
+}
+
+else if (localState == 14) {
+	
 }
 
 

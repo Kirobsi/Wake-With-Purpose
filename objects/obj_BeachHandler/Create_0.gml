@@ -11,9 +11,11 @@ localState = obj_System.beachState;
 
 siblifAlpha = 0;
 fadeInSiblif = false;
+fadeOutSiblif = false;
 
 _filledslots = -1;
 slotsToCashIn = [];
+localCalories = [0, 0, 0]; //boob, belly, butt
 
 if (localState == 0) {
 	alarm_set(0, 120)

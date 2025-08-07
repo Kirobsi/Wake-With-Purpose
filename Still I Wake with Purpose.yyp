@@ -40,6 +40,7 @@
   "resources":[
     {"id":{"name":"MainText","path":"fonts/MainText/MainText.yy",},},
     {"id":{"name":"obj_BeachHandler","path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},},
+    {"id":{"name":"obj_CalorieTally","path":"objects/obj_CalorieTally/obj_CalorieTally.yy",},},
     {"id":{"name":"obj_CaveHandler","path":"objects/obj_CaveHandler/obj_CaveHandler.yy",},},
     {"id":{"name":"obj_Crockpot","path":"objects/obj_Crockpot/obj_Crockpot.yy",},},
     {"id":{"name":"obj_JungleHandler","path":"objects/obj_JungleHandler/obj_JungleHandler.yy",},},
@@ -73,6 +74,7 @@
     {"id":{"name":"stageCave","path":"rooms/stageCave/stageCave.yy",},},
     {"id":{"name":"stageJungle","path":"rooms/stageJungle/stageJungle.yy",},},
     {"id":{"name":"Music_Player","path":"scripts/Music_Player/Music_Player.yy",},},
+    {"id":{"name":"script_CashIngredients","path":"scripts/script_CashIngredients/script_CashIngredients.yy",},},
     {"id":{"name":"Spawn_Textbox","path":"scripts/Spawn_Textbox/Spawn_Textbox.yy",},},
     {"id":{"name":"mus_Home","path":"sounds/mus_Home/mus_Home.yy",},},
     {"id":{"name":"snd_PlrLand","path":"sounds/snd_PlrLand/snd_PlrLand.yy",},},
