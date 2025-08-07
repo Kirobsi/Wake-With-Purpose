@@ -11,11 +11,8 @@
 Kiwi,Doe/Doe,,,,,,
 ,,,,,,,
 ~STRINGS~,,,,,,,
-1,Test!,wow... belly,14,sadjskl,18,yeag,20
 1,"yeah, lovely",,,,,,
-2,I'm name/pronouns 2,,,,,,
-3,I'm name/pronouns 3,,,,,,
-Die,,,,,,,
+Die,localState++,obj_CaveHandler,,,,,
 1,Kiwi!! Belly!!! I'm so fat!!!!,,,,,,
 goto,13,,,,,,
 4,Bye!,,,,,,

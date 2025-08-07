@@ -1,0 +1,1 @@
+currentspeed = 0;

@@ -101,4 +101,10 @@ else if (keyboard_check_pressed(vk_f3)) {
 	room_goto(stageCave);
 }
 
+else if (keyboard_check_pressed(vk_f4)) {
+	instance_destroy(obj_Textbox);
+	global.canControlPlayer = true;
+	room_goto(stageJungle);
+}
+
 #endregion

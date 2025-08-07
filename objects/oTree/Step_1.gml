@@ -1,0 +1,1 @@
+currentspeed = oPlayer.phy_speed_y;

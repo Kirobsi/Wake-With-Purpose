@@ -25,6 +25,7 @@ for (var i = 0; i < 10; i++) {
 }
 
 beachState = 0;
+caveState = 0;
 
 global.siblifFatStage = [0, 0, 0, 0];			//boob, belly, butt, base
 global.siblifCalories = [0, 0, 0, 0];	//boob, belly, butt, total, bonusboob, bonusbelly, bonusbutt
