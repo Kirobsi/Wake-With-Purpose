@@ -12,6 +12,9 @@ localState = obj_System.beachState;
 siblifAlpha = 0;
 fadeInSiblif = false;
 
+_filledslots = -1;
+slotsToCashIn = [];
+
 if (localState == 0) {
 	alarm_set(0, 120)
 	layer_set_visible("SiblifForeground",true);

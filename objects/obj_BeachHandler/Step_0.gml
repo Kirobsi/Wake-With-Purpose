@@ -97,15 +97,21 @@ if (localState == 1) {
 #region Cycle 1 End
 
 
-#region Cook food / results screen
-if (localState == 2) {localState = 3;}
-
-
 #region Tent reaction
 
-if (localState == 3 && !fadeFromBlack) {
+if (localState == 2 && !fadeFromBlack) {
 	// create_textbox()
-	localState++;
+	localState = 3;
+}
+
+#endregion
+
+
+#region Cash in
+
+if (localState == 3) {
+	//cash_in_food();
+	localState = 4;
 }
 
 #endregion
@@ -114,28 +120,39 @@ if (localState == 3 && !fadeFromBlack) {
 #region Tent interact
 
 if (localState == 4 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
-	
-	/// Determine how many real items the player has
-	var _filledslots = oPlayer.filledslots;
-	var _lostSlots = 0;
-	var _slotsToCashIn = [];
-	for (var i = 0; i < 10; i++) {
-		if (oPlayer.inv[i][0] == "Lost") {
-			_filledslots--;
-			_lostSlots++;
-		}
-		else if (oPlayer.inv[i][0] == "Nothing") {_filledslots--}
-		else {array_push(_slotsToCashIn, i)}
-	}
-	
 	fadeToTent = true;
 	create_textbox(72, false);
 }
 
 else if (localState == 5) {
 	fadeInSiblif = true;
-	create_textbox(76, false);
-	localState++;
+	create_textbox(77, false);
+	localState++;	//to prevent it from spamming textboxes
 }
+
+else if (localState == 7) {
+	/// Determine how many real items the player has
+	_filledslots = 10;
+	for (var i = 0; i < 10; i++) {
+		if (oPlayer.inv[i][0] == "Lost" || oPlayer.inv[i][0] == "Nothing") {
+			_filledslots--;
+		}
+		else {array_push(slotsToCashIn, i)}
+	}
+	show_debug_message(_filledslots);
+	
+	if (_filledslots > 7) {create_textbox(80)}
+	else if (_filledslots > 4) {create_textbox(85)}
+	else if (_filledslots > 0) {create_textbox(89)}
+	localState = 8;
+}
+
+else if (localState == 8) {
+	_filledslots = -1;
+}
+
+
+#endregion
+
 
 #endregion
