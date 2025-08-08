@@ -1,2 +1,2 @@
-//@description Advance localState on delay
+///@description Advance localState on delay
 localState++;

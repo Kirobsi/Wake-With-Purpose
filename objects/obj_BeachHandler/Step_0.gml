@@ -1,29 +1,4 @@
 
-#region Siblif Calorie Conversions
-
-global.siblifCalories[3] = global.siblifCalories[0] + global.siblifCalories[1] + global.siblifCalories[2];
-
-if (global.siblifCalories[3] >= 6000) {
-	global.siblifFatStage[3] = 2;
-}
-
-else if (global.siblifCalories[3] >= 4500) {
-	global.siblifFatStage[3] = 1;
-}
-
-for (var i = 0; i < 3; i++) {
-	global.siblifFatStage[i] = floor((global.siblifCalories[i]) / 1500);
-}
-
-if (keyboard_check_pressed(ord(1))) {global.siblifFatStage[0] += 1}
-if (keyboard_check_pressed(ord(2))) {global.siblifFatStage[1] += 1}
-if (keyboard_check_pressed(ord(3))) {global.siblifFatStage[2] += 1}
-
-//show_debug_message(global.siblifCalories)
-
-#endregion
-
-
 #region Fade in
 
 if (fadeFromBlack) {
@@ -40,10 +15,30 @@ if (fadeFromBlack) {
 #endregion
 
 
+#region Fade out
+
+else if (fadeToBlack) {
+	if (drawAlpha < 1) {
+		drawAlpha += 0.02;
+	}
+	else {
+		drawAlpha = 1;
+		fadeToBlack = false;
+		
+		if (morningTransition) {
+			alarm_set(1, 90);
+			calculate_siblif_size();
+			morningTransition = false;
+		}
+	}
+}
+
+#endregion
+
+
 #region Fade from Beach to Tent
 
 if (fadeToTent) {
-	global.hideInventory = true;
 	if (tentAlpha < 1) {
 		tentAlpha += 0.02;
 	}
@@ -65,7 +60,6 @@ if (fadeFromTent) {
 	else {
 		tentAlpha = 0;
 		fadeFromTent = false;
-		global.hideInventory = false;
 	}
 }
 
@@ -108,9 +102,9 @@ if (localState == 1) {
 #region Cycle 1 End
 
 
-#region Tent reaction
+#region Cash in 1
 
-if (localState == 2) {
+if (localState == 2 && !firstVisit) {
 	/// Determine how many real items the player has
 	_filledslots = 10;
 	for (var i = 0; i < 10; i++) {
@@ -121,13 +115,14 @@ if (localState == 2) {
 	}
 	show_debug_message(_filledslots);
 	obj_Crockpot.canInteract = true;
+	
 	localState = 3;
 }
 
 #endregion
 
 
-#region Cash in
+#region Fade
 
 if (localState == 3) {
 	if (!fadeFromBlack) {
@@ -166,10 +161,21 @@ else if (localState == 9) {
 	localState = 10;
 }
 
+#endregion
+
+
+#region Cash in 2
+
 else if (localState == 10) {
 	obj_Crockpot.canInteract = true;
 	localState = 11;
+	fadeToBlack = true;
 }
+
+#endregion
+
+
+#region Early cash in text
 
 else if (localState == 12 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
 	fadeToTent = true;

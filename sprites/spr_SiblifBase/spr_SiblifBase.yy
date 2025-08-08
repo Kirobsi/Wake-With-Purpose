@@ -23,7 +23,7 @@
   ],
   "name":"spr_SiblifBase",
   "nineSlice":null,
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"SiblifSprites",
     "path":"folders/Stage/Beach/SiblifSprites.yy",
@@ -77,7 +77,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":100,
     "yorigin":0,
   },
   "swatchColours":null,

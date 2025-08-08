@@ -7,3 +7,5 @@ if(localState == 1)
 }
 
 deleteFood = true;
+
+fade_from_black();

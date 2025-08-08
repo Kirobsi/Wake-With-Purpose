@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Fader_Spawner",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Fader_Spawner",
+  "parent":{
+    "name":"GameManager",
+    "path":"folders/GameManager.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

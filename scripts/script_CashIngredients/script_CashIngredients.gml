@@ -11,3 +11,22 @@ function cash_in_food(_inventory) {
 		
 	return _localCalories;
 }
+
+
+/// @description Function to calculate Siblif's fat stages
+function calculate_siblif_size() {
+	for (var i = 0; i < 3; i++) {
+		if (global.siblifCalories[i] >= 1600) {
+			
+			#region If initial pose base:
+			
+			if (global.siblifFatStage[3] == 0) {
+				global.siblifFatStage[i]++;
+			}
+			
+			#endregion
+		}
+	}
+	
+	return
+}

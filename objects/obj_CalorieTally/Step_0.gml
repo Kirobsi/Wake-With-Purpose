@@ -28,12 +28,16 @@ else if (internalState == 3) {
 	text2 = true;
 	funnyCounter = 1;
 	alarm_set(2, 1)
+	funnyCalorieSound = audio_play_sound(snd_calorieCounting, -5, true, 0.1 * global.volumeLevel);
 }
 
 else if (internalState == 4) {
 	funnyCounter++;
 	risingCalories = floor(calorieTally * funnyCounter / 120);
-	if (risingCalories == calorieTally) {internalState++;}
+	if (risingCalories == calorieTally) {
+		audio_sound_loop(funnyCalorieSound, false);
+		internalState++;
+		}
 }
 
 else if (internalState == 5) {
