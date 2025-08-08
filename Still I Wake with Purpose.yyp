@@ -26,7 +26,6 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"LiberationSerifFontLicense.txt","CopyToMask":-1,"filePath":"datafiles","name":"LiberationSerifFontLicense.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -68,6 +67,7 @@
     {"id":{"name":"oSpring","path":"objects/oSpring/oSpring.yy",},},
     {"id":{"name":"oStalagtite","path":"objects/oStalagtite/oStalagtite.yy",},},
     {"id":{"name":"oTerrain","path":"objects/oTerrain/oTerrain.yy",},},
+    {"id":{"name":"oTitleCard","path":"objects/oTitleCard/oTitleCard.yy",},},
     {"id":{"name":"oTree","path":"objects/oTree/oTree.yy",},},
     {"id":{"name":"oYellowButton","path":"objects/oYellowButton/oYellowButton.yy",},},
     {"id":{"name":"oYellowGate","path":"objects/oYellowGate/oYellowGate.yy",},},

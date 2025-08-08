@@ -41,6 +41,7 @@
     {"name":"oRock","order":3,"path":"objects/oRock/oRock.yy",},
     {"name":"oSpring","order":8,"path":"objects/oSpring/oSpring.yy",},
     {"name":"oStalagtite","order":6,"path":"objects/oStalagtite/oStalagtite.yy",},
+    {"name":"oTitleCard","order":8,"path":"objects/oTitleCard/oTitleCard.yy",},
     {"name":"oTree","order":4,"path":"objects/oTree/oTree.yy",},
     {"name":"oYellowButton","order":18,"path":"objects/oYellowButton/oYellowButton.yy",},
     {"name":"oYellowGate","order":19,"path":"objects/oYellowGate/oYellowGate.yy",},
