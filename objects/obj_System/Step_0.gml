@@ -67,13 +67,17 @@ else if (global.gameState == 1) {
 		instance_destroy(obj_VolumeKnob);
 		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step
 		alarm_set(0, 45);	//show first real textbox
+		
+		//save all settings to the ini
+		save_to_ini();
+		ini_close();
 	}
 }
 
 #endregion
 
 
-#region Beach startup
+#region Write settings to ini and start game
 
 if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
 	global.gameState = 2;

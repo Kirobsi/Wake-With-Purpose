@@ -49,6 +49,7 @@
     {"name":"stageCave","order":1,"path":"rooms/stageCave/stageCave.yy",},
     {"name":"Fader_Spawner","order":10,"path":"scripts/Fader_Spawner/Fader_Spawner.yy",},
     {"name":"Music_Player","order":7,"path":"scripts/Music_Player/Music_Player.yy",},
+    {"name":"Save_Load","order":11,"path":"scripts/Save_Load/Save_Load.yy",},
     {"name":"script_CashIngredients","order":7,"path":"scripts/script_CashIngredients/script_CashIngredients.yy",},
     {"name":"mus_Home","order":1,"path":"sounds/mus_Home/mus_Home.yy",},
     {"name":"snd_calorieCounting","order":9,"path":"sounds/snd_calorieCounting/snd_calorieCounting.yy",},
