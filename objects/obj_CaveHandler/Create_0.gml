@@ -10,6 +10,6 @@ deleteFood = true;
 
 instance_create_layer(x, y, "UI", oTitleCard,
 {
-	cardtext : "The cave where you make a girl's butt larger"
+	cardtext : "Bottom Cave"
 });
 fade_from_black(120);

@@ -1,4 +1,4 @@
-horiz = lerp(horiz, 128, 0.02);
+horiz = lerp(horiz, 64, 0.02);
 textprogress++;
 
 currenttext = currenttext + string_char_at(cardtext, textprogress);
