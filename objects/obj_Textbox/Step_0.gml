@@ -1,7 +1,7 @@
 #region Set position properly
 
-x = camera_get_view_x(view_camera[0]) + 149;
-y = camera_get_view_y(view_camera[0]) + 391;
+x = 149;
+y = 391;
 visible = true;
 if (global.allStrings[# 0, dialogueRow] == "0") {image_index = 2;}
 else {image_index = 1;}

@@ -2,8 +2,17 @@
 
 //fade in rectangle
 if (internalState < 3) {
-	if (rectangleAlpha < 0.5) {rectangleAlpha += 0.02;}
-	else {rectangleAlpha = 0.5;}
+	if (rectangleAlpha < 0.625) {rectangleAlpha += 0.025;}
+	else {rectangleAlpha = 0.625;}
+}
+
+//fade out rectangle
+if (fadeOutRectangle) {
+	if (rectangleAlpha > 0) {
+		rectangleAlpha -= 0.012;
+	} else {
+		rectangleAlpha = 0;
+	}
 }
 
 //show congrats
@@ -18,12 +27,17 @@ else if (internalState == 3) {
 	internalState++;
 	text2 = true;
 	funnyCounter = 1;
+	alarm_set(2, 1)
+	funnyCalorieSound = audio_play_sound(snd_calorieCounting, -5, true, 0.1 * global.volumeLevel);
 }
 
 else if (internalState == 4) {
 	funnyCounter++;
 	risingCalories = floor(calorieTally * funnyCounter / 120);
-	if (risingCalories == calorieTally) {internalState++;}
+	if (risingCalories == calorieTally) {
+		audio_sound_loop(funnyCalorieSound, false);
+		internalState++;
+		}
 }
 
 else if (internalState == 5) {
@@ -54,15 +68,11 @@ else if (internalState == 7 && global.jumpKeyPressed) {
 }
 
 else if (internalState == 8) {
-	if (rectangleAlpha > 0) {
-		rectangleAlpha -= 0.02;
-	} else {
-		rectangleAlpha = 0;
-		internalState++;
-	}
+	alarm_set(1, 10);
+	internalState++;
 }
 
-else if (internalState == 9) {alarm_set(0,19);}
+else if (internalState == 9 && alarm[0] == -1) {alarm_set(0,19);}
 
 else if (internalState == 10 && alarm[0] == -1) {
 	alarm_set(0,19);
@@ -72,6 +82,7 @@ else if (internalState == 10 && alarm[0] == -1) {
 else if (internalState == 11 && alarm[0] == -1) {
 	alarm_set(0,19);
 	text2 = false;
+	global.canControlPlayer = true;
 }
 
 else if (internalState == 12) {
@@ -79,7 +90,7 @@ else if (internalState == 12) {
 		obj_BeachHandler.localState = 12;
 	}
 	else if (global.cycles == 1) {
-		obj_BeachHandler.localState = 14;
+		obj_BeachHandler.localState = 15;
 	}
 	
 	instance_destroy();
