@@ -24,12 +24,6 @@ else if (fadeToBlack) {
 	else {
 		drawAlpha = 1;
 		fadeToBlack = false;
-		
-		if (morningTransition) {
-			alarm_set(1, 90);
-			calculate_siblif_size(localCalories);
-			morningTransition = false;
-		}
 	}
 }
 
@@ -188,18 +182,44 @@ else if (localState == 13) {
 	localState++;
 }
 
-else if (localState == 14) {
-	
-}
+else if (localState == 14) {}
 
 else if (localState == 15) {
 	fadeToBlack = true;
-	alarm_set(1, 15);
+	alarm_set(1, 75);
+	localState++;
 }
 
-else if (localState == 16) {
-	create_textbox(113);
-	localState = 19;
+else if (localState == 16) {}
+
+else if (localState == 17) {
+	create_textbox(114, false, false, fa_center, true, 330, -140, 600);
+	localState = 18;
+	calculate_siblif_size(localCalories);
+}
+
+else if (localState == 19) {
+	alarm_set(1, 90);
+	localState++;
+}
+
+else if (localState == 21) {
+	create_textbox(128, false);
+	localState++;
+}
+
+else if (localState == 23) {
+	fadeFromBlack = true;
+	alarm_set(1, 25)
+	localState++;
+}
+
+else if (localState == 25) {
+	if (global.siblifFatStage[0] == 1) {create_textbox(164, false);}
+	else if (global.siblifFatStage[1] == 1) {create_textbox(131, false);}
+	else if (global.siblifFatStage[2] >= 1) {create_textbox(160, false);}
+	else {create_textbox(103, false);}
+	localState++;
 }
 
 

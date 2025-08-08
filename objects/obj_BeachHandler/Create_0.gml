@@ -2,7 +2,6 @@ visible = true;
 drawAlpha = 1;
 fadeFromBlack = true;
 fadeToBlack = false;
-morningTransition = false;
 
 tentAlpha = 0;
 fadeToTent = false;
