@@ -2,8 +2,17 @@
 
 //fade in rectangle
 if (internalState < 3) {
-	if (rectangleAlpha < 0.5) {rectangleAlpha += 0.02;}
-	else {rectangleAlpha = 0.5;}
+	if (rectangleAlpha < 0.75) {rectangleAlpha += 0.03;}
+	else {rectangleAlpha = 0.75;}
+}
+
+//fade out rectangle
+if (fadeOutRectangle) {
+	if (rectangleAlpha > 0) {
+		rectangleAlpha -= 0.015;
+	} else {
+		rectangleAlpha = 0;
+	}
 }
 
 //show congrats
@@ -54,15 +63,11 @@ else if (internalState == 7 && global.jumpKeyPressed) {
 }
 
 else if (internalState == 8) {
-	if (rectangleAlpha > 0) {
-		rectangleAlpha -= 0.02;
-	} else {
-		rectangleAlpha = 0;
-		internalState++;
-	}
+	alarm_set(1, 10);
+	internalState++;
 }
 
-else if (internalState == 9) {alarm_set(0,19);}
+else if (internalState == 9 && alarm[0] == -1) {alarm_set(0,19);}
 
 else if (internalState == 10 && alarm[0] == -1) {
 	alarm_set(0,19);
@@ -82,5 +87,6 @@ else if (internalState == 12) {
 		obj_BeachHandler.localState = 14;
 	}
 	
+	global.canControlPlayer = true;
 	instance_destroy();
 }

@@ -15,6 +15,7 @@
     {"name":"Jungle","order":4,"path":"folders/Stage/Jungle.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"ResultsText","order":2,"path":"fonts/ResultsText/ResultsText.yy",},
     {"name":"obj_BeachHandler","order":3,"path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},
     {"name":"obj_CalorieTally","order":8,"path":"objects/obj_CalorieTally/obj_CalorieTally.yy",},
     {"name":"obj_CaveHandler","order":25,"path":"objects/obj_CaveHandler/obj_CaveHandler.yy",},

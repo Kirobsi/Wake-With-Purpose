@@ -15,9 +15,9 @@ for (var i = 0; i < 3; i++) {
 	global.siblifFatStage[i] = floor((global.siblifCalories[i]) / 1500);
 }
 
-if (keyboard_check_pressed(ord(1))) {global.siblifCalories[0] += 500}
-if (keyboard_check_pressed(ord(2))) {global.siblifCalories[1] += 500}
-if (keyboard_check_pressed(ord(3))) {global.siblifCalories[2] += 500}
+if (keyboard_check_pressed(ord(1))) {global.siblifFatStage[0] += 1}
+if (keyboard_check_pressed(ord(2))) {global.siblifFatStage[1] += 1}
+if (keyboard_check_pressed(ord(3))) {global.siblifFatStage[2] += 1}
 
 //show_debug_message(global.siblifCalories)
 

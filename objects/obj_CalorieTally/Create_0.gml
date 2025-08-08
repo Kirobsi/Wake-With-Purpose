@@ -8,3 +8,6 @@ text1 = false;
 text2 = false;
 text3 = false;
 rankText = "";
+
+fadeOutRectangle = false;
+global.canControlPlayer = false;

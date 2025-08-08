@@ -26,7 +26,6 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"LiberationSerifFontLicense.txt","CopyToMask":-1,"filePath":"datafiles","name":"LiberationSerifFontLicense.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -39,6 +38,7 @@
   "name":"Still I Wake with Purpose",
   "resources":[
     {"id":{"name":"MainText","path":"fonts/MainText/MainText.yy",},},
+    {"id":{"name":"ResultsText","path":"fonts/ResultsText/ResultsText.yy",},},
     {"id":{"name":"obj_BeachHandler","path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},},
     {"id":{"name":"obj_CalorieTally","path":"objects/obj_CalorieTally/obj_CalorieTally.yy",},},
     {"id":{"name":"obj_CaveHandler","path":"objects/obj_CaveHandler/obj_CaveHandler.yy",},},
@@ -101,7 +101,6 @@
     {"id":{"name":"spr_SiblifBelly","path":"sprites/spr_SiblifBelly/spr_SiblifBelly.yy",},},
     {"id":{"name":"spr_SiblifBoobs","path":"sprites/spr_SiblifBoobs/spr_SiblifBoobs.yy",},},
     {"id":{"name":"spr_SiblifLegs","path":"sprites/spr_SiblifLegs/spr_SiblifLegs.yy",},},
-    {"id":{"name":"spr_SiblifPlaceholder","path":"sprites/spr_SiblifPlaceholder/spr_SiblifPlaceholder.yy",},},
     {"id":{"name":"spr_TalkOption","path":"sprites/spr_TalkOption/spr_TalkOption.yy",},},
     {"id":{"name":"spr_Tent","path":"sprites/spr_Tent/spr_Tent.yy",},},
     {"id":{"name":"spr_Textbox","path":"sprites/spr_Textbox/spr_Textbox.yy",},},
