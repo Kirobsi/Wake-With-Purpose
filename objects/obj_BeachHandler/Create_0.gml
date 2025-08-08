@@ -17,7 +17,7 @@ fadeOutSiblif = false;
 
 _filledslots = -1;
 slotsToCashIn = [];
-localCalories = [0, 0, 0]; //boob, belly, butt
+localCalories = [0, 0, 0, 0]; //boob, belly, butt
 
 firstVisit = false;
 

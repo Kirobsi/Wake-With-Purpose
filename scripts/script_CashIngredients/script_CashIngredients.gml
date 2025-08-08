@@ -14,22 +14,57 @@ function cash_in_food(_inventory) {
 }
 
 
+
 /// @description Function to calculate Siblif's fat stages
-function calculate_siblif_size() {
+/// @param {Array} _localCalories Array of Siblif calories, for code brevity
+function calculate_siblif_size(_localCalories) {
 	global.siblifCalories = obj_BeachHandler.localCalories;
-	var _currentPoseTier = global.siblifFatStage[3];
+	//var _currentPoseTier = global.siblifFatStage[3];
+	var numStages = [0, 0, 0] //stage # (so, fatness level) of [boobs, belly, butt]
+	
+	
+	#region Calculate what the 'leading' calorie type is
+	var sortedCalories = _localCalories;
+	show_debug_message("Values pre-sort in sortedCalories: " + string(sortedCalories))
+	array_sort(sortedCalories, false);
+	show_debug_message("Values post-sort in sortedCalories: " + string(sortedCalories))
+	
+	//if the top two are too close, ensure that belly T2 pose is used instead of butt/boob
+	var bellyFallback = false;
+	if ((sortedCalories[1] / sortedCalories[0]) >= 0.85) {bellyFallback = true;}
+	
+	var primaryCalories = 0;
 	
 	for (var i = 0; i < 3; i++) {
-		if (global.siblifCalories[i] >= 1600) {
-			
-			#region If initial pose base:
-			
-			if (global.siblifFatStage[3] == 0) {
-				global.siblifFatStage[i]++;
-			}
-			
-			#endregion
+		if (sortedCalories[0] == _localCalories[i]) {
+			primaryCalories = i
+			break
 		}
+	}
+	
+	#endregion
+	
+	
+	#region Calculate what the segments should be
+	
+	for (var i = 0; i < 3; i++) {
+		numStages[i] = global.siblifCalories[i] div 1600 //should come out to correct stage?
+		
+		if (numStages[i] == 6) {numStages = 5} //fat stage cap
+	}
+	
+	// Pose 0 = Base
+	//		1 = Tier 2, Boob
+	//		2 = Tier 2, Belly
+	//		3 = Tier 2, Butt
+	
+	if (_localCalories[primaryCalories] >= 4800) {
+		if (bellyFallback) {global.siblifFatStage[3] = 2;}
+		else {global.siblifFatStage[3] = (primaryCalories + 1);}
+	}
+	
+	for (var i = 0; i < 3; i++) {
+		global.siblifFatStage[i] = (numStages[i] % 3) + (global.siblifFatStage[3] * 3);
 	}
 	
 	return
