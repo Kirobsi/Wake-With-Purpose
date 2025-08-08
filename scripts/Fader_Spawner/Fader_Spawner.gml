@@ -24,7 +24,7 @@ function fade_to_black(_targetRoom = rmBeach, _travelBool = true) {
 		drawAlpha : 0,
 		x : _x,
 		y : _y,
-		doTravel : _travelBool,
-		targetRoom : _targetRoom
+		targetRoom : _targetRoom,
+		doTravel : _travelBool
 	})
 }
