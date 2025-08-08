@@ -189,11 +189,12 @@ else if (localState == 13) {
 }
 
 else if (localState == 14) {
-	create_textbox(113,false,false,fa_center,true,330,-130,900);
+	
 }
 
 else if (localState == 15) {
 	calculate_siblif_size(localCalories);
+	localState++;
 }
 
 

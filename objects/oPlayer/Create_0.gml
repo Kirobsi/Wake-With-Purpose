@@ -20,7 +20,7 @@ else {
 		inv[i][0] = "Peach";	//item name
 		inv[i][1] = sPeach;		//item sprite
 		inv[i][2] = 2;			//item calorie type
-		inv[i][3] = 200;			//item calorie count
+		inv[i][3] = 600;			//item calorie count
 	}
 }
 

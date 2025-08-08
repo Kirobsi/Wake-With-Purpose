@@ -24,8 +24,9 @@ function calculate_siblif_size(_localCalories) {
 	
 	
 	#region Calculate what the 'leading' calorie type is
-	var sortedCalories = _localCalories;
-	show_debug_message("Values pre-sort in sortedCalories: " + string(sortedCalories))
+	var sortedCalories = [0, 0, 0]
+	array_copy(sortedCalories, 0, _localCalories, 0, 3)
+	
 	array_sort(sortedCalories, false);
 	show_debug_message("Values post-sort in sortedCalories: " + string(sortedCalories))
 	
