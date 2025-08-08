@@ -10,12 +10,12 @@ if(place_meeting(x, y, oPlayer))
 	{
 		oPlayer.inv[oPlayer.filledslots][0] = name;
 		oPlayer.inv[oPlayer.filledslots][1] = sprite_index;
+		oPlayer.inv[oPlayer.filledslots][2] = calorieType;
+		oPlayer.inv[oPlayer.filledslots][3] = calorieCount;
 		oPlayer.filledslots += 1;
 			
 		if (instance_exists(obj_JungleHandler)) {
 			array_push(obj_System.jungleFoodTaken, id);
-			show_debug_message("fuck !!! my ingerroidin")
-			show_debug_message(obj_System.jungleFoodTaken)
 		}
 			
 		instance_destroy();

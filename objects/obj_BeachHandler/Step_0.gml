@@ -193,12 +193,20 @@ else if (localState == 14) {
 }
 
 else if (localState == 15) {
-	calculate_siblif_size(localCalories);
-	localState++;
+	fadeToBlack = true;
+	alarm_set(1, 15);
+}
+
+else if (localState == 16) {
+	create_textbox(113);
+	localState = 19;
 }
 
 
 #endregion
+
+
+#region Later cash in text
 
 
 #endregion
