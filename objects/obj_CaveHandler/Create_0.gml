@@ -8,4 +8,8 @@ if(localState == 1)
 
 deleteFood = true;
 
-fade_from_black();
+instance_create_layer(x, y, "UI", oTitleCard,
+{
+	cardtext : "The cave where you make a girl's butt larger"
+});
+fade_from_black(120);
