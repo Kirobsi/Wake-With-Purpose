@@ -110,20 +110,7 @@ if (localState == 1) {
 
 #region Tent reaction
 
-if (localState == 2 && !fadeFromBlack) {
-	// create_textbox()
-	localState = 3;
-}
-
-#endregion
-
-
-#region Cash in
-
-if (localState == 3) {
-	obj_Crockpot.canInteract = true;
-	localState = 4;
-	
+if (localState == 2) {
 	/// Determine how many real items the player has
 	_filledslots = 10;
 	for (var i = 0; i < 10; i++) {
@@ -133,6 +120,20 @@ if (localState == 3) {
 		else {array_push(slotsToCashIn, i)}
 	}
 	show_debug_message(_filledslots);
+	obj_Crockpot.canInteract = true;
+	localState = 3;
+}
+
+#endregion
+
+
+#region Cash in
+
+if (localState == 3) {
+	if (!fadeFromBlack) {
+		// create_textbox()
+		localState = 4;
+	}
 }
 
 #endregion

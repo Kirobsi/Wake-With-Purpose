@@ -2,14 +2,14 @@
 
 //fade in rectangle
 if (internalState < 3) {
-	if (rectangleAlpha < 0.75) {rectangleAlpha += 0.03;}
-	else {rectangleAlpha = 0.75;}
+	if (rectangleAlpha < 0.625) {rectangleAlpha += 0.025;}
+	else {rectangleAlpha = 0.625;}
 }
 
 //fade out rectangle
 if (fadeOutRectangle) {
 	if (rectangleAlpha > 0) {
-		rectangleAlpha -= 0.015;
+		rectangleAlpha -= 0.012;
 	} else {
 		rectangleAlpha = 0;
 	}
@@ -27,6 +27,7 @@ else if (internalState == 3) {
 	internalState++;
 	text2 = true;
 	funnyCounter = 1;
+	alarm_set(2, 1)
 }
 
 else if (internalState == 4) {
@@ -77,6 +78,7 @@ else if (internalState == 10 && alarm[0] == -1) {
 else if (internalState == 11 && alarm[0] == -1) {
 	alarm_set(0,19);
 	text2 = false;
+	global.canControlPlayer = true;
 }
 
 else if (internalState == 12) {
@@ -84,9 +86,8 @@ else if (internalState == 12) {
 		obj_BeachHandler.localState = 12;
 	}
 	else if (global.cycles == 1) {
-		obj_BeachHandler.localState = 14;
+		obj_BeachHandler.localState = 15;
 	}
 	
-	global.canControlPlayer = true;
 	instance_destroy();
 }

@@ -11,3 +11,5 @@ rankText = "";
 
 fadeOutRectangle = false;
 global.canControlPlayer = false;
+
+invIndex = 0;
