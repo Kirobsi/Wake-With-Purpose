@@ -15,8 +15,8 @@ else {
 canOptions = true;
 talkOptions = 0;
 talkOptionsPosition = 0;
-talkOptHeight = 33;
-talkOptGap = 4;
+talkOptHeight = 38;
+//talkOptGap = 4;
 
 
 //How many characters of the current string should be drawn

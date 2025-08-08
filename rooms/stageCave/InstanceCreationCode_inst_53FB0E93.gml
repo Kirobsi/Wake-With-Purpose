@@ -4,4 +4,4 @@ image_xscale = -1;
 name = "Carrot";
 
 calorieType = 2;
-calorieCount = 500;
+calorieCount = 200;

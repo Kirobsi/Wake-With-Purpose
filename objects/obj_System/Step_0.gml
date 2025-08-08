@@ -85,44 +85,9 @@ if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
 #endregion
 
 
-#region Siblif Calorie Conversions
-
-global.siblifCalories[3] = global.siblifCalories[0] + global.siblifCalories[1] + global.siblifCalories[2];
-
-if (global.siblifCalories[3] >= 6000) {
-	for (var i = 0; i < 3; i++) {
-		if ((global.siblifCalories[i] + global.siblifCalories[i+4]) < 3000) {global.siblifCalories[i+4] = 3000 - global.siblifCalories[i]}
-	}
-	global.siblifFatStage[3] = 2;
-}
-
-else if (global.siblifCalories[3] >= 4500) {
-	for (var i = 0; i < 3; i++) {
-		if ((global.siblifCalories[i] + global.siblifCalories[i+4]) < 1500) {global.siblifCalories[i+4] = 1500 - global.siblifCalories[i]}
-	}
-	global.siblifFatStage[3] = 1;
-}
-
-for (var i = 0; i < 3; i++) {
-	global.siblifFatStage[i] = floor((global.siblifCalories[i] + global.siblifCalories[i+4]) / 1500);
-}
-
-if (keyboard_check_pressed(ord(1))) {global.siblifCalories[0] += 500}
-if (keyboard_check_pressed(ord(2))) {global.siblifCalories[1] += 500}
-if (keyboard_check_pressed(ord(3))) {global.siblifCalories[2] += 500}
-
-//show_debug_message(global.siblifCalories)
-
-#endregion
-
-
 #region DEBUG FUNCTIONS, REMOVE FOR RELEASE
 
-if (keyboard_check_pressed(vk_f1)) {
-	create_textbox(16);
-}
-
-else if (keyboard_check_pressed(vk_f2)) {
+if (keyboard_check_pressed(vk_f2)) {
 	game_restart();
 }
 
@@ -130,6 +95,12 @@ else if (keyboard_check_pressed(vk_f3)) {
 	instance_destroy(obj_Textbox);
 	global.canControlPlayer = true;
 	room_goto(stageCave);
+}
+
+else if (keyboard_check_pressed(vk_f4)) {
+	instance_destroy(obj_Textbox);
+	global.canControlPlayer = true;
+	room_goto(stageJungle);
 }
 
 #endregion

@@ -1,3 +1,29 @@
+
+#region Siblif Calorie Conversions
+
+global.siblifCalories[3] = global.siblifCalories[0] + global.siblifCalories[1] + global.siblifCalories[2];
+
+if (global.siblifCalories[3] >= 6000) {
+	global.siblifFatStage[3] = 2;
+}
+
+else if (global.siblifCalories[3] >= 4500) {
+	global.siblifFatStage[3] = 1;
+}
+
+for (var i = 0; i < 3; i++) {
+	global.siblifFatStage[i] = floor((global.siblifCalories[i]) / 1500);
+}
+
+if (keyboard_check_pressed(ord(1))) {global.siblifCalories[0] += 500}
+if (keyboard_check_pressed(ord(2))) {global.siblifCalories[1] += 500}
+if (keyboard_check_pressed(ord(3))) {global.siblifCalories[2] += 500}
+
+//show_debug_message(global.siblifCalories)
+
+#endregion
+
+
 #region Fade in
 
 if (fadeFromBlack) {
@@ -7,6 +33,7 @@ if (fadeFromBlack) {
 	else {
 		drawAlpha = 0;
 		fadeFromBlack = false;
+		if (localState == 0) {create_textbox(28);}
 	}
 }
 
@@ -16,6 +43,7 @@ if (fadeFromBlack) {
 #region Fade from Beach to Tent
 
 if (fadeToTent) {
+	global.hideInventory = true;
 	if (tentAlpha < 1) {
 		tentAlpha += 0.02;
 	}
@@ -37,6 +65,7 @@ if (fadeFromTent) {
 	else {
 		tentAlpha = 0;
 		fadeFromTent = false;
+		global.hideInventory = false;
 	}
 }
 
@@ -53,7 +82,17 @@ if (fadeInSiblif) {
 	else {
 		siblifAlpha = 1;
 		fadeInSiblif = false;
-		if (localState == 0) {alarm_set(1, 30);}
+	}
+}
+
+else if (fadeOutSiblif) {
+	if (siblifAlpha > 0) {
+		siblifAlpha -= 0.02;
+	}
+
+	else {
+		siblifAlpha = 0;
+		fadeOutSiblif = false;
 	}
 }
 
@@ -69,15 +108,31 @@ if (localState == 1) {
 #region Cycle 1 End
 
 
-#region Cook food / results screen
-if (localState == 2) {localState = 3;}
-
-
 #region Tent reaction
 
-if (localState == 3 && !fadeFromBlack) {
+if (localState == 2 && !fadeFromBlack) {
 	// create_textbox()
-	localState++;
+	localState = 3;
+}
+
+#endregion
+
+
+#region Cash in
+
+if (localState == 3) {
+	obj_Crockpot.canInteract = true;
+	localState = 4;
+	
+	/// Determine how many real items the player has
+	_filledslots = 10;
+	for (var i = 0; i < 10; i++) {
+		if (oPlayer.inv[i][0] == "Lost" || oPlayer.inv[i][0] == "Nothing") {
+			_filledslots--;
+		}
+		else {array_push(slotsToCashIn, i)}
+	}
+	show_debug_message(_filledslots);
 }
 
 #endregion
@@ -86,28 +141,52 @@ if (localState == 3 && !fadeFromBlack) {
 #region Tent interact
 
 if (localState == 4 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
-	
-	/// Determine how many real items the player has
-	var _filledslots = oPlayer.filledslots;
-	var _lostSlots = 0;
-	var _slotsToCashIn = [];
-	for (var i = 0; i < 10; i++) {
-		if (oPlayer.inv[i][0] == "Lost") {
-			_filledslots--;
-			_lostSlots++;
-		}
-		else if (oPlayer.inv[i][0] == "Nothing") {_filledslots--}
-		else {array_push(_slotsToCashIn, i)}
-	}
-	
+	obj_Crockpot.canInteract = false;
 	fadeToTent = true;
 	create_textbox(72, false);
 }
 
 else if (localState == 5) {
 	fadeInSiblif = true;
-	create_textbox(76, false);
+	create_textbox(77, false);
+	localState++;	//to prevent it from spamming textboxes
+}
+
+else if (localState == 7) {
+	if (_filledslots > 7) {create_textbox(80)}
+	else if (_filledslots > 4) {create_textbox(85)}
+	else if (_filledslots > 0) {create_textbox(89)}
+	localState = 8;
+}
+
+else if (localState == 9) {
+	fadeFromTent = true;
+	fadeOutSiblif = true;
+	localState = 10;
+}
+
+else if (localState == 10) {
+	obj_Crockpot.canInteract = true;
+	localState = 11;
+}
+
+else if (localState == 12 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+	fadeToTent = true;
+	alarm_set(1,49);
+	create_textbox(103, false);
+}
+
+else if (localState == 13) {
+	fadeInSiblif = true;
 	localState++;
 }
+
+else if (localState == 14) {
+	
+}
+
+
+#endregion
+
 
 #endregion

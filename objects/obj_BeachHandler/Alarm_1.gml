@@ -1,2 +1,2 @@
-///@description First textbox with portrait
-create_textbox(28);
+//@description Advance localState on delay
+localState++;

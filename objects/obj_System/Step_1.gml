@@ -13,5 +13,6 @@ global.jumpKeyPressed = keyboard_check_pressed(global.keyIndex[4]);
 global.jumpKeyReleased = keyboard_check_released(global.keyIndex[4]);
 global.interactKey = keyboard_check_pressed(global.keyIndex[5]);
 global.interactKeyPressed = keyboard_check_pressed(global.keyIndex[5]);
+global.pauseKeyPressed = keyboard_check_pressed(global.keyIndex[6]);
 
 #endregion

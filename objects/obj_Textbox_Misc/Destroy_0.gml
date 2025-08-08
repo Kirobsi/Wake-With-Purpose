@@ -1,8 +1,10 @@
 global.canControlPlayer = autoRestoreControl;
 global.jumpKeyPressed = !autoRestoreControl;
-if (global.miscStrings[# 1, dialogueRow] == "localState++") {
-	asset_get_index(global.miscStrings[# 2, dialogueRow]).localState += 1;
-}
-else if (global.miscStrings[# 1, dialogueRow] == "room_goto") {
-	room_goto(asset_get_index(global.miscStrings[# 2, dialogueRow]));
+for (var i = 1; i <= ds_grid_width(global.miscStrings) - 1; i += 2) {
+	if (global.miscStrings[# i, dialogueRow] == "localState++") {
+		asset_get_index(global.miscStrings[# i + 1, dialogueRow]).localState += 1;
+	}
+	else if (global.miscStrings[# i, dialogueRow] == "room_goto") {
+		room_goto(asset_get_index(global.miscStrings[# i + 1, dialogueRow]));
+	}
 }
