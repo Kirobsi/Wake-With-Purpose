@@ -63,6 +63,7 @@
     {"name":"sBombExploding","order":14,"path":"sprites/sBombExploding/sBombExploding.yy",},
     {"name":"sCarrot","order":7,"path":"sprites/sCarrot/sCarrot.yy",},
     {"name":"sCavePhaseBlocker","order":23,"path":"sprites/sCavePhaseBlocker/sCavePhaseBlocker.yy",},
+    {"name":"sCloudberry","order":11,"path":"sprites/sCloudberry/sCloudberry.yy",},
     {"name":"sCrackedWall","order":10,"path":"sprites/sCrackedWall/sCrackedWall.yy",},
     {"name":"sDamager","order":4,"path":"sprites/sDamager/sDamager.yy",},
     {"name":"sFallingBlock","order":7,"path":"sprites/sFallingBlock/sFallingBlock.yy",},

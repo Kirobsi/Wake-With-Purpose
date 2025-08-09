@@ -92,6 +92,7 @@
     {"id":{"name":"sBombExploding","path":"sprites/sBombExploding/sBombExploding.yy",},},
     {"id":{"name":"sCarrot","path":"sprites/sCarrot/sCarrot.yy",},},
     {"id":{"name":"sCavePhaseBlocker","path":"sprites/sCavePhaseBlocker/sCavePhaseBlocker.yy",},},
+    {"id":{"name":"sCloudberry","path":"sprites/sCloudberry/sCloudberry.yy",},},
     {"id":{"name":"sCrackedWall","path":"sprites/sCrackedWall/sCrackedWall.yy",},},
     {"id":{"name":"sDamager","path":"sprites/sDamager/sDamager.yy",},},
     {"id":{"name":"sFallingBlock","path":"sprites/sFallingBlock/sFallingBlock.yy",},},
