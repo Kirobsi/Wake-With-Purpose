@@ -47,7 +47,7 @@ if (fadeToTent) {
 
 #region Fade from Tent to Beach
 
-if (fadeFromTent) {
+else if (fadeFromTent) {
 	if (tentAlpha > 0) {
 		tentAlpha -= 0.03;
 	}
@@ -227,7 +227,7 @@ if (global.gameState == 3) {
 
 	else if (localState == 23) {
 		if (global.siblifFatStage[0] > 0) {create_textbox(167, false);}			//boob
-		else if (global.siblifFatStage[1] > 0) {create_textbox(131, false);}	//belly
+		else if (global.siblifFatStage[1] > 0) {create_textbox(132, false);}	//belly
 		else if (global.siblifFatStage[2] > 0) {create_textbox(162, false);}	//butt
 		else {create_textbox(201, false);}
 		localState++;
@@ -243,7 +243,14 @@ if (global.gameState == 3) {
 		layer_set_visible("LeaveArea", true);
 		fadeFromTent = true;
 		global.canControlPlayer = true;
-		if (global.siblifFatStage[3] > 0) {localState = 28}
+		
+		for (var i = 0; i < 3; i++) {
+			if (global.siblifFatStage[i] > 0) {
+				localState = 28
+				break
+			}
+		}
+		
 		localState++;
 	}
 	
