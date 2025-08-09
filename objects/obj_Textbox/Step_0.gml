@@ -53,12 +53,12 @@ if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStrin
 		dialogueRow = real(global.allStrings[# ((talkOptionsPosition + 1) * 2) + 1, dialogueRow])
 		talkOptions = 0;
 	} else {dialogueRow ++;}
+	if (global.allStrings[# 0, dialogueRow] == "goto") {dialogueRow = real(global.allStrings[# 1, dialogueRow])};
+	
 	if (global.allStrings[# 0, dialogueRow] == "Die") {
 		instance_destroy();	//stop if 'end conversation' code
 		return	//prevent rest of this code from running
 	}
-		
-	else if (global.allStrings[# 0, dialogueRow] == "goto") {dialogueRow = real(global.allStrings[# 1, dialogueRow])};
 	
 	currentString = global.allStrings[# 1, dialogueRow];
     currentStringDrawn = "";

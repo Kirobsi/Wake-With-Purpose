@@ -6,13 +6,13 @@ global.volumeLevel = ini_read_real("volume", "level", 20); //default volume of t
 audio_group_set_gain(audiogroup_default, global.volumeLevel / 100, 10) //actually use the volume
 
 //array for storing all the 'key codes.' [ Up, Down, Left, Right, Jump, Interact, Pause ]
-//global.keyIndex = [38,
-//40,
-//37,
-//39,
-//90,
-//88,
-//13];
+/*global.keyIndex = [38,
+40,
+37,
+39,
+90,
+88,
+13];*/
 global.keyIndex = [
 ini_read_real("buttons", "up", 38),
 ini_read_real("buttons", "down", 40),
@@ -25,7 +25,7 @@ key_rebind_count = 0;	//variable to track how many keys have been rebound
 rebind_mode = false;	//variable to track whether rebinding is active
 
 global.allStrings = load_csv("strings.csv"); //load strings file
-global.textSpeed = ini_read_real("text", "textspeed", 3); //Default text scroll speed
+global.textSpeed = ini_read_real("text", "textspeed", 3); //Set text scroll speed
 create_textbox(2,false,false,fa_center,true,330,-160,900); //create a textbox for controls adjustment
 
 draw_set_font(MainText);

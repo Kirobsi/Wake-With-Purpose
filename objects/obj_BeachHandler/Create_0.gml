@@ -8,7 +8,7 @@ fadeToTent = false;
 fadeFromTent = false;
 
 //pull local state from obj_System
-localState = obj_System.beachState;
+localState = 0;
 
 siblifAlpha = 0;
 fadeInSiblif = false;
@@ -20,14 +20,14 @@ localCalories = [0, 0, 0, 0]; //boob, belly, butt
 
 firstVisit = false;
 
-if (localState == 0) {
+if (global.gameState == 2) {
 	alarm_set(0, 90)
 	layer_set_visible("SiblifForeground",true);
 	beachBlur = 1;
 	firstVisit = true;
 }
 
-else if (localState > 0) {
+else if (global.gameState > 2) {
 	beachBlur = 0;
 	layer_set_visible("Instances", true);
 	layer_set_visible("Instances_1", true);
@@ -35,5 +35,5 @@ else if (localState > 0) {
 	if (!obj_System.homeSongExists) {
 		obj_System.homeSong = play_song_home();
 		obj_System.homeSongExists = true;
-	} else {replay_song(obj_System.homeSong);}
+	}
 }
