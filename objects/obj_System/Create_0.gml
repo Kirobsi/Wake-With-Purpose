@@ -53,4 +53,14 @@ mountainFoodTaken = [0];
 global.siblifFatStage = [0, 0, 0, 0];	//boob, belly, butt, base
 global.siblifCalories = [0, 0, 0, 0];	//boob, belly, butt, total
 
+//stupid render order stuff eugh I wasn't thinking about how different poses could mean different layering needs
+global.topSibDraw = spr_SiblifBoobs;
+global.secondSibDraw = spr_SiblifBelly;
+global.thirdSibDraw = spr_SiblifLegs;
+global.lastSibDraw = spr_SiblifBase;
+global.topNum = 0;
+global.twoNum = 1;
+global.threNum = 2;
+global.lastNum = 3;
+
 homeSongExists = false;

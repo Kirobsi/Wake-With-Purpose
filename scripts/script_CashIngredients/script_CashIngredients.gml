@@ -51,7 +51,8 @@ function calculate_siblif_size(_localCalories) {
 	for (var i = 0; i < 3; i++) {
 		numStages[i] = global.siblifCalories[i] div 1600 //should come out to correct stage?
 		
-		if (numStages[i] == 6) {numStages = 5} //fat stage cap
+		if (numStages[i] > 5) {numStages[i] = 5} //fat stage cap
+		show_debug_message("Slot #" + string(i) + "is: " + string(numStages[i]))
 	}
 	
 	// Pose 0 = Base
@@ -62,6 +63,17 @@ function calculate_siblif_size(_localCalories) {
 	if (_localCalories[primaryCalories] >= 4800) {
 		if (bellyFallback) {global.siblifFatStage[3] = 2;}
 		else {global.siblifFatStage[3] = (primaryCalories + 1);}
+	}
+	
+	if (global.siblifFatStage[3] == 3) {
+		global.topSibDraw = spr_SiblifLegs;
+		global.secondSibDraw = spr_SiblifBoobs;
+		global.thirdSibDraw = spr_SiblifBase;
+		global.lastSibDraw = spr_SiblifBelly;
+		global.topNum = 2;
+		global.twoNum = 0;
+		global.threNum = 3;
+		global.lastNum = 1;
 	}
 	
 	for (var i = 0; i < 3; i++) {

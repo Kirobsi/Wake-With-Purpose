@@ -193,7 +193,7 @@ else if (localState == 15) {
 else if (localState == 16) {}
 
 else if (localState == 17) {
-	create_textbox(114, false, false, fa_center, true, 330, -140, 600);
+	create_textbox(114, false/*, false, fa_center, true, 330, -140, 600*/);
 	localState = 18;
 	calculate_siblif_size(localCalories);
 }
@@ -210,15 +210,28 @@ else if (localState == 21) {
 
 else if (localState == 23) {
 	fadeFromBlack = true;
-	alarm_set(1, 25)
+	alarm_set(1, 90)
 	localState++;
 }
 
 else if (localState == 25) {
-	if (global.siblifFatStage[0] == 1) {create_textbox(164, false);}
-	else if (global.siblifFatStage[1] == 1) {create_textbox(131, false);}
-	else if (global.siblifFatStage[2] >= 1) {create_textbox(160, false);}
+	if (global.siblifFatStage[0] == 1) {create_textbox(166, false);}
+	else if (global.siblifFatStage[1] == 1) {create_textbox(132, false);}
+	else if (global.siblifFatStage[2] >= 1) {create_textbox(162, false);}
 	else {create_textbox(103, false);}
+	localState++;
+}
+
+else if (localState == 27) {
+	fadeOutSiblif = true;
+	alarm_set(1, 75)
+	localState++;
+}
+
+else if (localState == 29) {
+	layer_set_visible("LeaveArea", true);
+	fadeFromTent = true;
+	global.canControlPlayer = true;
 	localState++;
 }
 
