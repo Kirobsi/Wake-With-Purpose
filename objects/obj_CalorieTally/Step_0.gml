@@ -86,11 +86,8 @@ else if (internalState == 11 && alarm[0] == -1) {
 }
 
 else if (internalState == 12) {
-	if (global.cycles == 1 && obj_BeachHandler.localState < 10) {
-		obj_BeachHandler.localState = 12;
-	}
-	else if (global.cycles == 1) {
-		obj_BeachHandler.localState = 15;
+	if (global.cycles == 1 && obj_BeachHandler.localState < 8) {
+		obj_BeachHandler.localState = 10;
 	}
 	
 	instance_destroy();

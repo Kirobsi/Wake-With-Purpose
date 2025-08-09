@@ -1,2 +1,3 @@
 //Transfer local state to obj_System
-obj_System.beachState = localState;
+global.gameState++;
+show_debug_message("Global game state: " + string(global.gameState))
