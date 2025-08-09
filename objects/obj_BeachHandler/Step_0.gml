@@ -34,7 +34,7 @@ else if (fadeToBlack) {
 
 if (fadeToTent) {
 	if (tentAlpha < 1) {
-		tentAlpha += 0.02;
+		tentAlpha += 0.03;
 	}
 	else {
 		tentAlpha = 1;
@@ -49,7 +49,7 @@ if (fadeToTent) {
 
 if (fadeFromTent) {
 	if (tentAlpha > 0) {
-		tentAlpha -= 0.2;
+		tentAlpha -= 0.03;
 	}
 	else {
 		tentAlpha = 0;
@@ -64,7 +64,7 @@ if (fadeFromTent) {
 
 if (fadeInSiblif) {
 	if (siblifAlpha < 1) {
-		siblifAlpha += 0.02;
+		siblifAlpha += 0.03;
 	}
 
 	else {
@@ -75,7 +75,7 @@ if (fadeInSiblif) {
 
 else if (fadeOutSiblif) {
 	if (siblifAlpha > 0) {
-		siblifAlpha -= 0.02;
+		siblifAlpha -= 0.03;
 	}
 
 	else {
@@ -131,6 +131,7 @@ if (global.gameState == 3) {
 	#region Tent interact
 
 	if (localState == 2 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+		if (global.NoFoodMode) {create_textbox(199)}
 		obj_Crockpot.canInteract = false;
 		fadeToTent = true;
 		create_textbox(72, false);
@@ -143,16 +144,26 @@ if (global.gameState == 3) {
 	}
 
 	else if (localState == 5) {
+		localState = 6;
+		if (_filledslots > 0) {global.NoFoodMode = false;}
+		
 		if (_filledslots > 7) {create_textbox(80)}
 		else if (_filledslots > 4) {create_textbox(85)}
 		else if (_filledslots > 0) {create_textbox(89)}
-		localState = 6;
+		else {
+			create_textbox(179)
+			global.NoFoodMode = true;
+		}
 	}
 
 	else if (localState == 7) {
 		fadeFromTent = true;
 		fadeOutSiblif = true;
 		localState = 8
+		if (global.NoFoodMode) {
+			global.gameState = 2;
+			layer_set_visible("LeaveArea", true);
+		}
 	}
 
 	#endregion
@@ -192,6 +203,11 @@ if (global.gameState == 3) {
 		localState = 16;
 		calculate_siblif_size(localCalories);
 	}
+	
+	#endregion
+	
+	
+	#region Night & Morning Section
 
 	else if (localState == 17) {
 		alarm_set(1, 180);
@@ -210,10 +226,10 @@ if (global.gameState == 3) {
 	}
 
 	else if (localState == 23) {
-		if (global.siblifFatStage[0] == 1) {create_textbox(166, false);}
-		else if (global.siblifFatStage[1] == 1) {create_textbox(132, false);}
-		else if (global.siblifFatStage[2] >= 1) {create_textbox(162, false);}
-		else {create_textbox(103, false);}
+		if (global.siblifFatStage[0] > 0) {create_textbox(167, false);}			//boob
+		else if (global.siblifFatStage[1] > 0) {create_textbox(131, false);}	//belly
+		else if (global.siblifFatStage[2] > 0) {create_textbox(162, false);}	//butt
+		else {create_textbox(201, false);}
 		localState++;
 	}
 
@@ -227,7 +243,22 @@ if (global.gameState == 3) {
 		layer_set_visible("LeaveArea", true);
 		fadeFromTent = true;
 		global.canControlPlayer = true;
+		if (global.siblifFatStage[3] > 0) {localState = 28}
 		localState++;
+	}
+	
+	else if (localState == 28 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+		fadeToTent = true;
+		fadeInSiblif = true;
+		create_textbox(245, false);
+		localState = 24;
+	}
+	
+	else if (localState == 29 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+		fadeToTent = true;
+		fadeInSiblif = true;
+		create_textbox(247, false);
+		localState = 24;
 	}
 
 

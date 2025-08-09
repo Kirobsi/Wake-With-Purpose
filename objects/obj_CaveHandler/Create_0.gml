@@ -12,4 +12,4 @@ instance_create_layer(x, y, "UI", oTitleCard,
 {
 	cardtext : "Bottom Cave"
 });
-fade_from_black(120);
+fade_from_black(75);

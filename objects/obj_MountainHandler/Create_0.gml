@@ -1,4 +1,4 @@
-localState = obj_System.jungleState;
+localState = obj_System.mountainState;
 
 if(localState == 1)
 {
@@ -10,6 +10,6 @@ deleteFood = true;
 
 instance_create_layer(x, y, "UI", oTitleCard,
 {
-	cardtext : "Belly of the Island"
+	cardtext : "Topping Mountain"
 });
 fade_from_black(75);

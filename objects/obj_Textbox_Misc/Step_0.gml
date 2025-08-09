@@ -1,7 +1,7 @@
 #region Set position properly
 
-x = camera_get_view_x(view_camera[0]) + 149;
-y = camera_get_view_y(view_camera[0]) + 391;
+x = 149;
+y = 391;
 visible = true;
 if (global.miscStrings[# 0, dialogueRow] == "0") {image_index = 2;}
 else {image_index = 1;}
@@ -53,12 +53,13 @@ if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStrin
 		dialogueRow = real(global.miscStrings[# ((talkOptionsPosition + 1) * 2) + 1, dialogueRow])
 		talkOptions = 0;
 	} else {dialogueRow ++;}
+	
+	if (global.miscStrings[# 0, dialogueRow] == "goto") {dialogueRow = real(global.miscStrings[# 1, dialogueRow])};
+	
 	if (global.miscStrings[# 0, dialogueRow] == "Die") {
 		instance_destroy();	//stop if 'end conversation' code
 		return	//prevent rest of this code from running
 	}
-		
-	else if (global.miscStrings[# 0, dialogueRow] == "goto") {dialogueRow = real(global.miscStrings[# 1, dialogueRow])};
 	
 	currentString = global.miscStrings[# 1, dialogueRow];
     currentStringDrawn = "";

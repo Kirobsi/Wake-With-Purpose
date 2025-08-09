@@ -12,8 +12,8 @@
     {"name":"SiblifSprites","order":5,"path":"folders/Stage/Beach/SiblifSprites.yy",},
     {"name":"Cave","order":1,"path":"folders/Stage/Cave.yy",},
     {"name":"Common","order":2,"path":"folders/Stage/Common.yy",},
-    {"name":"Mountain","order":5,"path":"folders/Stage/Mountain.yy",},
     {"name":"Jungle","order":4,"path":"folders/Stage/Jungle.yy",},
+    {"name":"Mountain","order":5,"path":"folders/Stage/Mountain.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"ResultsText","order":2,"path":"fonts/ResultsText/ResultsText.yy",},

@@ -18,8 +18,6 @@ _filledslots = -1;
 slotsToCashIn = [];
 localCalories = [0, 0, 0, 0]; //boob, belly, butt
 
-firstVisit = false;
-
 if (global.gameState == 2) {
 	alarm_set(0, 90)
 	layer_set_visible("SiblifForeground",true);
