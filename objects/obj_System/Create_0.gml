@@ -1,14 +1,31 @@
+ini_open("save.ini"); //open save ini for saving/loading
+
 global.gameState = 0; //to track how far through boot you are
 global.cycles = 1;	//which cycle the player/game is on
-global.volumeLevel = 20; //default volume of the game
+global.volumeLevel = ini_read_real("volume", "level", 20); //default volume of the game
 audio_group_set_gain(audiogroup_default, global.volumeLevel / 100, 10) //actually use the volume
 
-global.keyIndex = [ 38,40,37,39,90,88,13 ];	//array for storing all the 'key codes.' [ Up, Down, Left, Right, Jump, Interact, Pause ]
+//array for storing all the 'key codes.' [ Up, Down, Left, Right, Jump, Interact, Pause ]
+//global.keyIndex = [38,
+//40,
+//37,
+//39,
+//90,
+//88,
+//13];
+global.keyIndex = [
+ini_read_real("buttons", "up", 38),
+ini_read_real("buttons", "down", 40),
+ini_read_real("buttons", "left", 37),
+ini_read_real("buttons", "right", 39),
+ini_read_real("buttons", "jump", 90),
+ini_read_real("buttons", "interact", 88),
+ini_read_real("buttons", "pause", 13)];
 key_rebind_count = 0;	//variable to track how many keys have been rebound
 rebind_mode = false;	//variable to track whether rebinding is active
 
 global.allStrings = load_csv("strings.csv"); //load strings file
-global.textSpeed = 3; //Default text scroll speed
+global.textSpeed = ini_read_real("text", "textspeed", 3); //Default text scroll speed
 create_textbox(2,false,false,fa_center,true,330,-160,900); //create a textbox for controls adjustment
 
 draw_set_font(MainText);

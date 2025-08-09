@@ -1,13 +1,14 @@
 ///@description Function to fade from black at the start of a room
-function fade_from_black() {
+function fade_from_black(_timer = 1) {
 	var _x = camera_get_view_x(view_camera[0]);
 	var _y = camera_get_view_y(view_camera[0]);
 	
 	instance_create_layer(_x, _y, "UI", oFader, {
-		fadeFromBlack : true,
+		//fadeFromBlack : true,
 		drawAlpha : 1,
 		x : _x,
-		y : _y
+		y : _y,
+		timer : _timer
 	})
 }
 
@@ -23,7 +24,7 @@ function fade_to_black(_targetRoom = rmBeach, _travelBool = true) {
 		drawAlpha : 0,
 		x : _x,
 		y : _y,
-		doTravel : _travelBool,
-		targetRoom : _targetRoom
+		targetRoom : _targetRoom,
+		doTravel : _travelBool
 	})
 }
