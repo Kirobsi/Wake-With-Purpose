@@ -8,7 +8,6 @@ if (fadeFromBlack) {
 	else {
 		drawAlpha = 0;
 		fadeFromBlack = false;
-		if (localState == 0 && global.gameState == 2) {create_textbox(28);}
 	}
 }
 
@@ -60,7 +59,7 @@ else if (fadeFromTent) {
 #endregion
 
 
-#region Initial Siblif encounter
+#region Siblif Fade
 
 if (fadeInSiblif) {
 	if (siblifAlpha < 1) {
@@ -84,10 +83,19 @@ else if (fadeOutSiblif) {
 	}
 }
 
-if (localState == 1) {
-	localState = 2;
-/* in case Siblif gets an overworld sprite for her default size,
-   I'll have beach 1 be more interactive! but I don't know yet. Best to reserve the space for it */
+#endregion
+
+
+#region Cycle 1 Start
+
+if (global.gameState == 2) {
+	if (localState == 1) {create_textbox(28);}
+
+	else if (localState == 2) {
+		localState = 3;
+	/* in case Siblif gets an overworld sprite for her default size,
+	   I'll have beach 1 be more interactive! but I don't know yet. Best to reserve the space for it */
+	}
 }
 
 #endregion
@@ -107,7 +115,7 @@ if (global.gameState == 3) {
 			}
 			else {array_push(slotsToCashIn, i)}
 		}
-		show_debug_message(_filledslots);
+		show_debug_message("Number of filled inv slots: " + string(_filledslots));
 		obj_Crockpot.canInteract = true;
 	
 		localState = 1;
@@ -243,6 +251,7 @@ if (global.gameState == 3) {
 		layer_set_visible("LeaveArea", true);
 		fadeFromTent = true;
 		global.canControlPlayer = true;
+		global.cycles = 2;
 		
 		for (var i = 0; i < 3; i++) {
 			if (global.siblifFatStage[i] > 0) {
@@ -282,6 +291,66 @@ if (global.gameState == 3) {
 	}
 	
 	#endregion
+}
+
+#endregion
+
+
+#region Cycle 2 End
+
+if (global.gameState == 4) {
+	
+	switch (localState)
+	{
+		
+		case 0: //cash in
+			
+			/// Determine how many real items the player has
+			_filledslots = 10;
+			for (var i = 0; i < 10; i++) {
+				if (oPlayer.inv[i][0] == "Lost" || oPlayer.inv[i][0] == "Nothing") {
+					_filledslots--;
+				}
+				else {array_push(slotsToCashIn, i)}
+			}
+			show_debug_message("Number of filled inv slots: " + string(_filledslots));
+			obj_Crockpot.canInteract = true;
+	
+			localState = 1;
+			
+		break
+		
+		
+		case 1: //Initiate tent&textbox post-cooking
+		
+			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+				fadeToTent = true;
+				alarm_set(1,49);
+				var hasGained = false;
+				
+				//Figure out which scenario the player's in
+				for (var i = 0; i < 3; i++) {
+					var hasGained = false;
+					if (global.siblifFatStage[i] > 0) {
+						hasGained = true;
+					}
+				}
+				
+				if (!hasGained) {create_textbox(252)}
+			}
+		
+		break
+		
+		
+		case 2: //show Siblif
+			
+			fadeInSiblif = true;
+			localState++;
+			
+		break
+		
+	}
+	
 }
 
 #endregion
