@@ -3,4 +3,4 @@ sprite_index = sMushroomAlt;
 name = "Butts Mush";
 
 calorieType = 2;
-calorieCount = 1600;
+calorieCount = 3000;

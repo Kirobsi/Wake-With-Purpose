@@ -84,5 +84,5 @@ function calculate_siblif_size(_localCalories) {
 		global.siblifFatStage[i] = (numStages[i] % 3) + (global.siblifFatStage[3] * 3);
 	}
 	
-	return
+	return primaryCalories;
 }

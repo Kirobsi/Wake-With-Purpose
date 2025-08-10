@@ -1,7 +1,7 @@
 #region Set position properly
 
 x = 149;
-y = 391;
+y = 392;
 visible = true;
 if (global.allStrings[# 0, dialogueRow] == "0") {image_index = 2;}
 else {image_index = 1;}
