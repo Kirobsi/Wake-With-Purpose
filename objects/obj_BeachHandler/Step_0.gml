@@ -237,7 +237,7 @@ if (global.gameState == 3) {
 	}
 
 	else if (localState == 23) {
-		if (global.siblifFatStage[primaryCalories] % 3 > 0) {
+		if (global.siblifFatStage[primaryCalories] > 0) {
 			switch (primaryCalories) {
 			case 0:
 				create_textbox(167, false);	//boob
@@ -330,11 +330,12 @@ if (global.gameState == 4) {
 			}
 			show_debug_message("Number of filled inv slots: " + string(_filledslots));
 			obj_Crockpot.canInteract = true;
+			localState++;
 			
 		break;
 		
 		
-		case 1: //Initiate tent&textbox post-cooking
+		case 2: //Initiate tent&textbox post-cooking
 		
 			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
 				fadeToTent = true;
@@ -349,17 +350,28 @@ if (global.gameState == 4) {
 					}
 				}
 				
-				if (!hasGained) {create_textbox(252)}
+				if (hasGained) {create_textbox(316, false);}
+				else if (_filledslots > 6) {create_textbox(252, false);}
+				else {create_textbox(285, false);}
 			}
 		
 		break;
 		
 		
-		case 2: //show Siblif
+		case 3: //show Siblif
 			
 			fadeInSiblif = true;
 			localState++;
 			
+		break;
+		
+		
+		case 5: //Next textbox
+		
+			create_textbox(278, false);
+			fadeOutSiblif = true;
+			localState++;
+		
 		break;
 		
 	}
