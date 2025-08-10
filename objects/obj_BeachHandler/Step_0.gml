@@ -89,7 +89,10 @@ else if (fadeOutSiblif) {
 #region Cycle 1 Start
 
 if (global.gameState == 2) {
-	if (localState == 1) {create_textbox(28);}
+	if (localState == 1) {
+		create_textbox(28);
+		localState++;
+	}
 
 	else if (localState == 2) {
 		localState = 3;
@@ -209,7 +212,7 @@ if (global.gameState == 3) {
 	else if (localState == 15) {
 		create_textbox(114, false/*, false, fa_center, true, 330, -140, 600*/);
 		localState = 16;
-		calculate_siblif_size(localCalories);
+		primaryCalories = calculate_siblif_size(localCalories);
 	}
 	
 	#endregion
@@ -234,9 +237,21 @@ if (global.gameState == 3) {
 	}
 
 	else if (localState == 23) {
-		if (global.siblifFatStage[0] > 0) {create_textbox(167, false);}			//boob
-		else if (global.siblifFatStage[1] > 0) {create_textbox(132, false);}	//belly
-		else if (global.siblifFatStage[2] > 0) {create_textbox(162, false);}	//butt
+		if (global.siblifFatStage[primaryCalories] % 3 > 0) {
+			switch (primaryCalories) {
+			case 0:
+				create_textbox(167, false);	//boob
+			break;
+			
+			case 1:
+				create_textbox(132, false); //belly
+			break;
+			
+			case 2:
+				create_textbox(162, false); //butt
+			break;
+			}
+		}
 		else {create_textbox(201, false);}
 		localState++;
 	}
@@ -255,8 +270,8 @@ if (global.gameState == 3) {
 		
 		for (var i = 0; i < 3; i++) {
 			if (global.siblifFatStage[i] > 0) {
-				localState = 28
-				break
+				localState = 28;
+				break;
 			}
 		}
 		
@@ -315,10 +330,8 @@ if (global.gameState == 4) {
 			}
 			show_debug_message("Number of filled inv slots: " + string(_filledslots));
 			obj_Crockpot.canInteract = true;
-	
-			localState = 1;
 			
-		break
+		break;
 		
 		
 		case 1: //Initiate tent&textbox post-cooking
@@ -339,7 +352,7 @@ if (global.gameState == 4) {
 				if (!hasGained) {create_textbox(252)}
 			}
 		
-		break
+		break;
 		
 		
 		case 2: //show Siblif
@@ -347,7 +360,7 @@ if (global.gameState == 4) {
 			fadeInSiblif = true;
 			localState++;
 			
-		break
+		break;
 		
 	}
 	

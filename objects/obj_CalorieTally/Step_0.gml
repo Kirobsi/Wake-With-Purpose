@@ -89,6 +89,7 @@ else if (internalState == 12) {
 	if (global.cycles == 1 && obj_BeachHandler.localState < 8) {
 		obj_BeachHandler.localState = 10;
 	}
+	else {obj_BeachHandler.localState++;}
 	
 	instance_destroy();
 }
