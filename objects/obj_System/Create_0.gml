@@ -42,6 +42,8 @@ for (var i = 0; i < 10; i++) {
 }
 
 beachState = 0;
+global.NoFoodMode = false;
+
 caveState = 0;
 jungleState = 0;
 mountainState = 0;

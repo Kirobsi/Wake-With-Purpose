@@ -44,16 +44,16 @@ else if (internalState == 5) {
 	if (alarm[0] == -1) {
 		alarm_set(0, 59);
 	}
-	if (calorieTally >= 2200) {
+	if (calorieTally >= 5000) {
 		rankText = "That shark will be a whale before you know it!"
 	}
-	else if (calorieTally >= 1600) {
+	else if (calorieTally >= 4000) {
 		rankText = "This'll do a number on her waistline!";
 	}
-	else if (calorieTally >= 1200) {
-		rankText = "This might fatten her up."
+	else if (calorieTally >= 3000) {
+		rankText = "This should fatten her up."
 	}
-	else if (calorieTally >= 800) {
+	else if (calorieTally >= 1500) {
 		rankText = "She won't be gaining much today..."
 	} else {rankText = "Did you really try...?"}
 }
@@ -89,6 +89,7 @@ else if (internalState == 12) {
 	if (global.cycles == 1 && obj_BeachHandler.localState < 8) {
 		obj_BeachHandler.localState = 10;
 	}
+	else {obj_BeachHandler.localState++;}
 	
 	instance_destroy();
 }

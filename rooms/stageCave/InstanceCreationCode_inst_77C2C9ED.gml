@@ -3,4 +3,4 @@ sprite_index = sCarrot;
 name = "Carrot";
 
 calorieType = 2;
-calorieCount = 200;
+calorieCount = 625;

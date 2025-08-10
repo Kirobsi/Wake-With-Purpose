@@ -22,8 +22,8 @@
     {"$GMFolder":"","%Name":"SiblifSprites","folderPath":"folders/Stage/Beach/SiblifSprites.yy","name":"SiblifSprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Cave","folderPath":"folders/Stage/Cave.yy","name":"Cave","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Common","folderPath":"folders/Stage/Common.yy","name":"Common","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Mountain","folderPath":"folders/Stage/Mountain.yy","name":"Mountain","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Jungle","folderPath":"folders/Stage/Jungle.yy","name":"Jungle","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Mountain","folderPath":"folders/Stage/Mountain.yy","name":"Mountain","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[

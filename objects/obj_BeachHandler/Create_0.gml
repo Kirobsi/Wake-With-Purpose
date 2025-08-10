@@ -17,8 +17,7 @@ fadeOutSiblif = false;
 _filledslots = -1;
 slotsToCashIn = [];
 localCalories = [0, 0, 0, 0]; //boob, belly, butt
-
-firstVisit = false;
+primaryCalories = 0;
 
 if (global.gameState == 2) {
 	alarm_set(0, 90)

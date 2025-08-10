@@ -5,6 +5,6 @@ for (var i = 1; i <= ds_grid_width(global.miscStrings) - 1; i += 2) {
 		asset_get_index(global.miscStrings[# i + 1, dialogueRow]).localState += 1;
 	}
 	else if (global.miscStrings[# i, dialogueRow] == "room_goto") {
-		room_goto(asset_get_index(global.miscStrings[# i + 1, dialogueRow]));
+		fade_to_black(asset_get_index(global.miscStrings[# i + 1, dialogueRow]));
 	}
 }

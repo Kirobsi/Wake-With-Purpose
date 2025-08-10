@@ -9,9 +9,10 @@ function cash_in_food(_inventory) {
 	}
 		
 	instance_create_layer(480, 270, "UI", obj_CalorieTally, {calorieTally : _localCalories[0] + _localCalories[1] + _localCalories[2]});
-	show_debug_message(_localCalories)
 	return _localCalories;
 }
+
+
 
 
 
@@ -29,9 +30,9 @@ function calculate_siblif_size(_localCalories) {
 	
 	array_sort(sortedCalories, false);
 	
-	//if the top two are too close, ensure that belly T2 pose is used instead of butt/boob
-	var bellyFallback = false;
-	if ((sortedCalories[1] / sortedCalories[0]) >= 0.85) {bellyFallback = true;}
+	/*if the top two are too close, ensure that belly T2 pose is used instead of butt/boob
+	global.bellyFallback = false;
+	if ((sortedCalories[1] / sortedCalories[0]) >= 0.85) {global.bellyFallback = true;}*/
 	
 	var primaryCalories = 0;
 	
@@ -48,36 +49,40 @@ function calculate_siblif_size(_localCalories) {
 	#region Calculate what the segments should be
 	
 	for (var i = 0; i < 3; i++) {
-		numStages[i] = global.siblifCalories[i] div 1600 //should come out to correct stage?
+		numStages[i] = global.siblifCalories[i] div 3000 //should come out to correct stage?
 		
 		if (numStages[i] > 5) {numStages[i] = 5} //fat stage cap
-		show_debug_message("Fat Stage #" + string(i) + " is: " + string(numStages[i]))
+		show_debug_message("Fat type " + string(i) + " is stage # " + string(numStages[i]))
 	}
 	
-	// Pose 0 = Base
-	//		1 = Tier 2, Boob
-	//		2 = Tier 2, Belly
-	//		3 = Tier 2, Butt
+	show_debug_message("The primary calorie type is " + string(primaryCalories));
 	
-	if (_localCalories[primaryCalories] >= 4800) {
-		if (bellyFallback) {global.siblifFatStage[3] = 2;}
-		else {global.siblifFatStage[3] = (primaryCalories + 1);}
-	}
+	if (global.siblifFatStage[3] == 0) {
+		// Pose 0 = Base
+		//		1 = Tier 2, Boob
+		//		2 = Tier 2, Belly
+		//		3 = Tier 2, Butt
 	
-	if (global.siblifFatStage[3] == 3) {
-		global.topSibDraw = spr_SiblifLegs;
-		global.secondSibDraw = spr_SiblifBoobs;
-		global.thirdSibDraw = spr_SiblifBase;
-		global.lastSibDraw = spr_SiblifBelly;
-		global.topNum = 2;
-		global.twoNum = 0;
-		global.threNum = 3;
-		global.lastNum = 1;
+		if (_localCalories[primaryCalories] >= 9000) {
+			/*if (global.bellyFallback) {global.siblifFatStage[3] = 2;}
+			else {*/global.siblifFatStage[3] = (primaryCalories + 1);//}
+		}
+	
+		if (global.siblifFatStage[3] == 3) {
+			global.topSibDraw = spr_SiblifLegs;
+			global.secondSibDraw = spr_SiblifBoobs;
+			global.thirdSibDraw = spr_SiblifBase;
+			global.lastSibDraw = spr_SiblifBelly;
+			global.topNum = 2;
+			global.twoNum = 0;
+			global.threNum = 3;
+			global.lastNum = 1;
+		}
 	}
 	
 	for (var i = 0; i < 3; i++) {
 		global.siblifFatStage[i] = (numStages[i] % 3) + (global.siblifFatStage[3] * 3);
 	}
 	
-	return
+	return primaryCalories;
 }
