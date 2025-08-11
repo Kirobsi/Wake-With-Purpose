@@ -398,6 +398,7 @@ if (global.gameState == 4) {
 		case 11:
 			fadeFromBlack = true;
 			create_textbox(411, false);
+			localState++;
 		break;
 		
 	}
