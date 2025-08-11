@@ -3,4 +3,4 @@ sprite_index = sPeach;
 name = "Peach";
 
 calorieType = 2;
-calorieCount = 300;
+calorieCount = 500;
