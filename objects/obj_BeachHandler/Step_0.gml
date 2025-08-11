@@ -351,7 +351,7 @@ if (global.gameState == 4) {
 				}
 				
 				if (hasGained) {create_textbox(316, false);}
-				else if (_filledslots > 6) {create_textbox(252, false);}
+				else if (_filledslots >= 6) {create_textbox(252, false);}
 				else {create_textbox(285, false);}
 			}
 		

@@ -49,9 +49,10 @@ function calculate_siblif_size(_localCalories) {
 	#region Calculate what the segments should be
 	
 	for (var i = 0; i < 3; i++) {
-		numStages[i] = global.siblifCalories[i] div 3000 //should come out to correct stage?
+		numStages[i] = _localCalories[i] div 3000 //should come out to correct stage?
 		
-		if (numStages[i] > 5) {numStages[i] = 5} //fat stage cap
+		if (i != primaryCalories) {numStages[i] = clamp(numStages[i], 0, 2);}
+		else if (numStages[i] > 5) {numStages[i] = 5} //fat stage cap
 		show_debug_message("Fat type " + string(i) + " is stage # " + string(numStages[i]))
 	}
 	
@@ -68,7 +69,15 @@ function calculate_siblif_size(_localCalories) {
 			else {*/global.siblifFatStage[3] = (primaryCalories + 1);//}
 		}
 	
-		if (global.siblifFatStage[3] == 3) {
+		if (global.siblifFatStage[3] == 1) {
+			global.sibPos = 458;
+		}
+		
+		else if (global.siblifFatStage[3] == 2) {
+			global.sibPos = 502;
+		}
+		
+		else if (global.siblifFatStage[3] == 3) {
 			global.topSibDraw = spr_SiblifLegs;
 			global.secondSibDraw = spr_SiblifBoobs;
 			global.thirdSibDraw = spr_SiblifBase;
@@ -77,6 +86,7 @@ function calculate_siblif_size(_localCalories) {
 			global.twoNum = 0;
 			global.threNum = 3;
 			global.lastNum = 1;
+			global.sibPos = 480;
 		}
 	}
 	

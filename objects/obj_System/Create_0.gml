@@ -64,5 +64,6 @@ global.topNum = 0;
 global.twoNum = 1;
 global.threNum = 2;
 global.lastNum = 3;
+global.sibPos = 440;
 
 homeSongExists = false;
