@@ -104,7 +104,7 @@ if (global.gameState == 2) {
 #endregion
 
 
-#region Cycle 1 End
+#region Cycle 1 End / Cycle 2 Start
 
 if (global.gameState == 3) {
 	#region Cash in 1
@@ -212,7 +212,7 @@ if (global.gameState == 3) {
 	else if (localState == 15) {
 		create_textbox(114, false/*, false, fa_center, true, 330, -140, 600*/);
 		localState = 16;
-		primaryCalories = calculate_siblif_size(localCalories);
+		primaryCalories = calculate_siblif_size(global.siblifCalories);
 	}
 	
 	#endregion
@@ -221,7 +221,7 @@ if (global.gameState == 3) {
 	#region Night & Morning Section
 
 	else if (localState == 17) {
-		alarm_set(1, 180);
+		alarm_set(1, 150);
 		localState++;
 	}
 
@@ -311,7 +311,7 @@ if (global.gameState == 3) {
 #endregion
 
 
-#region Cycle 2 End
+#region Cycle 2 End / Cycle 3 Start
 
 if (global.gameState == 4) {
 	
@@ -331,15 +331,16 @@ if (global.gameState == 4) {
 			show_debug_message("Number of filled inv slots: " + string(_filledslots));
 			obj_Crockpot.canInteract = true;
 			
+			localState++;
+			
 			//Figure out if Siblif gained weight last night
+			global.dialogueFlag1 = false;
 			for (var i = 0; i < 3; i++) {
-				dialogueFlag1 = false;
 				if (global.siblifFatStage[i] > 0) {
-					dialogueFlag1 = true;
+					global.dialogueFlag1 = true;
+					break;
 				}
 			}
-
-			localState++;
 			
 		break;
 		
@@ -350,7 +351,7 @@ if (global.gameState == 4) {
 				fadeToTent = true;
 				alarm_set(1,49);
 				
-				if (dialogueFlag1) {create_textbox(316, false);}
+				if (global.dialogueFlag1) {create_textbox(316, false);}
 				else if (_filledslots >= 7) {create_textbox(252, false);}
 				else {create_textbox(285, false);}
 			}
@@ -368,37 +369,65 @@ if (global.gameState == 4) {
 		
 		case 5: //Next textbox
 		
-			if (dialogueFlag1) {create_textbox(400, false);}
+			if (global.dialogueFlag1) {create_textbox(400, false);}
 			else {create_textbox(278, false);}
-			fadeOutSiblif = true;
+			fadeToBlack = true;
 			localState++;
 		
 		break;
 		
 		
-		case 7:
+		case 7: //Sleepyzone
 			
 			fadeToBlack = true;
-			alarm_set(1, 90);
+			alarm_set(1, 150);
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			global.cycles = 3;
 			localState++;
 			
 		break;
 		
 		
 		case 9:
+			if (!global.dialogueFlag1) {
+				create_textbox(413, false);
+				localState = 10;
+			}
+			else {
+				create_textbox(417, false);
+				fadeFromBlack = true;
+				localState = 16;
+			}
+		break;
+		
+		
+		case 11:
 			
-			calculate_siblif_size(localCalories);
-			fadeInSiblif = true;
-			alarm_set(1,120);
+			fadeFromBlack = true;
+			if (primaryCalories == 0) {create_textbox(416, false);}
+			else if (primaryCalories == 1) {create_textbox(434, false);}
+			else {create_textbox(443, false);}
 			localState++;
 			
 		break;
 		
 		
-		case 11:
-			fadeFromBlack = true;
-			create_textbox(411, false);
+		case 13:
+		
+			fadeOutSiblif = true;
+			alarm_set(1, 75);
 			localState++;
+		
+		break;
+		
+		
+		case 15:
+		
+			fadeFromTent = true;
+			global.canControlPlayer = true;
+			layer_set_visible("LeaveArea", true);
+			localState = 999;
+		
 		break;
 		
 	}

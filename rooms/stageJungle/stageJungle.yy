@@ -190,7 +190,7 @@
           51,-26,-2147483648,-31,0,-46,-2147483648,4,62,63,62,63,-26,-2147483648,-31,0,-76,-2147483648,-31,0,-76,
           -2147483648,-31,0,-76,-2147483648,-31,0,-76,-2147483648,-31,0,-76,-2147483648,-31,0,-76,-2147483648,
           -31,0,-76,-2147483648,-31,0,-76,-2147483648,-31,0,-76,-2147483648,-31,0,-76,-2147483648,-31,0,-236,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tilesetJungle","path":"tilesets/tilesetJungle/tilesetJungle.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tilesetJungle","path":"tilesets/tilesetJungle/tilesetJungle.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"oPlayerLayer","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_5F687DF9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F687DF9","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":208.0,"y":1728.0,},
       ],"layers":[],"name":"oPlayerLayer","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

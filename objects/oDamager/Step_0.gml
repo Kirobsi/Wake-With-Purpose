@@ -6,10 +6,12 @@ if(place_meeting(x, y, oPlayer) && oPlayer.alarm[0] == -1)
 	if(oPlayer.filledslots > 0)
 	{
 		var _numLost = 0;
+		var noRealItems = true;
 		for (var i = 0; i < 10; i++;) {
 			if (oPlayer.inv[i][0] == "Lost") {_numLost++;}
+			else if (oPlayer.inv[i][0] != "Nothing") {noRealItems = false;}
 		}
-		if (_numLost > 5) {return}
+		if (_numLost > 5 || noRealItems) {return}
 		
 		var _rand = irandom_range(0, oPlayer.filledslots - 1);
 		while (oPlayer.inv[_rand][0] == "Lost") {
