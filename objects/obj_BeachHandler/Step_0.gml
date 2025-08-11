@@ -158,8 +158,8 @@ if (global.gameState == 3) {
 		localState = 6;
 		if (_filledslots > 0) {global.NoFoodMode = false;}
 		
-		if (_filledslots > 7) {create_textbox(80)}
-		else if (_filledslots > 4) {create_textbox(85)}
+		if (_filledslots >= 7) {create_textbox(80)}
+		else if (_filledslots >= 4) {create_textbox(85)}
 		else if (_filledslots > 0) {create_textbox(89)}
 		else {
 			create_textbox(179)
@@ -330,6 +330,15 @@ if (global.gameState == 4) {
 			}
 			show_debug_message("Number of filled inv slots: " + string(_filledslots));
 			obj_Crockpot.canInteract = true;
+			
+			//Figure out if Siblif gained weight last night
+			for (var i = 0; i < 3; i++) {
+				dialogueFlag1 = false;
+				if (global.siblifFatStage[i] > 0) {
+					dialogueFlag1 = true;
+				}
+			}
+
 			localState++;
 			
 		break;
@@ -340,18 +349,9 @@ if (global.gameState == 4) {
 			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
 				fadeToTent = true;
 				alarm_set(1,49);
-				var hasGained = false;
 				
-				//Figure out which scenario the player's in
-				for (var i = 0; i < 3; i++) {
-					var hasGained = false;
-					if (global.siblifFatStage[i] > 0) {
-						hasGained = true;
-					}
-				}
-				
-				if (hasGained) {create_textbox(316, false);}
-				else if (_filledslots >= 6) {create_textbox(252, false);}
+				if (dialogueFlag1) {create_textbox(316, false);}
+				else if (_filledslots >= 7) {create_textbox(252, false);}
 				else {create_textbox(285, false);}
 			}
 		
@@ -368,10 +368,36 @@ if (global.gameState == 4) {
 		
 		case 5: //Next textbox
 		
-			create_textbox(278, false);
+			if (dialogueFlag1) {create_textbox(400, false);}
+			else {create_textbox(278, false);}
 			fadeOutSiblif = true;
 			localState++;
 		
+		break;
+		
+		
+		case 7:
+			
+			fadeToBlack = true;
+			alarm_set(1, 90);
+			localState++;
+			
+		break;
+		
+		
+		case 9:
+			
+			calculate_siblif_size(localCalories);
+			fadeInSiblif = true;
+			alarm_set(1,120);
+			localState++;
+			
+		break;
+		
+		
+		case 11:
+			fadeFromBlack = true;
+			create_textbox(411, false);
 		break;
 		
 	}
