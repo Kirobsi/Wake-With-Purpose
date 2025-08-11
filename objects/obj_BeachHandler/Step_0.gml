@@ -389,7 +389,7 @@ if (global.gameState == 4) {
 		
 		
 		case 9:
-			if (!global.dialogueFlag1) {
+			if (global.dialogueFlag1) {
 				create_textbox(413, false);
 				localState = 10;
 			}
