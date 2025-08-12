@@ -2,5 +2,5 @@ sprite_index = sMushroomAlt;
 
 name = "Hoehohe Mumshroom";
 
-calorieType = 2;
+calorieType = 1;
 calorieCount = 500;
