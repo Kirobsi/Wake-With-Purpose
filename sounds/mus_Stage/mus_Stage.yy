@@ -6,7 +6,7 @@
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "bitRate":192,
   "compression":0,
   "conversionMode":0,
   "duration":93.02633,
@@ -20,6 +20,6 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"mus_Stage.wav",
-  "type":0,
+  "type":1,
   "volume":1.0,
 }

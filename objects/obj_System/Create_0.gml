@@ -2,7 +2,7 @@ ini_open("save.ini"); //open save ini for saving/loading
 
 global.gameState = 0; //to track how far through boot you are
 global.cycles = 1;	//which cycle the player/game is on
-global.volumeLevel = ini_read_real("volume", "level", 20); //default volume of the game
+global.volumeLevel = ini_read_real("volume", "level", 30); //default volume of the game
 audio_group_set_gain(audiogroup_default, global.volumeLevel / 100, 10) //actually use the volume
 
 //array for storing all the 'key codes.' [ Up, Down, Left, Right, Jump, Interact, Pause ]

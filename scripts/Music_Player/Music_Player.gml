@@ -8,7 +8,7 @@ function play_song_home() {
 }
 
 function play_song_cave() {
-	var homeSong = audio_play_sound(mus_Stage, true, 1, 1);
+	var homeSong = audio_play_sound(mus_Stage, true, 1, 0.85);
 	audio_sound_loop_start(homeSong,0);
 	audio_sound_loop_end(homeSong,89.68);
 	return homeSong;

@@ -15,10 +15,10 @@ instance_create_layer(x, y, "UI", oTitleCard,
 fade_from_black(75);
 
 //music
-audio_sound_gain(mus_Stage, 4, 0);
+audio_sound_gain(mus_Stage, 3, 0);
 if (obj_System.songPlaying != mus_Stage)
 {
-	audio_stop_sound(obj_System.songPlaying);
+	if (typeof(obj_System.songPlaying) == "ref") {audio_stop_sound(obj_System.songPlaying);}
 	obj_System.songPlaying = mus_Stage;
 	var _song = audio_play_sound(obj_System.songPlaying, true, 1, 1);
 	audio_sound_loop_start(_song,29.05);

@@ -27,4 +27,6 @@ function fade_to_black(_targetRoom = rmBeach, _travelBool = true) {
 		targetRoom : _targetRoom,
 		doTravel : _travelBool
 	})
+	
+	if (typeof(obj_System.songPlaying) == "ref") {stop_song(obj_System.songPlaying);}
 }

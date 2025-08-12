@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"stageMountain",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/stageMountain/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -371,6 +371,7 @@
     {"name":"inst_207CDBA1","path":"rooms/stageMountain/stageMountain.yy",},
     {"name":"inst_3BCF99B4","path":"rooms/stageMountain/stageMountain.yy",},
     {"name":"inst_3588CE8C","path":"rooms/stageMountain/stageMountain.yy",},
+    {"name":"inst_2CDCF53D","path":"rooms/stageMountain/stageMountain.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -752,6 +753,7 @@
         {"$GMRInstance":"v2","%Name":"inst_207CDBA1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_207CDBA1","objectId":{"name":"oIngredient","path":"objects/oIngredient/oIngredient.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2704.0,"y":1392.0,},
         {"$GMRInstance":"v2","%Name":"inst_3BCF99B4","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3BCF99B4","objectId":{"name":"oIngredient","path":"objects/oIngredient/oIngredient.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2592.0,"y":1392.0,},
         {"$GMRInstance":"v2","%Name":"inst_3588CE8C","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3588CE8C","objectId":{"name":"oIngredient","path":"objects/oIngredient/oIngredient.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2816.0,"y":1392.0,},
+        {"$GMRInstance":"v2","%Name":"inst_2CDCF53D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2CDCF53D","objectId":{"name":"oLeaveArea","path":"objects/oLeaveArea/oLeaveArea.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1552.0,"y":3610.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_2","depth":400,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_2","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":125,"SerialiseWidth":110,"TileCompressedData":[
           -659,-2147483648,1,186,-108,-2147483648,2,186,79,-107,-2147483648,3,186,102,103,-106,-2147483648,4,186,

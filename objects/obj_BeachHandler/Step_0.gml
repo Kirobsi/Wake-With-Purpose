@@ -521,8 +521,7 @@ if (global.gameState == 5) {
 				fadeInSiblif = true;
 				localState++;
 				
-				if (!global.dialogueFlag1) {create_textbox(455, false);}
-				else {create_textbox(452, false);}
+				create_textbox(455, false);
 			}
 		
 		break;

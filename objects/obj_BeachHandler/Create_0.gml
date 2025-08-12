@@ -32,6 +32,7 @@ else if (global.gameState > 2) {
 	layer_set_visible("Instances_1", true);
 	
 	if (obj_System.songPlaying != mus_Home) {
+		if (typeof(obj_System.songPlaying) == "ref") {audio_stop_sound(obj_System.songPlaying);}
 		obj_System.songPlaying = mus_Home;
 		var _song = audio_play_sound(obj_System.songPlaying, true, 1, 1);
 		audio_sound_loop_start(_song,1686859/44100);
