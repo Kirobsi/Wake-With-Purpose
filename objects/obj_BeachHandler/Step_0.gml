@@ -382,23 +382,26 @@ if (global.gameState == 4) {
 			fadeToBlack = true;
 			alarm_set(1, 150);
 			global.cycles = 3;
+			
+			//If she's already M.F. fat, go to that 'branch'
+			if (global.dialogueFlag1) {
+				fadeOutSiblif = true;
+				localState = 16;				
+				break;
+			}
+			
 			localState++;
 			
 		break;
 		
 		
 		case 9:
+			
 			primaryCalories = calculate_siblif_size(global.siblifCalories);
 			
-			if (!global.dialogueFlag1) {
-				create_textbox(413, false);
-				localState = 10;
-			}
-			else {
-				create_textbox(455, false);
-				fadeFromBlack = true;
-				localState = 12;
-			}
+			create_textbox(413, false);
+			localState = 10;
+				
 		break;
 		
 		
@@ -428,6 +431,41 @@ if (global.gameState == 4) {
 			global.canControlPlayer = true;
 			layer_set_visible("LeaveArea", true);
 			localState = 999;
+		
+		break;
+		
+		
+		case 17:
+		
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			
+			//Find out if Siblif is in a T2 pose
+			if (global.siblifFatStage[3] > 0) {global.dialogueFlag1 = true;}
+			
+			fadeFromBlack = true;
+			create_textbox(469, false);
+			localState++;
+		
+		break;
+		
+		
+		case 19:
+		
+			fadeInSiblif = true;
+			
+			if (!global.dialogueFlag1) {create_textbox(469, false);}
+			else {
+				//boob
+				if (global.siblifFatStage[3] == 1) {create_textbox(475, false);}
+				
+				//belly
+				else if (global.siblifFatStage[3] == 2) {create_textbox(469, false);}
+				
+				//butt
+				else {create_textbox(469, false);}
+			}
+			
+			localState++;
 		
 		break;
 		

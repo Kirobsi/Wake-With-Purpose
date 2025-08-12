@@ -17,6 +17,7 @@ fadeOutSiblif = false;
 _filledslots = -1;
 slotsToCashIn = [];
 primaryCalories = 0;
+dayCalories = 0;
 
 if (global.gameState == 2) {
 	alarm_set(0, 90)
