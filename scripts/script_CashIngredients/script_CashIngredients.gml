@@ -6,6 +6,8 @@ function cash_in_food(_inventory) {
 	for (var i = 0; i < array_length(_inventory); i++) {
 		_localCalories[oPlayer.inv[_inventory[i]][2]] += oPlayer.inv[_inventory[i]][3];
 		_localCalories[3] += oPlayer.inv[_inventory[i]][3];
+		global.siblifCalories[oPlayer.inv[_inventory[i]][2]] += oPlayer.inv[_inventory[i]][3];
+		global.siblifCalories[3] += oPlayer.inv[_inventory[i]][3];
 	}
 		
 	instance_create_layer(480, 270, "UI", obj_CalorieTally, {calorieTally : _localCalories[0] + _localCalories[1] + _localCalories[2]});
@@ -19,7 +21,6 @@ function cash_in_food(_inventory) {
 /// @description Function to calculate Siblif's fat stages
 /// @param {Array} _localCalories Array of Siblif calories, for code brevity
 function calculate_siblif_size(_localCalories) {
-	global.siblifCalories = obj_BeachHandler.localCalories;
 	//var _currentPoseTier = global.siblifFatStage[3];
 	var numStages = [0, 0, 0] //stage # (so, fatness level) of [boobs, belly, butt]
 	
@@ -38,8 +39,7 @@ function calculate_siblif_size(_localCalories) {
 	
 	for (var i = 0; i < 3; i++) {
 		if (sortedCalories[0] == _localCalories[i]) {
-			primaryCalories = i
-			break
+			primaryCalories = i;
 		}
 	}
 	
@@ -51,7 +51,8 @@ function calculate_siblif_size(_localCalories) {
 	for (var i = 0; i < 3; i++) {
 		numStages[i] = global.siblifCalories[i] div 3000 //should come out to correct stage?
 		
-		if (numStages[i] > 5) {numStages[i] = 5} //fat stage cap
+		if (i != primaryCalories) {numStages[i] = clamp(numStages[i], 0, 2);}
+		else if (numStages[i] > 5) {numStages[i] = 5} //fat stage cap
 		show_debug_message("Fat type " + string(i) + " is stage # " + string(numStages[i]))
 	}
 	
@@ -68,7 +69,15 @@ function calculate_siblif_size(_localCalories) {
 			else {*/global.siblifFatStage[3] = (primaryCalories + 1);//}
 		}
 	
-		if (global.siblifFatStage[3] == 3) {
+		if (global.siblifFatStage[3] == 1) {
+			global.sibPos = 458;
+		}
+		
+		else if (global.siblifFatStage[3] == 2) {
+			global.sibPos = 502;
+		}
+		
+		else if (global.siblifFatStage[3] == 3) {
 			global.topSibDraw = spr_SiblifLegs;
 			global.secondSibDraw = spr_SiblifBoobs;
 			global.thirdSibDraw = spr_SiblifBase;
@@ -77,6 +86,7 @@ function calculate_siblif_size(_localCalories) {
 			global.twoNum = 0;
 			global.threNum = 3;
 			global.lastNum = 1;
+			global.sibPos = 480;
 		}
 	}
 	
