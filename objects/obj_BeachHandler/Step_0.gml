@@ -430,6 +430,7 @@ if (global.gameState == 4) {
 			fadeFromTent = true;
 			global.canControlPlayer = true;
 			layer_set_visible("LeaveArea", true);
+			global.dialogueFlag1 = true;
 			localState = 999;
 		
 		break;
@@ -441,6 +442,7 @@ if (global.gameState == 4) {
 			
 			//Find out if Siblif is in a T2 pose
 			if (global.siblifFatStage[3] > 0) {global.dialogueFlag1 = true;}
+			else {global.dialogueFlag1 = false;}
 			
 			fadeFromBlack = true;
 			create_textbox(469, false);
@@ -453,18 +455,29 @@ if (global.gameState == 4) {
 		
 			fadeInSiblif = true;
 			
-			if (!global.dialogueFlag1) {create_textbox(469, false);}
+			if (!global.dialogueFlag1) {create_textbox(631, false);}
 			else {
 				//boob
 				if (global.siblifFatStage[3] == 1) {create_textbox(475, false);}
 				
 				//belly
-				else if (global.siblifFatStage[3] == 2) {create_textbox(469, false);}
+				else if (global.siblifFatStage[3] == 2) {create_textbox(542, false);}
 				
 				//butt
-				else {create_textbox(469, false);}
+				else {create_textbox(586, false);}
 			}
 			
+			localState++;
+		
+		break;
+		
+		
+		case 21:
+		
+			fadeOutSiblif = true;
+			fadeFromTent = true;
+			global.canControlPlayer = true;
+			layer_set_visible("LeaveArea", true);
 			localState++;
 		
 		break;
@@ -506,18 +519,18 @@ if (global.gameState == 5) {
 			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
 				fadeToTent = true;
 				fadeInSiblif = true;
-				alarm_set(1,49);
+				localState++;
 				
-				create_textbox(455, false)
+				if (!global.dialogueFlag1) {create_textbox(455, false);}
+				else {create_textbox(452, false);}
 			}
 		
 		break;
 		
 		
-		case 3:
+		case 4:
 			
 			fadeToBlack = true;
-			if (alarm[1]) > 0 {localState++}
 			
 			alarm_set(1,50);
 			localState++;
@@ -525,17 +538,18 @@ if (global.gameState == 5) {
 		break;
 		
 		
-		case 5:
+		case 6:
 		
 			calculate_siblif_size(global.siblifCalories);
 			fadeFromBlack = true;
 			fadeToBlack = false;
 			localState++;
+			alarm_set(1,40)
 		
 		break;
 		
 		
-		case 7:
+		case 8:
 		
 			fadeFromTent = true;
 			fadeOutSiblif = true;
