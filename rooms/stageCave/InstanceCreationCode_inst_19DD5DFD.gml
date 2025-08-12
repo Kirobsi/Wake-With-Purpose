@@ -3,4 +3,4 @@ sprite_index = sKiwiFruit;
 name = "Kiwi Fruit";
 
 calorieType = 1;
-calorieCount = 500;
+calorieCount = 1000;
