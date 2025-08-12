@@ -7,6 +7,13 @@ function play_song_home() {
 	return homeSong;
 }
 
+function play_song_cave() {
+	var homeSong = audio_play_sound(mus_Stage, true, 1, 1);
+	audio_sound_loop_start(homeSong,0);
+	audio_sound_loop_end(homeSong,89.68);
+	return homeSong;
+}
+
 /// @description Stops any song by muting it
 /// @param {Id.Sound} _song The song to stop
 function stop_song(_song) {

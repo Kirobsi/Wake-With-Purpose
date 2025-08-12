@@ -86,6 +86,8 @@
     {"id":{"name":"script_CashIngredients","path":"scripts/script_CashIngredients/script_CashIngredients.yy",},},
     {"id":{"name":"Spawn_Textbox","path":"scripts/Spawn_Textbox/Spawn_Textbox.yy",},},
     {"id":{"name":"mus_Home","path":"sounds/mus_Home/mus_Home.yy",},},
+    {"id":{"name":"mus_None","path":"sounds/mus_None/mus_None.yy",},},
+    {"id":{"name":"mus_Stage","path":"sounds/mus_Stage/mus_Stage.yy",},},
     {"id":{"name":"snd_calorieCounting","path":"sounds/snd_calorieCounting/snd_calorieCounting.yy",},},
     {"id":{"name":"snd_PlrLand","path":"sounds/snd_PlrLand/snd_PlrLand.yy",},},
     {"id":{"name":"sAvocado","path":"sprites/sAvocado/sAvocado.yy",},},
