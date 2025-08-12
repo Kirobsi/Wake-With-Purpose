@@ -456,3 +456,23 @@ goto,424,,,,,,,,,,
 0,"You bring your steaming meals in, and give one to Siblif.",,,,,,,,,,
 0,"Shortly after you sit down, and after the shark has already begun eating, you speak up.",,,,,,,,,,
 goto,405,,,,,,,,,,
+2,hi I'm Siblif :) placeholder text. oh woww I'm so fat now look haha .. *blushe*,,,,,,,,,,
+Die,localState++,obj_BeachHandler,,,,,,,,,
+2,omg wow I'm so Biggest Bellie .....,,,,,,,,,,
+0,you touch oh so big belliebuttboob. very arousing sexie,,,,,,,,,,
+1,damb girl.... :fuckboy emoji: you so big wtf???,,,,,,,,,,
+0,"Then either it fades to black with some dialogue implying that they continue for a little while longer, or this is the day that Siblif has to leave. I dunno!",,,,,,,,,,
+Die,localState++,obj_BeachHandler,,,,,,,,,
+0,~SNACK WANDERER~,,,,,,,,,,
+0,CREDITS:,,,,,,,,,,
+0,"Kirobsi
+Project lead, systems programmer, supplemental gameplay programmer,
+writer, & creator of beach music and Kiwi sprite",,,,,,,,,,
+0,"Enkah
+Main artist, Siblif Design.
+Also provided lots of valuable feedback that steered the game much more towards fats erotica than whatever esoteric thing my (Kiwi's) creative impulses suggested.",,,,,,,,,,
+0,"Jamorphous
+Gameplay programmer, supplemental systems programmer
+sound designer, level designer, composer of level music",,,,,,,,,,
+Die,localState++,obj_BeachHandler,,,,,,,,,
+0,THE END,,,,,,,,,,

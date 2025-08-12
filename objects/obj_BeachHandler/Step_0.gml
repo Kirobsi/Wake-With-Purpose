@@ -381,7 +381,6 @@ if (global.gameState == 4) {
 			
 			fadeToBlack = true;
 			alarm_set(1, 150);
-			primaryCalories = calculate_siblif_size(global.siblifCalories);
 			global.cycles = 3;
 			localState++;
 			
@@ -389,14 +388,16 @@ if (global.gameState == 4) {
 		
 		
 		case 9:
-			if (global.dialogueFlag1) {
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			
+			if (!global.dialogueFlag1) {
 				create_textbox(413, false);
 				localState = 10;
 			}
 			else {
-				create_textbox(417, false);
+				create_textbox(455, false);
 				fadeFromBlack = true;
-				localState = 16;
+				localState = 12;
 			}
 		break;
 		
@@ -430,6 +431,245 @@ if (global.gameState == 4) {
 		
 		break;
 		
+	}
+	
+}
+
+#endregion
+
+
+#region Cycle 3 End/Cycle 4 Start
+
+if (global.gameState == 5) {
+
+	switch (localState)
+	{
+		
+		case 0: //cash in
+			
+			/// Determine how many real items the player has
+			_filledslots = 10;
+			for (var i = 0; i < 10; i++) {
+				if (oPlayer.inv[i][0] == "Lost" || oPlayer.inv[i][0] == "Nothing") {
+					_filledslots--;
+				}
+				else {array_push(slotsToCashIn, i)}
+			}
+			show_debug_message("Number of filled inv slots: " + string(_filledslots));
+			obj_Crockpot.canInteract = true;
+			
+			localState++;
+			
+		break;
+		
+		
+		case 2: //Initiate tent&textbox post-cooking
+		
+			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+				fadeToTent = true;
+				fadeInSiblif = true;
+				alarm_set(1,49);
+				
+				create_textbox(455, false)
+			}
+		
+		break;
+		
+		
+		case 3:
+			
+			fadeToBlack = true;
+			if (alarm[1]) > 0 {localState++}
+			
+			alarm_set(1,50);
+			localState++;
+			
+		break;
+		
+		
+		case 5:
+		
+			calculate_siblif_size(global.siblifCalories);
+			fadeFromBlack = true;
+			fadeToBlack = false;
+			localState++;
+		
+		break;
+		
+		
+		case 7:
+		
+			fadeFromTent = true;
+			fadeOutSiblif = true;
+			global.canControlPlayer = true;
+			layer_set_visible("LeaveArea", true);
+			localState = 999;
+		
+		break;
+	}
+	
+}
+
+#endregion
+
+
+#region Cycle 4 End/Cycle 5 Start
+
+if (global.gameState == 6) {
+
+	switch (localState)
+	{
+		
+		case 0: //cash in
+			
+			/// Determine how many real items the player has
+			_filledslots = 10;
+			for (var i = 0; i < 10; i++) {
+				if (oPlayer.inv[i][0] == "Lost" || oPlayer.inv[i][0] == "Nothing") {
+					_filledslots--;
+				}
+				else {array_push(slotsToCashIn, i)}
+			}
+			show_debug_message("Number of filled inv slots: " + string(_filledslots));
+			obj_Crockpot.canInteract = true;
+			
+			localState++;
+			
+		break;
+		
+		
+		case 2: //Initiate tent&textbox post-cooking
+		
+			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+				fadeToTent = true;
+				fadeInSiblif = true;
+				alarm_set(1,49);
+				
+				create_textbox(455, false)
+			}
+		
+		break;
+		
+		
+		case 3:
+			
+			fadeToBlack = true;
+			if (alarm[1]) > 0 {localState++}
+			
+			alarm_set(1,50);
+			localState++;
+			
+		break;
+		
+		
+		case 5:
+		
+			calculate_siblif_size(global.siblifCalories);
+			fadeFromBlack = true;
+			fadeToBlack = false;
+			localState++;
+		
+		break;
+		
+		
+		case 7:
+		
+			fadeFromTent = true;
+			fadeOutSiblif = true;
+			global.canControlPlayer = true;
+			layer_set_visible("LeaveArea", true);
+			localState = 999;
+		
+		break;
+	}
+	
+}
+
+#endregion
+
+
+#region Cycle 5 End
+
+if (global.gameState == 7) {
+
+	switch (localState)
+	{
+		
+		case 0: //cash in
+			
+			/// Determine how many real items the player has
+			_filledslots = 10;
+			for (var i = 0; i < 10; i++) {
+				if (oPlayer.inv[i][0] == "Lost" || oPlayer.inv[i][0] == "Nothing") {
+					_filledslots--;
+				}
+				else {array_push(slotsToCashIn, i)}
+			}
+			show_debug_message("Number of filled inv slots: " + string(_filledslots));
+			obj_Crockpot.canInteract = true;
+			
+			localState++;
+			
+		break;
+		
+		
+		case 2: //Initiate tent&textbox post-cooking
+		
+			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+				fadeToTent = true;
+				fadeInSiblif = true;
+				alarm_set(1,49);
+				
+				create_textbox(455, false)
+			}
+		
+		break;
+		
+		
+		case 3:
+			
+			fadeToBlack = true;
+			if (alarm[1]) > 0 {localState++}
+			
+			alarm_set(1,50);
+			localState++;
+			
+		break;
+		
+		
+		case 5:
+		
+			calculate_siblif_size(global.siblifCalories);
+			fadeFromBlack = true;
+			fadeToBlack = false;
+			localState++;
+		
+		break;
+		
+		
+		case 7:
+		
+			create_textbox(457, false)
+			localState++;
+		
+		break;
+		
+		
+		case 9:
+		
+			fadeToBlack = true;
+			localState++;
+			create_textbox(462,false,false,fa_center,true,331,-160,900);
+		
+		break;
+		
+		
+		case 11:
+			
+			create_textbox(468,false,false,fa_center,false,331,-160,900);
+			localState++;
+			
+		break;
 	}
 	
 }

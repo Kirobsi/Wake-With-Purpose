@@ -13,7 +13,7 @@ if (global.gameState == 0) {
 			key_rebind_count = 0;
 			rebind_mode = false;
 			instance_destroy(obj_Textbox);
-			create_textbox(2,false,false,fa_center,true,330,-160,900); //recreate textbox
+			create_textbox(2,false,false,fa_center,true,331,-160,900); //recreate textbox
 		}
 	}
 
@@ -26,7 +26,7 @@ if (global.gameState == 0) {
 		global.gameState = 0.5;
 		instance_destroy(obj_Textbox);
 		instance_create_layer(x, y, "UI", obj_TextSpeedKnob)
-		create_textbox(10,false,false,fa_center,true,330,-130,900);
+		create_textbox(10,false,false,fa_center,true,331,-130,900);
 	}
 }
 
@@ -45,7 +45,7 @@ else if (global.gameState == 0.5) {
 		instance_destroy(obj_Textbox);
 		instance_destroy(obj_TextSpeedKnob);
 		instance_create_layer(x, y, "UI", obj_VolumeKnob)
-		create_textbox(1,false,false,fa_center,true,330,-130,900);
+		create_textbox(1,false,false,fa_center,true,331,-130,900);
 	}
 }
 

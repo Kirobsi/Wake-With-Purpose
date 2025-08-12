@@ -26,7 +26,7 @@ rebind_mode = false;	//variable to track whether rebinding is active
 
 global.allStrings = load_csv("strings.csv"); //load strings file
 global.textSpeed = ini_read_real("text", "textspeed", 3); //Set text scroll speed
-create_textbox(2,false,false,fa_center,true,330,-160,900); //create a textbox for controls adjustment
+create_textbox(2,false,false,fa_center,true,331,-160,900); //create a textbox for controls adjustment
 
 draw_set_font(MainText);
 draw_set_halign(fa_center);
