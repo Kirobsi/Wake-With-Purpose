@@ -28,7 +28,7 @@ else if (internalState == 3) {
 	text2 = true;
 	funnyCounter = 1;
 	alarm_set(2, 1)
-	funnyCalorieSound = audio_play_sound(snd_calorieCounting, -5, true, 0.08 * global.volumeLevel);
+	funnyCalorieSound = audio_play_sound(snd_calorieCounting, -5, true, 0.05 * global.volumeLevel);
 }
 
 else if (internalState == 4) {

@@ -59,7 +59,7 @@
     {"name":"script_CashIngredients","order":7,"path":"scripts/script_CashIngredients/script_CashIngredients.yy",},
     {"name":"mus_Home","order":1,"path":"sounds/mus_Home/mus_Home.yy",},
     {"name":"mus_None","order":4,"path":"sounds/mus_None/mus_None.yy",},
-    {"name":"mus_Stage","order":3,"path":"sounds/mus_Stage/mus_Stage.yy",},
+    {"name":"mus_Stage","order":5,"path":"sounds/mus_Stage/mus_Stage.yy",},
     {"name":"snd_calorieCounting","order":9,"path":"sounds/snd_calorieCounting/snd_calorieCounting.yy",},
     {"name":"snd_PlrLand","order":3,"path":"sounds/snd_PlrLand/snd_PlrLand.yy",},
     {"name":"sAvocado","order":14,"path":"sprites/sAvocado/sAvocado.yy",},

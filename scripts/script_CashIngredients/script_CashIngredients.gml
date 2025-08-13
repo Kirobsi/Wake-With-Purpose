@@ -37,11 +37,15 @@ function calculate_siblif_size(_localCalories) {
 	
 	var primaryCalories = 0;
 	
-	for (var i = 0; i < 3; i++) {
-		if (sortedCalories[0] == _localCalories[i]) {
-			primaryCalories = i;
+	if (global.siblifFatStage[3] == 0) {
+		for (var i = 0; i < 3; i++) {
+			if (sortedCalories[0] == _localCalories[i]) {
+				primaryCalories = i;
+			}
 		}
 	}
+	
+	else {primaryCalories = global.siblifFatStage[3] - 1;}
 	
 	#endregion
 	

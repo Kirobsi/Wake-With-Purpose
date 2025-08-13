@@ -455,16 +455,16 @@ if (global.gameState == 4) {
 		
 			fadeInSiblif = true;
 			
-			if (!global.dialogueFlag1) {create_textbox(631, false);}
+			if (!global.dialogueFlag1) {create_textbox(632, false);}
 			else {
 				//boob
 				if (global.siblifFatStage[3] == 1) {create_textbox(475, false);}
 				
 				//belly
-				else if (global.siblifFatStage[3] == 2) {create_textbox(542, false);}
+				else if (global.siblifFatStage[3] == 2) {create_textbox(543, false);}
 				
 				//butt
-				else {create_textbox(586, false);}
+				else {create_textbox(587, false);}
 			}
 			
 			localState++;
@@ -489,7 +489,7 @@ if (global.gameState == 4) {
 #endregion
 
 
-#region Cycle 3 End/Cycle 4 Start
+#region Cycle 3 End / Cycle 4 Start
 
 if (global.gameState == 5) {
 
@@ -565,7 +565,7 @@ if (global.gameState == 5) {
 #endregion
 
 
-#region Cycle 4 End/Cycle 5 Start
+#region Cycle 4 End / Cycle 5 Start
 
 if (global.gameState == 6) {
 

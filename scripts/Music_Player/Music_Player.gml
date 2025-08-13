@@ -24,5 +24,5 @@ function stop_song(_song) {
 /// @param {Id.Sound} _song The song to resume
 function replay_song(_song) {
 	audio_sound_set_track_position(_song, 0)
-	audio_sound_gain(_song, global.volumeLevel, 0)
+	audio_sound_gain(_song, 1, 0)
 }
