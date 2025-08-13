@@ -519,17 +519,18 @@ if (global.gameState == 5) {
 			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
 				fadeToTent = true;
 				fadeInSiblif = true;
-				localState++;
+				alarm_set(1,49);
 				
-				create_textbox(455, false);
+				create_textbox(455, false)
 			}
 		
 		break;
 		
 		
-		case 4:
+		case 3:
 			
 			fadeToBlack = true;
+			if (alarm[1]) > 0 {localState++}
 			
 			alarm_set(1,50);
 			localState++;
@@ -537,23 +538,23 @@ if (global.gameState == 5) {
 		break;
 		
 		
-		case 6:
+		case 5:
 		
 			calculate_siblif_size(global.siblifCalories);
 			fadeFromBlack = true;
 			fadeToBlack = false;
 			localState++;
-			alarm_set(1,40)
 		
 		break;
 		
 		
-		case 8:
+		case 7:
 		
 			fadeFromTent = true;
 			fadeOutSiblif = true;
 			global.canControlPlayer = true;
 			layer_set_visible("LeaveArea", true);
+			global.cycles++;
 			localState = 999;
 		
 		break;
@@ -629,6 +630,7 @@ if (global.gameState == 6) {
 			fadeOutSiblif = true;
 			global.canControlPlayer = true;
 			layer_set_visible("LeaveArea", true);
+			global.cycles++;
 			localState = 999;
 		
 		break;

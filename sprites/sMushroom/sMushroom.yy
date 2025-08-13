@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sMushroom",
   "bboxMode":0,
-  "bbox_bottom":14,
+  "bbox_bottom":15,
   "bbox_left":0,
   "bbox_right":14,
   "bbox_top":0,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3b0dc4bb-e538-4ee5-9dd0-2bbebfc83f37","name":"3b0dc4bb-e538-4ee5-9dd0-2bbebfc83f37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"f1e17f42-b384-46b4-acea-c1685ff64ceb","name":"f1e17f42-b384-46b4-acea-c1685ff64ceb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"6d10538a-fd11-4a55-993d-ad0c625eb3a7","name":"6d10538a-fd11-4a55-993d-ad0c625eb3a7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -72,8 +72,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3b0dc4bb-e538-4ee5-9dd0-2bbebfc83f37","path":"sprites/sMushroom/sMushroom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"098531d4-1ba6-4d72-bd69-72fb4d5c026d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f1e17f42-b384-46b4-acea-c1685ff64ceb","path":"sprites/sMushroom/sMushroom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1f008a7c-5a69-4173-884e-c0a1b3f8d911","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6d10538a-fd11-4a55-993d-ad0c625eb3a7","path":"sprites/sMushroom/sMushroom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"13c1282e-0eac-45d5-8862-5339e6529c00","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
