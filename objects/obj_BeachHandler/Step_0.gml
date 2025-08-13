@@ -430,7 +430,6 @@ if (global.gameState == 4) {
 			fadeFromTent = true;
 			global.canControlPlayer = true;
 			layer_set_visible("LeaveArea", true);
-			global.dialogueFlag1 = true;
 			localState = 999;
 		
 		break;
@@ -441,8 +440,8 @@ if (global.gameState == 4) {
 			primaryCalories = calculate_siblif_size(global.siblifCalories);
 			
 			//Find out if Siblif is in a T2 pose
-			if (global.siblifFatStage[3] > 0) {global.dialogueFlag1 = true;}
-			else {global.dialogueFlag1 = false;}
+			if (global.siblifFatStage[3] > 0) {global.dialogueFlag2 = true;}
+			else {global.dialogueFlag2 = false;}
 			
 			fadeFromBlack = true;
 			create_textbox(469, false);
@@ -455,7 +454,7 @@ if (global.gameState == 4) {
 		
 			fadeInSiblif = true;
 			
-			if (!global.dialogueFlag1) {create_textbox(632, false);}
+			if (!global.dialogueFlag2) {create_textbox(632, false);}
 			else {
 				//boob
 				if (global.siblifFatStage[3] == 1) {create_textbox(475, false);}
@@ -519,9 +518,9 @@ if (global.gameState == 5) {
 			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
 				fadeToTent = true;
 				fadeInSiblif = true;
-				alarm_set(1,49);
 				
-				create_textbox(455, false)
+				if (!global.dialogueFlag1) {create_textbox(316, false);}
+				else {create_textbox(722, false);}
 			}
 		
 		break;
