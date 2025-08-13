@@ -17,6 +17,7 @@ fadeOutSiblif = false;
 _filledslots = -1;
 slotsToCashIn = [];
 primaryCalories = 0;
+dayCalories = 0;
 
 if (global.gameState == 2) {
 	alarm_set(0, 90)
@@ -30,8 +31,12 @@ else if (global.gameState > 2) {
 	layer_set_visible("Instances", true);
 	layer_set_visible("Instances_1", true);
 	
-	if (!obj_System.homeSongExists) {
-		obj_System.homeSong = play_song_home();
-		obj_System.homeSongExists = true;
+	if (obj_System.songPlaying != mus_Home) {
+
+		obj_System.songPlaying = mus_Home;
+		var _song = audio_play_sound(obj_System.songPlaying, true, 1, 1);
+		audio_sound_gain(_song, 1, 0);
+		audio_sound_loop_start(_song,1686859/44100);
+		audio_sound_loop_end(_song,5801391/44100);
 	}
 }

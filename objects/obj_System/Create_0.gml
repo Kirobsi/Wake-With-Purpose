@@ -2,7 +2,7 @@ ini_open("save.ini"); //open save ini for saving/loading
 
 global.gameState = 0; //to track how far through boot you are
 global.cycles = 1;	//which cycle the player/game is on
-global.volumeLevel = ini_read_real("volume", "level", 20); //default volume of the game
+global.volumeLevel = ini_read_real("volume", "level", 30); //default volume of the game
 audio_group_set_gain(audiogroup_default, global.volumeLevel / 100, 10) //actually use the volume
 
 //array for storing all the 'key codes.' [ Up, Down, Left, Right, Jump, Interact, Pause ]
@@ -26,7 +26,7 @@ rebind_mode = false;	//variable to track whether rebinding is active
 
 global.allStrings = load_csv("strings.csv"); //load strings file
 global.textSpeed = ini_read_real("text", "textspeed", 3); //Set text scroll speed
-create_textbox(2,false,false,fa_center,true,330,-160,900); //create a textbox for controls adjustment
+create_textbox(2,false,false,fa_center,true,331,-160,900); //create a textbox for controls adjustment
 
 draw_set_font(MainText);
 draw_set_halign(fa_center);
@@ -67,4 +67,4 @@ global.threNum = 2;
 global.lastNum = 3;
 global.sibPos = 440;
 
-homeSongExists = false;
+songPlaying = mus_None;

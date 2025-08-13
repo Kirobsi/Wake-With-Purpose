@@ -17,6 +17,14 @@ if(place_meeting(x, y, oPlayer))
 		if (instance_exists(obj_CaveHandler)) {
 			array_push(obj_System.caveFoodTaken, id);
 		}
+		
+		else if (instance_exists(obj_JungleHandler)) {
+			array_push(obj_System.jungleFoodTaken, id);
+		}
+		
+		else if (instance_exists(obj_MountainHandler)) {
+			array_push(obj_System.mountainFoodTaken, id);
+		}
 			
 		instance_destroy();
 	}

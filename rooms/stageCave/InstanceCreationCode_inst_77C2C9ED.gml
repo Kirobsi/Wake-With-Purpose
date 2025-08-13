@@ -1,6 +1,6 @@
-sprite_index = sCarrot;
+sprite_index = sFlankSteak;
 
-name = "Carrot";
+name = "Flank Steak";
 
 calorieType = 2;
 calorieCount = 500;

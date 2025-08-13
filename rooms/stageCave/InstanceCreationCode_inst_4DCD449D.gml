@@ -1,6 +1,6 @@
-sprite_index = sMushroomAlt;
+sprite_index = sMushroom;
 
-name = "Hoehohe Mumshroom";
+name = "Button Mushroom";
 
 calorieType = 2;
 calorieCount = 500;
