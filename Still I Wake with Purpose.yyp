@@ -27,7 +27,6 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"LiberationSerifFontLicense.txt","CopyToMask":-1,"filePath":"datafiles","name":"LiberationSerifFontLicense.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -91,7 +90,10 @@
     {"id":{"name":"mus_None","path":"sounds/mus_None/mus_None.yy",},},
     {"id":{"name":"mus_Stage","path":"sounds/mus_Stage/mus_Stage.yy",},},
     {"id":{"name":"snd_calorieCounting","path":"sounds/snd_calorieCounting/snd_calorieCounting.yy",},},
+    {"id":{"name":"snd_Explode","path":"sounds/snd_Explode/snd_Explode.yy",},},
+    {"id":{"name":"snd_PlrJump","path":"sounds/snd_PlrJump/snd_PlrJump.yy",},},
     {"id":{"name":"snd_PlrLand","path":"sounds/snd_PlrLand/snd_PlrLand.yy",},},
+    {"id":{"name":"snd_Spring","path":"sounds/snd_Spring/snd_Spring.yy",},},
     {"id":{"name":"sAvocado","path":"sprites/sAvocado/sAvocado.yy",},},
     {"id":{"name":"sBomb","path":"sprites/sBomb/sBomb.yy",},},
     {"id":{"name":"sBombExploding","path":"sprites/sBombExploding/sBombExploding.yy",},},

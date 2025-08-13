@@ -26,6 +26,7 @@ else if(bombstate == 2)
 	if(place_meeting(x, y, oTerrain))
 	{
 		instance_create_layer(x, y, "Instances", oBombExploding);
+		audio_play_sound(snd_Explode, 0, 0);
 		bombstate = 0;
 		x = xstart;
 		y = ystart;
