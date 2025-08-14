@@ -11,7 +11,7 @@ image_index *= hasBackground;
 #region Text Crawl
 
 if (currentStringDrawnNo < string_length(currentString) + 1) {
-	if (global.textSpeed != 0) {
+	if (global.textSpeed != 0 && !global.jumpKeyPressed) {
 		for (var i = 0; i < global.textSpeed; i++) {
 			currentStringDrawn = string_concat(currentStringDrawn, string_char_at(currentString, currentStringDrawnNo));
 			currentStringDrawnNo++;
@@ -35,7 +35,7 @@ if (currentStringDrawnNo < string_length(currentString) + 1) {
 	else {
 		currentStringDrawn = currentString;
 		currentStringDrawnNo = string_length(currentString) + 1;
-		
+		global.jumpKeyPressed = false;
 	}
 }
 

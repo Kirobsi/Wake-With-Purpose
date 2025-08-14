@@ -519,7 +519,7 @@ if (global.gameState == 5) {
 				fadeToTent = true;
 				fadeInSiblif = true;
 				
-				if (!global.dialogueFlag1) {create_textbox(755, false);}
+				if (!global.dialogueFlag1) {create_textbox(884, false);}
 				else {create_textbox(722, false);}
 			}
 		
