@@ -94,6 +94,7 @@
     {"id":{"name":"snd_PlrJump","path":"sounds/snd_PlrJump/snd_PlrJump.yy",},},
     {"id":{"name":"snd_PlrLand","path":"sounds/snd_PlrLand/snd_PlrLand.yy",},},
     {"id":{"name":"snd_Spring","path":"sounds/snd_Spring/snd_Spring.yy",},},
+    {"id":{"name":"snd_Talk","path":"sounds/snd_Talk/snd_Talk.yy",},},
     {"id":{"name":"sAvocado","path":"sprites/sAvocado/sAvocado.yy",},},
     {"id":{"name":"sBomb","path":"sprites/sBomb/sBomb.yy",},},
     {"id":{"name":"sBombExploding","path":"sprites/sBombExploding/sBombExploding.yy",},},

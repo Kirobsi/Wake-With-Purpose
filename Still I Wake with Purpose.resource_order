@@ -65,6 +65,7 @@
     {"name":"snd_PlrJump","order":4,"path":"sounds/snd_PlrJump/snd_PlrJump.yy",},
     {"name":"snd_PlrLand","order":3,"path":"sounds/snd_PlrLand/snd_PlrLand.yy",},
     {"name":"snd_Spring","order":6,"path":"sounds/snd_Spring/snd_Spring.yy",},
+    {"name":"snd_Talk","order":7,"path":"sounds/snd_Talk/snd_Talk.yy",},
     {"name":"sAvocado","order":14,"path":"sprites/sAvocado/sAvocado.yy",},
     {"name":"sBomb","order":12,"path":"sprites/sBomb/sBomb.yy",},
     {"name":"sBombExploding","order":14,"path":"sprites/sBombExploding/sBombExploding.yy",},

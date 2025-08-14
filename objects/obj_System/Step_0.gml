@@ -66,6 +66,7 @@ else if (global.gameState == 1) {
 		instance_destroy(obj_Textbox);
 		instance_destroy(obj_VolumeKnob);
 		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step
+		global.talkSound = true;	//turn on talk sounds
 		alarm_set(0, 45);	//show first real textbox
 		
 		//save all settings to the ini
@@ -77,7 +78,7 @@ else if (global.gameState == 1) {
 #endregion
 
 
-#region Write settings to ini and start game
+#region Start game
 
 if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
 	global.gameState = 2;
