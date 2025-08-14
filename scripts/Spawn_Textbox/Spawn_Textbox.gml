@@ -1,5 +1,5 @@
 /// @description Show a textbox starting on the specified .CSV row
-/// @param {string} text_row The csv row to start on - starts at 0!
+/// @param {real} text_row The csv row to start on - starts at 0!
 /// @param {bool} _autoRestoreControl Whether to restore Kiwi controls when textbox is destroyed
 /// @param {bool} _hasBackground Whether or not the text should float with no background
 /// @param {Constant.HAlign} _hAlignment Which horizontal alignment/justification to use
@@ -23,7 +23,7 @@ function create_textbox(text_row, _autoRestoreControl = true, _hasBackground = t
 }
 
 /// @description Show a textbox starting on the specified other_strings.CSV row
-/// @param {string} text_row The csv row to start on - starts at 0!
+/// @param {real} text_row The csv row to start on - starts at 0!
 /// @param {bool} _autoRestoreControl Whether to restore Kiwi controls when textbox is destroyed
 /// @param {bool} _hasBackground Whether or not the text should float with no background
 /// @param {Constant.HAlign} _hAlignment Which horizontal alignment/justification to use
