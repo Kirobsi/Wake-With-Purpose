@@ -12,6 +12,9 @@ else {
 	characterName = "";
 }
 
+if (global.allStrings[# 0, dialogueRow] == "0") {image_index = 2;}
+else {image_index = 1;}
+
 canOptions = true;
 talkOptions = 0;
 talkOptionsPosition = 0;

@@ -3,8 +3,6 @@
 x = 149;
 y = 391;
 visible = true;
-if (global.miscStrings[# 0, dialogueRow] == "0") {image_index = 2;}
-else {image_index = 1;}
 image_index *= hasBackground;
 
 #endregion
@@ -88,6 +86,9 @@ if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStrin
 		pronounString = global.miscStrings[# 1, 11 - real(pronounChecker)];
 		characterName = global.miscStrings[# 0, 11 - real(pronounChecker)];
 	}
+	
+	if (global.miscStrings[# 0, dialogueRow] == "0") {image_index = 2;}
+	else {image_index = 1;}
 	
 	talkOptions = 0;
 	canOptions = true;
