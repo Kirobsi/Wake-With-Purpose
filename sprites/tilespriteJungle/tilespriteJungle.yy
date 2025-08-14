@@ -3,7 +3,7 @@
   "%Name":"tilespriteJungle",
   "bboxMode":0,
   "bbox_bottom":255,
-  "bbox_left":32,
+  "bbox_left":0,
   "bbox_right":383,
   "bbox_top":0,
   "collisionKind":1,

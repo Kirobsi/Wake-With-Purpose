@@ -21,8 +21,17 @@ if (currentStringDrawnNo < string_length(currentString) + 1) {
 		//play talk sound
 		if(!audio_is_playing(snd_Talk))
 		{
-			audio_sound_pitch(snd_Talk, random_range(0.8, 1.2));
-			audio_play_sound(snd_Talk, 0, 0, global.talkSound);
+			if (characterName == "Siblif" || characterName == "???")
+			{
+				audio_sound_pitch(snd_Talk, random_range(0.6, 0.9));
+				audio_play_sound(snd_Talk, 0, 0, global.talkSound);
+			}
+			
+			else
+			{
+				audio_sound_pitch(snd_Talk, random_range(0.8, 1.2));
+				audio_play_sound(snd_Talk, 0, 0, global.talkSound);
+			}
 		}
 	}
 	else {

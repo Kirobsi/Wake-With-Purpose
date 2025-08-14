@@ -18,6 +18,21 @@ if (currentStringDrawnNo < string_length(currentString) + 1) {
 			currentStringDrawn = string_concat(currentStringDrawn, string_char_at(currentString, currentStringDrawnNo));
 			currentStringDrawnNo++;
 		}
+		//play talk sound
+		if(!audio_is_playing(snd_Talk))
+		{
+			if (characterName == "Siblif" || characterName == "???")
+			{
+				audio_sound_pitch(snd_Talk, random_range(0.6, 0.9));
+				audio_play_sound(snd_Talk, 0, 0, global.talkSound);
+			}
+			
+			else
+			{
+				audio_sound_pitch(snd_Talk, random_range(0.8, 1.2));
+				audio_play_sound(snd_Talk, 0, 0, global.talkSound);
+			}
+		}
 	}
 	else {
 		currentStringDrawn = currentString;
