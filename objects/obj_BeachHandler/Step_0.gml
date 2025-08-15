@@ -213,6 +213,7 @@ if (global.gameState == 3) {
 		create_textbox(114, false/*, false, fa_center, true, 330, -140, 600*/);
 		localState = 16;
 		primaryCalories = calculate_siblif_size(global.siblifCalories);
+		beachBlur = 0;
 	}
 	
 	#endregion
@@ -398,6 +399,7 @@ if (global.gameState == 4) {
 		case 9:
 			
 			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			
 			create_textbox(413, false);
 			localState = 10;
@@ -438,6 +440,7 @@ if (global.gameState == 4) {
 		case 17:
 		
 			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			
 			//Find out if Siblif is in a T2 pose
 			if (global.siblifFatStage[3] > 0) {global.dialogueFlag2 = true;}
@@ -547,7 +550,8 @@ if (global.gameState == 5) {
 		
 		case 7:
 		
-			calculate_siblif_size(global.siblifCalories);
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			
 			if (global.dialogueFlag1) {
 				localState = 12;
@@ -699,7 +703,8 @@ if (global.gameState == 6) {
 		
 		case 5:
 		
-			calculate_siblif_size(global.siblifCalories);
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			fadeFromBlack = true;
 			fadeToBlack = false;
 			localState++;
@@ -775,7 +780,8 @@ if (global.gameState == 7) {
 		
 		case 5:
 		
-			calculate_siblif_size(global.siblifCalories);
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			fadeFromBlack = true;
 			fadeToBlack = false;
 			localState++;
