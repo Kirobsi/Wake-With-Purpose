@@ -90,7 +90,7 @@ else if (fadeOutSiblif) {
 
 if (global.gameState == 2) {
 	if (localState == 1) {
-		create_textbox(28);
+		create_textbox(28, false);
 		localState++;
 	}
 
@@ -623,7 +623,7 @@ if (global.gameState == 5) {
 			else if (global.siblifFatStage[3] == 2) {create_textbox(995, false);}
 				
 			//butt
-			else {create_textbox(587, false);}
+			else {create_textbox(1054, false);}
 			
 			localState++;
 		
