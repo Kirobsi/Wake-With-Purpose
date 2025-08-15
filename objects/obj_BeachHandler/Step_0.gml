@@ -620,7 +620,7 @@ if (global.gameState == 5) {
 			if (global.siblifFatStage[3] == 1) {create_textbox(937, false);}
 				
 			//belly
-			else if (global.siblifFatStage[3] == 2) {create_textbox(543, false);}
+			else if (global.siblifFatStage[3] == 2) {create_textbox(995, false);}
 				
 			//butt
 			else {create_textbox(587, false);}
