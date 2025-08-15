@@ -599,12 +599,12 @@ if (global.gameState == 5) {
 			global.canControlPlayer = true;
 			layer_set_visible("LeaveArea", true);
 			global.cycles++;
-			localState++;
+			localState = 999;
 		
 		break;
 		
 		
-		case 13:
+		case 12:
 		
 			create_textbox(930, false);
 			localState++;
@@ -612,10 +612,12 @@ if (global.gameState == 5) {
 		break;
 		
 		
-		case 15:
+		case 14:
 		
+			fadeFromBlack = true;
+			
 			//boob
-			if (global.siblifFatStage[3] == 1) {create_textbox(475, false);}
+			if (global.siblifFatStage[3] == 1) {create_textbox(937, false);}
 				
 			//belly
 			else if (global.siblifFatStage[3] == 2) {create_textbox(543, false);}
@@ -628,9 +630,19 @@ if (global.gameState == 5) {
 		break;
 		
 		
-		case 17:
+		case 16:
 		
-			localState = 20;
+			fadeOutSiblif = true;
+			alarm_set(1, 75);
+			localState++;
+		
+		break;
+		
+		
+		case 18:
+		
+			create_textbox(992, false);
+			localState++;
 		
 		break;
 		
@@ -638,7 +650,6 @@ if (global.gameState == 5) {
 		case 20:
 		
 			fadeFromTent = true;
-			fadeOutSiblif = true;
 			global.canControlPlayer = true;
 			layer_set_visible("LeaveArea", true);
 			global.cycles++;
