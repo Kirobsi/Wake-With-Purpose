@@ -35,6 +35,7 @@ else if (!jumpDelay && jumping) {
 	jumping = false;
 	touchedSpring = false;
 	audio_play_sound(snd_PlrLand,0,0)
+	instance_create_layer(x, y, "UI", oParticle, {sprite_index : sParticleLandJump});
 }
 
 #endregion

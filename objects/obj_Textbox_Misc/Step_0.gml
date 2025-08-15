@@ -3,8 +3,6 @@
 x = 149;
 y = 391;
 visible = true;
-if (global.miscStrings[# 0, dialogueRow] == "0") {image_index = 2;}
-else {image_index = 1;}
 image_index *= hasBackground;
 
 #endregion
@@ -17,6 +15,21 @@ if (currentStringDrawnNo < string_length(currentString) + 1) {
 		for (var i = 0; i < global.textSpeed; i++) {
 			currentStringDrawn = string_concat(currentStringDrawn, string_char_at(currentString, currentStringDrawnNo));
 			currentStringDrawnNo++;
+		}
+		//play talk sound
+		if(!audio_is_playing(snd_Talk))
+		{
+			if (characterName == "Siblif" || characterName == "???")
+			{
+				audio_sound_pitch(snd_Talk, random_range(0.6, 0.9));
+				audio_play_sound(snd_Talk, 0, 0, global.talkSound);
+			}
+			
+			else
+			{
+				audio_sound_pitch(snd_Talk, random_range(0.8, 1.2));
+				audio_play_sound(snd_Talk, 0, 0, global.talkSound);
+			}
 		}
 	}
 	else {
@@ -73,6 +86,9 @@ if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStrin
 		pronounString = global.miscStrings[# 1, 11 - real(pronounChecker)];
 		characterName = global.miscStrings[# 0, 11 - real(pronounChecker)];
 	}
+	
+	if (global.miscStrings[# 0, dialogueRow] == "0") {image_index = 2;}
+	else {image_index = 1;}
 	
 	talkOptions = 0;
 	canOptions = true;

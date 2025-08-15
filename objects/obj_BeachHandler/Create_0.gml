@@ -27,7 +27,7 @@ if (global.gameState == 2) {
 }
 
 else if (global.gameState > 2) {
-	beachBlur = 0;
+	beachBlur = 2;
 	layer_set_visible("Instances", true);
 	layer_set_visible("Instances_1", true);
 	

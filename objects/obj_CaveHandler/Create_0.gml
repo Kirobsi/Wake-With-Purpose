@@ -19,6 +19,7 @@ fade_from_black(75);
 if (obj_System.songPlaying != mus_Stage)
 {
 	//if (typeof(obj_System.songPlaying) == "ref") {audio_stop_sound(obj_System.songPlaying);}
+	audio_stop_sound(obj_System.songPlaying);
 	obj_System.songPlaying = mus_Stage;
 	var _song = audio_play_sound(obj_System.songPlaying, true, 1, 1);
 	audio_sound_gain(_song, 1, 0);

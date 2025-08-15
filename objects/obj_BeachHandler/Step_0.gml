@@ -213,6 +213,7 @@ if (global.gameState == 3) {
 		create_textbox(114, false/*, false, fa_center, true, 330, -140, 600*/);
 		localState = 16;
 		primaryCalories = calculate_siblif_size(global.siblifCalories);
+		beachBlur = 0;
 	}
 	
 	#endregion
@@ -398,6 +399,7 @@ if (global.gameState == 4) {
 		case 9:
 			
 			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			
 			create_textbox(413, false);
 			localState = 10;
@@ -438,6 +440,7 @@ if (global.gameState == 4) {
 		case 17:
 		
 			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			
 			//Find out if Siblif is in a T2 pose
 			if (global.siblifFatStage[3] > 0) {global.dialogueFlag2 = true;}
@@ -519,7 +522,7 @@ if (global.gameState == 5) {
 				fadeToTent = true;
 				fadeInSiblif = true;
 				
-				if (!global.dialogueFlag1) {create_textbox(316, false);}
+				if (!global.dialogueFlag1) {create_textbox(885, false);}
 				else {create_textbox(722, false);}
 			}
 		
@@ -529,25 +532,110 @@ if (global.gameState == 5) {
 		case 3:
 			
 			fadeToBlack = true;
-			if (alarm[1]) > 0 {localState++}
-			
-			alarm_set(1,50);
+			if (!global.dialogueFlag1) {create_textbox(400, false);}
+			else {create_textbox(881, false);}
 			localState++;
 			
 		break;
-		
+
 		
 		case 5:
-		
-			calculate_siblif_size(global.siblifCalories);
-			fadeFromBlack = true;
-			fadeToBlack = false;
+			
 			localState++;
-		
+			alarm_set(1, 95);
+			fadeOutSiblif = true;
+			
 		break;
 		
 		
 		case 7:
+		
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
+			
+			if (global.dialogueFlag1) {
+				localState = 12;
+				fadeInSiblif = true;
+				siblifAlpha = 1;
+				break;
+			}
+			
+			//Find out if Siblif is in a T2 pose
+			if (global.siblifFatStage[3] > 0) {global.dialogueFlag2 = true;}
+			else {global.dialogueFlag2 = false;}
+			
+			fadeFromBlack = true;
+			create_textbox(469, false);
+			localState++;
+		
+		break;
+		
+		
+		case 9:
+		
+			fadeInSiblif = true;
+			
+			if (!global.dialogueFlag2) {create_textbox(632, false);}
+			else {
+				//boob
+				if (global.siblifFatStage[3] == 1) {create_textbox(475, false);}
+				
+				//belly
+				else if (global.siblifFatStage[3] == 2) {create_textbox(543, false);}
+				
+				//butt
+				else {create_textbox(587, false);}
+			}
+			
+			localState++;
+		
+		break;
+		
+		
+		case 11:
+		
+			fadeOutSiblif = true;
+			fadeFromTent = true;
+			global.canControlPlayer = true;
+			layer_set_visible("LeaveArea", true);
+			global.cycles++;
+			localState++;
+		
+		break;
+		
+		
+		case 13:
+		
+			create_textbox(930, false);
+			localState++;
+		
+		break;
+		
+		
+		case 15:
+		
+			//boob
+			if (global.siblifFatStage[3] == 1) {create_textbox(475, false);}
+				
+			//belly
+			else if (global.siblifFatStage[3] == 2) {create_textbox(543, false);}
+				
+			//butt
+			else {create_textbox(587, false);}
+			
+			localState++;
+		
+		break;
+		
+		
+		case 17:
+		
+			localState = 20;
+		
+		break;
+		
+		
+		case 20:
 		
 			fadeFromTent = true;
 			fadeOutSiblif = true;
@@ -615,7 +703,8 @@ if (global.gameState == 6) {
 		
 		case 5:
 		
-			calculate_siblif_size(global.siblifCalories);
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			fadeFromBlack = true;
 			fadeToBlack = false;
 			localState++;
@@ -691,7 +780,8 @@ if (global.gameState == 7) {
 		
 		case 5:
 		
-			calculate_siblif_size(global.siblifCalories);
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			beachBlur = 0;
 			fadeFromBlack = true;
 			fadeToBlack = false;
 			localState++;

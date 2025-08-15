@@ -68,3 +68,5 @@ global.lastNum = 3;
 global.sibPos = 440;
 
 songPlaying = mus_None;
+
+global.talkSound = false;
