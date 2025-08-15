@@ -32,7 +32,6 @@ else if (global.gameState > 2) {
 	layer_set_visible("Instances_1", true);
 	
 	if (obj_System.songPlaying != mus_Home) {
-
 		obj_System.songPlaying = mus_Home;
 		var _song = audio_play_sound(obj_System.songPlaying, true, 1, 1);
 		audio_sound_gain(_song, 1, 0);
@@ -40,3 +39,6 @@ else if (global.gameState > 2) {
 		audio_sound_loop_end(_song,5801391/44100);
 	}
 }
+
+if(!audio_is_playing(amb_Beach)) audio_play_sound(amb_Beach, 0, 1, 1);
+audio_sound_gain(amb_Beach, 1, 2000);
