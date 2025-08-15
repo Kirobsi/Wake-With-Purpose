@@ -375,6 +375,7 @@
     {"name":"inst_1276A1E4","path":"rooms/stageMountain/stageMountain.yy",},
     {"name":"inst_956CB6","path":"rooms/stageMountain/stageMountain.yy",},
     {"name":"inst_C361D1B","path":"rooms/stageMountain/stageMountain.yy",},
+    {"name":"inst_78FB5290","path":"rooms/stageMountain/stageMountain.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -760,6 +761,7 @@
         {"$GMRInstance":"v2","%Name":"inst_1276A1E4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1276A1E4","objectId":{"name":"oTerrain","path":"objects/oTerrain/oTerrain.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":6.0,"scaleY":2.0,"x":2528.0,"y":1408.0,},
         {"$GMRInstance":"v2","%Name":"inst_956CB6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_956CB6","objectId":{"name":"oTerrain","path":"objects/oTerrain/oTerrain.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":2848.0,"y":1440.0,},
         {"$GMRInstance":"v2","%Name":"inst_C361D1B","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_C361D1B","objectId":{"name":"oIngredient","path":"objects/oIngredient/oIngredient.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":3248.0,},
+        {"$GMRInstance":"v2","%Name":"inst_78FB5290","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_78FB5290","objectId":{"name":"oTerrain","path":"objects/oTerrain/oTerrain.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":384.0,"y":3264.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_2","depth":400,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_2","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":125,"SerialiseWidth":110,"TileCompressedData":[
           -659,-2147483648,1,186,-108,-2147483648,2,186,79,-107,-2147483648,3,186,102,103,-106,-2147483648,4,186,

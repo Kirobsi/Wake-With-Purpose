@@ -58,6 +58,7 @@
     {"name":"Music_Player","order":7,"path":"scripts/Music_Player/Music_Player.yy",},
     {"name":"Save_Load","order":11,"path":"scripts/Save_Load/Save_Load.yy",},
     {"name":"script_CashIngredients","order":7,"path":"scripts/script_CashIngredients/script_CashIngredients.yy",},
+    {"name":"amb_Beach","order":7,"path":"sounds/amb_Beach/amb_Beach.yy",},
     {"name":"mus_Home","order":1,"path":"sounds/mus_Home/mus_Home.yy",},
     {"name":"mus_Jungle","order":6,"path":"sounds/mus_Jungle/mus_Jungle.yy",},
     {"name":"mus_None","order":4,"path":"sounds/mus_None/mus_None.yy",},

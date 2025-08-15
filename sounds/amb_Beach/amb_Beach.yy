@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"amb_Beach",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":15.976848,
+  "name":"amb_Beach",
+  "parent":{
+    "name":"MiscAssets",
+    "path":"folders/MiscAssets.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"amb_Beach.wav",
+  "type":1,
+  "volume":1.0,
+}
