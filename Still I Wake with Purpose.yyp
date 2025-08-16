@@ -90,6 +90,7 @@
     {"id":{"name":"amb_Beach","path":"sounds/amb_Beach/amb_Beach.yy",},},
     {"id":{"name":"mus_Home","path":"sounds/mus_Home/mus_Home.yy",},},
     {"id":{"name":"mus_Jungle","path":"sounds/mus_Jungle/mus_Jungle.yy",},},
+    {"id":{"name":"mus_Mountain","path":"sounds/mus_Mountain/mus_Mountain.yy",},},
     {"id":{"name":"mus_None","path":"sounds/mus_None/mus_None.yy",},},
     {"id":{"name":"mus_Stage","path":"sounds/mus_Stage/mus_Stage.yy",},},
     {"id":{"name":"snd_calorieCounting","path":"sounds/snd_calorieCounting/snd_calorieCounting.yy",},},
