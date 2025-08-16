@@ -693,9 +693,8 @@ if (global.gameState == 6) {
 			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
 				fadeToTent = true;
 				fadeInSiblif = true;
-				alarm_set(1,49);
 				
-				create_textbox(455, false)
+				create_textbox(1118, false)
 			}
 		
 		break;

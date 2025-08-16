@@ -1,9 +1,7 @@
 draw_set_halign(hAlignment);
 draw_set_font(MainText);
 
-draw_set_alpha(hasBackground);
 draw_self();
-draw_set_alpha(1);
 											  
 draw_text_ext(x + xOffset, y + yOffset, currentStringDrawn, 24, boxWidth);	//draw string
 draw_text_ext(x + xOffset, y + yOffset - 42, characterName, 24, boxWidth);	//draw name

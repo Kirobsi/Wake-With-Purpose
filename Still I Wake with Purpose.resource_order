@@ -100,6 +100,7 @@
     {"name":"spr_SiblifBelly","order":3,"path":"sprites/spr_SiblifBelly/spr_SiblifBelly.yy",},
     {"name":"spr_SiblifBoobs","order":2,"path":"sprites/spr_SiblifBoobs/spr_SiblifBoobs.yy",},
     {"name":"spr_SiblifLegs","order":4,"path":"sprites/spr_SiblifLegs/spr_SiblifLegs.yy",},
+    {"name":"spr_SiblifRide","order":10,"path":"sprites/spr_SiblifRide/spr_SiblifRide.yy",},
     {"name":"spr_TalkOption","order":1,"path":"sprites/spr_TalkOption/spr_TalkOption.yy",},
     {"name":"spr_Tent","order":4,"path":"sprites/spr_Tent/spr_Tent.yy",},
     {"name":"sRock","order":4,"path":"sprites/sRock/sRock.yy",},

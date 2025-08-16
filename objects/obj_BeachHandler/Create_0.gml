@@ -51,4 +51,5 @@ else if (global.gameState > 2) {
 }
 
 if(!audio_is_playing(amb_Beach)) audio_play_sound(amb_Beach, 0, 1, 1);
-audio_sound_gain(amb_Beach, 1, 2000);
+audio_sound_gain(amb_Beach, 0, 0);
+audio_sound_gain(amb_Beach, 0.4, 2000);

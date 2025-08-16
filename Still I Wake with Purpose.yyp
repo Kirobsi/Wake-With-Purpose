@@ -130,6 +130,7 @@
     {"id":{"name":"spr_SiblifBelly","path":"sprites/spr_SiblifBelly/spr_SiblifBelly.yy",},},
     {"id":{"name":"spr_SiblifBoobs","path":"sprites/spr_SiblifBoobs/spr_SiblifBoobs.yy",},},
     {"id":{"name":"spr_SiblifLegs","path":"sprites/spr_SiblifLegs/spr_SiblifLegs.yy",},},
+    {"id":{"name":"spr_SiblifRide","path":"sprites/spr_SiblifRide/spr_SiblifRide.yy",},},
     {"id":{"name":"spr_TalkOption","path":"sprites/spr_TalkOption/spr_TalkOption.yy",},},
     {"id":{"name":"spr_Tent","path":"sprites/spr_Tent/spr_Tent.yy",},},
     {"id":{"name":"spr_Textbox","path":"sprites/spr_Textbox/spr_Textbox.yy",},},
