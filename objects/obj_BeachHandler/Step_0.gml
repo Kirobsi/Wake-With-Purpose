@@ -553,16 +553,16 @@ if (global.gameState == 5) {
 			primaryCalories = calculate_siblif_size(global.siblifCalories);
 			beachBlur = 0;
 			
-			if (global.dialogueFlag1) {
+			//Find out if Siblif is in a T2 pose
+			if (global.siblifFatStage[3] > 0) {global.dialogueFlag2 = true;}
+			else {global.dialogueFlag2 = false;}
+			
+			if (global.dialogueFlag2 && global.dialogueFlag1) {
 				localState = 12;
 				fadeInSiblif = true;
 				siblifAlpha = 1;
 				break;
 			}
-			
-			//Find out if Siblif is in a T2 pose
-			if (global.siblifFatStage[3] > 0) {global.dialogueFlag2 = true;}
-			else {global.dialogueFlag2 = false;}
 			
 			fadeFromBlack = true;
 			create_textbox(469, false);
@@ -633,7 +633,7 @@ if (global.gameState == 5) {
 		case 16:
 		
 			fadeOutSiblif = true;
-			alarm_set(1, 75);
+			alarm_set(1, 95);
 			localState++;
 		
 		break;
@@ -694,7 +694,12 @@ if (global.gameState == 6) {
 				fadeToTent = true;
 				fadeInSiblif = true;
 				
-				create_textbox(1118, false)
+				//Find out if Siblif is in a T2 pose
+				if (global.siblifFatStage[3] > 0) {global.dialogueFlag2 = true;}
+				else {global.dialogueFlag2 = false;}
+				
+				if (!global.dialogueFlag2) {create_textbox(722, false);}
+				else {create_textbox(1118, false);}
 			}
 		
 		break;
@@ -703,9 +708,8 @@ if (global.gameState == 6) {
 		case 3:
 			
 			fadeToBlack = true;
-			if (alarm[1]) > 0 {localState++}
 			
-			alarm_set(1,50);
+			alarm_set(1,25);
 			localState++;
 			
 		break;
@@ -713,10 +717,8 @@ if (global.gameState == 6) {
 		
 		case 5:
 		
-			primaryCalories = calculate_siblif_size(global.siblifCalories);
 			beachBlur = 0;
-			fadeFromBlack = true;
-			fadeToBlack = false;
+			create_textbox(1194, false);
 			localState++;
 		
 		break;
@@ -724,8 +726,95 @@ if (global.gameState == 6) {
 		
 		case 7:
 		
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			alarm_set(1,120);
+			localState++;
+		
+		break;
+		
+		
+		case 9:
+		
+			if (!global.dialogueFlag2 && global.siblifFatStage[3] > 0) {
+				localState = 12;
+				break;
+			}
+			
+			else {create_textbox(1204, false);}
+			fadeFromBlack = true;
+			localState++;
+		
+		break;
+		
+		
+		case 11:
+		
+			if (primaryCalories == 0) {create_textbox(1238)}		//boob
+			else if (primaryCalories == 1) {create_textbox(1244)}	//belly
+			else {create_textbox(1248)}								//butt
+			localState++;
+		
+		break;
+		
+		
+		case 13:
+		
 			fadeFromTent = true;
 			fadeOutSiblif = true;
+			global.canControlPlayer = true;
+			layer_set_visible("LeaveArea", true);
+			global.cycles++;
+			localState = 999;
+		
+		break;
+		
+		
+		case 14:
+		
+			create_textbox(930, false);
+			localState++;
+		
+		break;
+		
+		
+		case 16:
+		
+			fadeFromBlack = true;
+			
+			//boob
+			if (global.siblifFatStage[3] == 1) {create_textbox(937, false);}
+				
+			//belly
+			else if (global.siblifFatStage[3] == 2) {create_textbox(995, false);}
+				
+			//butt
+			else {create_textbox(1054, false);}
+			
+			localState++;
+		
+		break;
+		
+		
+		case 18:
+		
+			fadeOutSiblif = true;
+			alarm_set(1, 95);
+			localState++;
+		
+		break;
+		
+		
+		case 20:
+		
+			create_textbox(992, false);
+			localState++;
+		
+		break;
+		
+		
+		case 22:
+		
+			fadeFromTent = true;
 			global.canControlPlayer = true;
 			layer_set_visible("LeaveArea", true);
 			global.cycles++;
@@ -769,9 +858,14 @@ if (global.gameState == 7) {
 			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
 				fadeToTent = true;
 				fadeInSiblif = true;
-				alarm_set(1,49);
 				
-				create_textbox(455, false)
+				show_debug_message(global.siblifCalories)
+				for (var i = 0; i < 4; i++) {
+					global.siblifCalories[i] += (dayCalories[i] * 0.5);
+				}
+				show_debug_message(global.siblifCalories)
+				
+				create_textbox(1268, false);
 			}
 		
 		break;
@@ -779,10 +873,7 @@ if (global.gameState == 7) {
 		
 		case 3:
 			
-			fadeToBlack = true;
-			if (alarm[1]) > 0 {localState++}
-			
-			alarm_set(1,50);
+			//create_textbox(, false);
 			localState++;
 			
 		break;
