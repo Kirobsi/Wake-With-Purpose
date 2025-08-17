@@ -46,6 +46,7 @@
     {"id":{"name":"obj_Crockpot","path":"objects/obj_Crockpot/obj_Crockpot.yy",},},
     {"id":{"name":"obj_JungleHandler","path":"objects/obj_JungleHandler/obj_JungleHandler.yy",},},
     {"id":{"name":"obj_MountainHandler","path":"objects/obj_MountainHandler/obj_MountainHandler.yy",},},
+    {"id":{"name":"obj_SiblifRide","path":"objects/obj_SiblifRide/obj_SiblifRide.yy",},},
     {"id":{"name":"obj_System","path":"objects/obj_System/obj_System.yy",},},
     {"id":{"name":"obj_Textbox_Misc","path":"objects/obj_Textbox_Misc/obj_Textbox_Misc.yy",},},
     {"id":{"name":"obj_Textbox","path":"objects/obj_Textbox/obj_Textbox.yy",},},
@@ -78,6 +79,7 @@
     {"id":{"name":"oYellowButton","path":"objects/oYellowButton/oYellowButton.yy",},},
     {"id":{"name":"oYellowGate","path":"objects/oYellowGate/oYellowGate.yy",},},
     {"id":{"name":"rmBeach","path":"rooms/rmBeach/rmBeach.yy",},},
+    {"id":{"name":"rmEndScreen","path":"rooms/rmEndScreen/rmEndScreen.yy",},},
     {"id":{"name":"rmStartup","path":"rooms/rmStartup/rmStartup.yy",},},
     {"id":{"name":"stageCave","path":"rooms/stageCave/stageCave.yy",},},
     {"id":{"name":"stageJungle","path":"rooms/stageJungle/stageJungle.yy",},},
@@ -162,6 +164,7 @@
     {"roomId":{"name":"rmBeach","path":"rooms/rmBeach/rmBeach.yy",},},
     {"roomId":{"name":"stageJungle","path":"rooms/stageJungle/stageJungle.yy",},},
     {"roomId":{"name":"stageMountain","path":"rooms/stageMountain/stageMountain.yy",},},
+    {"roomId":{"name":"rmEndScreen","path":"rooms/rmEndScreen/rmEndScreen.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

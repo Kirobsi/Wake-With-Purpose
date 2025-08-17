@@ -749,9 +749,9 @@ if (global.gameState == 6) {
 		
 		case 11:
 		
-			if (primaryCalories == 0) {create_textbox(1238)}		//boob
-			else if (primaryCalories == 1) {create_textbox(1244)}	//belly
-			else {create_textbox(1248)}								//butt
+			if (primaryCalories == 0) {create_textbox(1238, false)}		//boob
+			else if (primaryCalories == 1) {create_textbox(1244, false)}	//belly
+			else {create_textbox(1248, false)}								//butt
 			localState++;
 		
 		break;
@@ -873,7 +873,9 @@ if (global.gameState == 7) {
 		
 		case 3:
 			
-			//create_textbox(, false);
+			if (global.siblifFatStage[3] == 1) {create_textbox(1323, false)}			//boob
+			else if (global.siblifFatStage[3] == 2) {create_textbox(1361, false)}		//belly
+			else {create_textbox(1372, false)}											//butt
 			localState++;
 			
 		break;
@@ -881,10 +883,8 @@ if (global.gameState == 7) {
 		
 		case 5:
 		
-			primaryCalories = calculate_siblif_size(global.siblifCalories);
-			beachBlur = 0;
-			fadeFromBlack = true;
-			fadeToBlack = false;
+			alarm_set(1, 120);
+			fadeToBlack = true;
 			localState++;
 		
 		break;
@@ -892,7 +892,8 @@ if (global.gameState == 7) {
 		
 		case 7:
 		
-			create_textbox(457, false)
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			create_textbox(1383, false);
 			localState++;
 		
 		break;
@@ -900,18 +901,66 @@ if (global.gameState == 7) {
 		
 		case 9:
 		
+			fadeFromBlack = true;
+			alarm_set(1, 150);
+			localState++;
+		
+		break;
+		
+		
+		case 11:
+		
+			if (primaryCalories == 0) {create_textbox(1387, false)}			//boob
+			else if (primaryCalories == 1) {create_textbox(1410, false)}	//belly
+			else {create_textbox(1432, false)}								//butt
+			localState++;
+		
+		break;
+		
+		
+		case 13:
+		
 			fadeToBlack = true;
+			alarm_set(1, 120);
+			stop_song(obj_System.songPlaying);
+			localState++;
+		
+		break;
+		
+		
+		case 15:
+		
 			localState++;
 			create_textbox(462,false,false,fa_center,true,331,-160,900);
 		
 		break;
 		
 		
-		case 11:
+		case 17:
 			
-			create_textbox(468,false,false,fa_center,false,331,-160,900);
+			if (global.siblifCalories[3] >= 21000) {
+				localState = 18;
+				alarm_set(1, 60);
+				break;
+			}
+			else {create_textbox(1466, false);}
 			localState++;
 			
+		break;
+		
+		
+		case 19:
+		
+			create_textbox(1454,false,false,fa_center,true,331,-160,650);
+			localState++;
+		
+		break;
+		
+		
+		case 21:
+		
+			room_goto(rmEndScreen);
+		
 		break;
 	}
 	
