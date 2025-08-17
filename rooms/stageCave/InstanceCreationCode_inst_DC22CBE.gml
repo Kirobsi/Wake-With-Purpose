@@ -3,4 +3,4 @@ sprite_index = sCloudberry;
 name = "Cloudberry";
 
 calorieType = 0;
-calorieCount = 1000;
+calorieCount = 1500;

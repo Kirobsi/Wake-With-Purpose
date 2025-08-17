@@ -114,4 +114,10 @@ else if (keyboard_check_pressed(vk_f5)) {
 	room_goto(stageMountain);
 }
 
+else if (keyboard_check_pressed(vk_f6)) {
+	instance_destroy(obj_Textbox);
+	global.canControlPlayer = false;
+	room_goto(rmEndScreen);
+}
+
 #endregion

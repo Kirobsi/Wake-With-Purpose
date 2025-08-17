@@ -87,8 +87,8 @@ if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStrin
 		characterName = global.allStrings[# 0, 16 - real(pronounChecker)];
 	}
 	
-	if (global.allStrings[# 0, dialogueRow] == "0") {image_index = 2;}
-	else {image_index = 1;}
+	if (global.allStrings[# 0, dialogueRow] == "0") {image_index = 2 * hasBackground;}
+	else {image_index = 1 * hasBackground;}
 	
 	talkOptions = 0;
 	canOptions = true;
