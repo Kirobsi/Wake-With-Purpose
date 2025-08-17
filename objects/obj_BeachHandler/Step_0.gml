@@ -172,7 +172,6 @@ if (global.gameState == 3) {
 		fadeOutSiblif = true;
 		localState = 8
 		if (global.NoFoodMode) {
-			global.gameState = 2;
 			layer_set_visible("LeaveArea", true);
 		}
 	}
