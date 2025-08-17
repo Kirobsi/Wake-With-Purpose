@@ -95,7 +95,7 @@ if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
 if (keyboard_check_pressed(vk_f2)) {
 	game_restart();
 }
-
+/*
 else if (keyboard_check_pressed(vk_f3)) {
 	instance_destroy(obj_Textbox);
 	global.canControlPlayer = true;
