@@ -633,7 +633,7 @@ else if (global.gameState == 5) {
 		case 16:
 		
 			fadeOutSiblif = true;
-			alarm_set(1, 95);
+			alarm_set(1, 50);
 			localState++;
 		
 		break;
@@ -727,7 +727,6 @@ else if (global.gameState == 6) {
 		
 		case 7:
 		
-			primaryCalories = calculate_siblif_size(global.siblifCalories);
 			alarm_set(1,120);
 			localState++;
 		
@@ -736,6 +735,8 @@ else if (global.gameState == 6) {
 		
 		case 9:
 		
+			primaryCalories = calculate_siblif_size(global.siblifCalories);
+			
 			if (!global.dialogueFlag2 && global.siblifFatStage[3] > 0) {
 				localState = 14;
 				break;
@@ -799,7 +800,7 @@ else if (global.gameState == 6) {
 		case 18:
 		
 			fadeOutSiblif = true;
-			alarm_set(1, 95);
+			alarm_set(1, 50);
 			localState++;
 		
 		break;
@@ -959,6 +960,14 @@ else if (global.gameState == 7) {
 		
 		
 		case 21:
+		
+			alarm_set(1, 75);
+			localState++;
+		
+		break;
+		
+		
+		case 23:
 		
 			room_goto(rmEndScreen);
 		
