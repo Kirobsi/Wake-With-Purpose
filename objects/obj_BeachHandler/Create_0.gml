@@ -19,6 +19,8 @@ slotsToCashIn = [];
 primaryCalories = 0;
 dayCalories = 0;
 
+incrementGlobalGameState = 1;
+
 if (global.gameState == 2) {
 	alarm_set(0, 90)
 	layer_set_visible("SiblifForeground",true);
@@ -46,7 +48,10 @@ else if (global.gameState > 2) {
 		}
 	}
 	
-	if (layer_get_visible("LeaveArea")) {beachBlur = 0;}
+	if (layer_get_visible("LeaveArea")) {
+		beachBlur = 0;
+		incrementGlobalGameState = 0;
+	}
 	else {beachBlur = 2;}
 }
 

@@ -1,5 +1,5 @@
 //Transfer local state to obj_System
-global.gameState++;
+global.gameState += incrementGlobalGameState;
 show_debug_message("Global game state: " + string(global.gameState))
 
 //Fade out ambience
