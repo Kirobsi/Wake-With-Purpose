@@ -1,5 +1,5 @@
-#region Horizontal Movement
-
+#region Horizontal Movement (original)
+/*
 if(global.leftKey && global.canControlPlayer)
 {
 	phy_speed_x = lerp(phy_speed_x, -4, 0.3);
@@ -11,6 +11,34 @@ else if(global.rightKey && global.canControlPlayer)
 else
 {
 	phy_speed_x = lerp(phy_speed_x, 0, 0.3);
+}
+*/
+#endregion
+
+#region Horizontal Movement
+
+if(abs(phy_speed_x <= 4))
+{
+	image_speed = 1;
+	
+	if(global.leftKey && global.canControlPlayer)
+	{
+		phy_speed_x = lerp(phy_speed_x, -4, 0.3);
+	}
+	else if(global.rightKey && global.canControlPlayer)
+	{
+		phy_speed_x = lerp(phy_speed_x, 4, 0.3);
+	}
+	else
+	{
+		phy_speed_x = lerp(phy_speed_x, 0, 0.3);
+	}
+}
+else
+{
+	image_speed = 2;
+	
+	phy_speed_x += 0.1 * (-global.leftKey + global.rightKey);
 }
 
 #endregion
