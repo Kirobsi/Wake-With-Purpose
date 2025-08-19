@@ -17,7 +17,7 @@ else
 
 #region Horizontal Movement
 
-if(abs(phy_speed_x <= 4))
+if(phy_speed_x < 4 && phy_speed_x > -4)
 {
 	image_speed = 1;
 	
@@ -38,7 +38,18 @@ else
 {
 	image_speed = 2;
 	
-	phy_speed_x += 0.1 * (-global.leftKey + global.rightKey);
+	if(global.leftKey && global.canControlPlayer && phy_speed_x > 0)
+	{
+		phy_speed_x -= 0.2;
+	}
+	else if(global.rightKey && global.canControlPlayer && phy_speed_x < 0)
+	{
+		phy_speed_x += 0.2;
+	}
+	else
+	{
+		phy_speed_x += 0.01 * -sign(phy_speed_x);
+	}
 }
 
 #endregion

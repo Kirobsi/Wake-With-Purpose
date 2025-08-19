@@ -1,3 +1,3 @@
-applyspeed = false;
+//applyspeed = false;
 
-storedspeed = 0;
+//storedspeed = 0;

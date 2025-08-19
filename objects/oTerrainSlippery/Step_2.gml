@@ -1,4 +1,4 @@
-if(applyspeed)
-{
-	oPlayer.phy_speed_x = storedspeed;
-}
+//if(applyspeed)
+//{
+//	oPlayer.phy_speed_x = storedspeed;
+//}

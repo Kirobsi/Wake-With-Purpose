@@ -1,3 +1,3 @@
-applyspeed = false;
+//applyspeed = false;
 
-storedspeed = oPlayer.phy_speed_x;
+//storedspeed = oPlayer.phy_speed_x;
