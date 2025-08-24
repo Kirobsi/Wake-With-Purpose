@@ -298,7 +298,7 @@ if (global.gameState == 3) {
 
 	#region Later cash in text
 	
-	else if (localState == 9 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+	else if (localState == 9 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && obj_Crockpot.canInteract == false) {
 		fadeToTent = true;
 		alarm_set(1,49);
 		create_textbox(177, false);
