@@ -6,7 +6,7 @@
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "bitRate":128,
   "compression":0,
   "conversionMode":0,
   "duration":93.02633,
