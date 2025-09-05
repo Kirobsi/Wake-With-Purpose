@@ -7,6 +7,7 @@ if(localState == 1)
 }
 
 deleteFood = true;
+deleteWalls = true;
 
 instance_create_layer(x, y, "UI", oTitleCard,
 {
