@@ -49,6 +49,7 @@ jungleState = 0;
 mountainState = 0;
 
 caveFoodTaken = [0];
+wallsDestroyed = [0];
 jungleFoodTaken = [0];
 mountainFoodTaken = [0];
 

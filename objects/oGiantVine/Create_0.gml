@@ -1,4 +1,4 @@
-if(obj_JungleHandler.localState == 1)
+if(obj_JungleHandler.localState >= 1)
 {
 	image_index = 1;
 	done = true;

@@ -1,20 +1,20 @@
-~NAME/PRONOUNS~,,
-10,pronouns,
-9,pronouns,
-8,pronouns,
-7,pronouns,
-6,pronouns,
-5,pronouns,
-4,pronouns,
-3,pronouns,
-2,pronouns,
-Kiwi,Doe/Doe,
-,,
-~STRINGS~,,
-1,This looks like it might collapse soon...,
-Die,localState++,obj_CaveHandler
-1,Hopefully this thing will grow by tomorrow.,
-Die,localState++,obj_JungleHandler
-goto,13,
-4,Bye!,
-Die,,
+~NAME/PRONOUNS~,
+10,pronouns
+9,pronouns
+8,pronouns
+7,pronouns
+6,pronouns
+5,pronouns
+4,pronouns
+3,pronouns
+2,pronouns
+Kiwi,Doe/Doe
+,
+~STRINGS~,
+1,This looks like it might collapse soon...
+Die,
+1,Hopefully this thing will grow by tomorrow.
+Die,
+goto,13
+4,Bye!
+Die,

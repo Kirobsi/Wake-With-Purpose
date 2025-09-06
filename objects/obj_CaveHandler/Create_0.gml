@@ -1,12 +1,13 @@
 localState = obj_System.caveState;
 
-if(localState == 1)
+if(localState >= 1)
 {
 	//Allow passage to phase 2 area
 	instance_destroy(oCavePhaseBlocker);
 }
 
 deleteFood = true;
+deleteWalls = true;
 
 instance_create_layer(x, y, "UI", oTitleCard,
 {
