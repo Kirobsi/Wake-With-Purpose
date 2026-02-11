@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_SiblifBase",
   "bboxMode":0,
-  "bbox_bottom":189,
+  "bbox_bottom":198,
   "bbox_left":3,
   "bbox_right":199,
   "bbox_top":4,
