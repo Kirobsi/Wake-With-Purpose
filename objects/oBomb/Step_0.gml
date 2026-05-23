@@ -1,5 +1,5 @@
-image_xscale = lerp(image_xscale, 1, 0.5);
-image_yscale = lerp(image_yscale, 1, 0.5);
+image_xscale = lerp(image_xscale, 2, 1);
+image_yscale = lerp(image_yscale, 2, 1);
 
 if(bombstate == 0)
 {
@@ -25,13 +25,8 @@ else if(bombstate == 2)
 	ysp += 0.5;
 	if(place_meeting(x, y, oTerrain))
 	{
-		instance_create_layer(x, y, "Instances", oBombExploding);
-		audio_play_sound(snd_Explode, 0, 0);
-		bombstate = 0;
-		x = xstart;
-		y = ystart;
-		image_xscale = 0;
-		image_yscale = 0;
-		ysp = -5;
+		alarm_set(0, 90);
+		bombstate = 3;
+		sprite_index = sBombLit;
 	}
 }

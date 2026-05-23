@@ -45,6 +45,7 @@ beachState = 0;
 global.NoFoodMode = false;
 
 caveState = 0;
+cavegatelowered = false; // whether or not the yellow gate has been lowered in Cave
 jungleState = 0;
 mountainState = 0;
 
@@ -55,7 +56,7 @@ mountainFoodTaken = [0];
 
 global.siblifFatStage = [0, 0, 0, 0];	//boob, belly, butt, base
 global.siblifCalories = [0, 0, 0, 0];	//boob, belly, butt, total
-global.dialogueFlag1 = false;
+global.dialogueFlag1 = false;			//general purpose, reusable dialogue flag
 
 //stupid render order stuff eugh I wasn't thinking about how different poses could mean different layering needs
 global.topSibDraw = spr_SiblifBoobs;

@@ -1,6 +1,6 @@
 sprite_index = sSnowCone;
 
-name = "Snow Cone";
+name = global.allStrings[# 0, 1512];
 
 calorieType = 0;
 calorieCount = 1500;

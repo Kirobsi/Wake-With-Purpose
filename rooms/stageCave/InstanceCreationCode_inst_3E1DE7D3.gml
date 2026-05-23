@@ -1,6 +1,6 @@
 sprite_index = sOubli;
 
-name = "Oubli Fruit";
+name = global.allStrings[# 0, 1513];
 
 calorieType = 0;
 calorieCount = 1500;

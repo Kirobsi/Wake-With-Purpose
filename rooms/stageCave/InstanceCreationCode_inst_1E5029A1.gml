@@ -1,6 +1,6 @@
 sprite_index = sPeach;
 
-name = "Peach";
+name = global.allStrings[# 0, 1505];
 
 calorieType = 2;
 calorieCount = 500;

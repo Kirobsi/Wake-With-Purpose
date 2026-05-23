@@ -1,5 +1,6 @@
 visible = true;
 drawAlpha = 1;
+siblifSurface = -1;
 fadeFromBlack = true;
 fadeToBlack = false;
 
@@ -20,6 +21,8 @@ primaryCalories = 0;
 dayCalories = 0;
 
 incrementGlobalGameState = 1;
+
+siblifSurface = surface_create(960, 540);
 
 if (global.gameState == 2) {
 	alarm_set(0, 90)

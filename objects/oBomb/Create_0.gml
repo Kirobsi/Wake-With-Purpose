@@ -2,6 +2,7 @@ bombstate = 0;
 //0 = not picked up
 //1 = picked up
 //2 = thrown
+//3 = fuse lit
 
 xsp = 5;
 ysp = -5;

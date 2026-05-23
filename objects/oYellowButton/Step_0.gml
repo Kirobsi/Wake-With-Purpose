@@ -2,6 +2,7 @@ if(place_meeting(x, y, oPlayer) && !pushed)
 {
 	image_index = 1;
 	pushed = true;
+	obj_System.cavegatelowered = true;
 	attachedgate.phy_active = false;
 }
 

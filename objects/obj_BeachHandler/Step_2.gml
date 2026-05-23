@@ -141,7 +141,7 @@ if (global.gameState == 3) {
 
 	#region Tent interact
 
-	if (localState == 2 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+	if (localState == 2 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent) {
 		if (global.NoFoodMode && _filledslots == 0) {create_textbox(199)}
 		obj_Crockpot.canInteract = false;
 		fadeToTent = true;
@@ -191,7 +191,7 @@ if (global.gameState == 3) {
 
 	#region Early cash in text
 
-	else if (localState == 10 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+	else if (localState == 10 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent) {
 		fadeToTent = true;
 		alarm_set(1,49);
 		create_textbox(103, false);
@@ -278,14 +278,14 @@ if (global.gameState == 3) {
 		localState++;
 	}
 	
-	else if (localState == 28 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+	else if (localState == 28 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent) {
 		fadeToTent = true;
 		fadeInSiblif = true;
 		create_textbox(245, false);
 		localState = 24;
 	}
 	
-	else if (localState == 29 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+	else if (localState == 29 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent) {
 		fadeToTent = true;
 		fadeInSiblif = true;
 		create_textbox(247, false);
@@ -298,7 +298,7 @@ if (global.gameState == 3) {
 
 	#region Later cash in text
 	
-	else if (localState == 9 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && obj_Crockpot.canInteract == false) {
+	else if (localState == 9 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent && obj_Crockpot.canInteract == false) {
 		fadeToTent = true;
 		alarm_set(1,49);
 		create_textbox(177, false);
@@ -338,7 +338,7 @@ else if (global.gameState == 4) {
 		
 		case 2: //Initiate tent&textbox post-cooking
 		
-			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent) {
 				fadeToTent = true;
 				alarm_set(1,49);
 				
@@ -517,7 +517,7 @@ else if (global.gameState == 5) {
 		
 		case 2: //Initiate tent&textbox post-cooking
 		
-			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent) {
 				fadeToTent = true;
 				fadeInSiblif = true;
 				
@@ -689,7 +689,7 @@ else if (global.gameState == 6) {
 		
 		case 2: //Initiate tent&textbox post-cooking
 		
-			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent) {
 				fadeToTent = true;
 				fadeInSiblif = true;
 				
@@ -856,7 +856,7 @@ else if (global.gameState == 7) {
 		
 		case 2: //Initiate tent&textbox post-cooking
 		
-			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer) {
+			if (place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent) {
 				fadeToTent = true;
 				fadeInSiblif = true;
 				
