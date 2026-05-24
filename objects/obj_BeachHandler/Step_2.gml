@@ -296,7 +296,7 @@ if (global.gameState == 3) {
 	#endregion
 
 
-	#region Later cash in text
+#region Later cash in text
 	
 	else if (localState == 9 && place_meeting(0,0,oPlayer) && global.interactKeyPressed && global.canControlPlayer && !fadeFromTent && obj_Crockpot.canInteract == false) {
 		fadeToTent = true;
@@ -305,7 +305,6 @@ if (global.gameState == 3) {
 		localState = 10;
 	}
 	
-	#endregion
 }
 
 #endregion
