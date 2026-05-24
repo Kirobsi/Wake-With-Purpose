@@ -7,9 +7,6 @@ font_enable_effects(MainText, true, {
     dropShadowOffsetX : 2,
     dropShadowColour : c_black
 })
-draw_text_color(camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0]) / 2),
-	camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0]) / 1.25),
-	_string + name,
-	c_white, c_white, c_white, c_white, showtext);
+draw_text_color(480, 432, global.allStrings[# 0, stringnum], c_white, c_white, c_white, c_white, showtext);
 
 font_enable_effects(MainText, false);

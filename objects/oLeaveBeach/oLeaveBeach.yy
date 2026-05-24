@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oVersionNumber",
+  "%Name":"oLeaveBeach",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":75,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":73,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oVersionNumber",
+  "name":"oLeaveBeach",
   "overriddenProperties":[],
   "parent":{
-    "name":"GameManager",
-    "path":"folders/GameManager.yy",
+    "name":"Beach",
+    "path":"folders/Stage/Beach.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,6 +32,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":null,
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sLeaveArea",
+    "path":"sprites/sLeaveArea/sLeaveArea.yy",
+  },
   "visible":true,
 }

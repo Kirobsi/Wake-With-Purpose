@@ -22,8 +22,6 @@ dayCalories = 0;
 
 incrementGlobalGameState = 1;
 
-siblifSurface = surface_create(960, 540);
-
 if (global.gameState == 2) {
 	alarm_set(0, 90)
 	layer_set_visible("SiblifForeground",true);
