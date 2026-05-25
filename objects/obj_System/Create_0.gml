@@ -1,5 +1,7 @@
 ini_open("save.ini"); //open save ini for saving/loading
 
+scribble_font_set_default("MainText");
+
 global.gameState = 0; //to track how far through boot you are
 global.cycles = 1;	//which cycle the player/game is on
 global.volumeLevel = ini_read_real("volume", "level", 30); //default volume of the game

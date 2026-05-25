@@ -10,12 +10,10 @@ image_index *= hasBackground;
 
 #region Text Crawl
 
-if (currentStringDrawnNo < string_length(currentString) + 1) {
+if (typist.get_state() != 1) {
 	if (global.textSpeed != 0) {
-		for (var i = 0; i < global.textSpeed; i++) {
-			currentStringDrawn = string_concat(currentStringDrawn, string_char_at(currentString, currentStringDrawnNo));
-			currentStringDrawnNo++;
-		}
+		if (global.jumpKeyPressed) {typist.skip(true);}
+		
 		//play talk sound
 		if(!audio_is_playing(snd_Talk))
 		{
@@ -33,8 +31,8 @@ if (currentStringDrawnNo < string_length(currentString) + 1) {
 		}
 	}
 	else {
-		currentStringDrawn = currentString;
-		currentStringDrawnNo = string_length(currentString) + 1;
+		typist.skip(true);
+		global.jumpKeyPressed = false;
 	}
 }
 
@@ -61,7 +59,7 @@ else if (global.miscStrings[# 2, dialogueRow] != "" && canOptions) {
 
 #region Press jump to advance
 
-if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStringDrawnNo >= string_length(currentString) + 1)) {
+if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || typist.get_state() >= 1)) {
     if (talkOptions > 0) {
 		dialogueRow = real(global.miscStrings[# ((talkOptionsPosition + 1) * 2) + 1, dialogueRow])
 		talkOptions = 0;
@@ -74,9 +72,7 @@ if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStrin
 		return	//prevent rest of this code from running
 	}
 	
-	currentString = global.miscStrings[# 1, dialogueRow];
-    currentStringDrawn = "";
-    currentStringDrawnNo = 1;
+	currentString = scribble(global.miscStrings[# 1, dialogueRow]);
 	characterName = global.miscStrings[# 0, dialogueRow];
 	
 	//figure out name and pronouns

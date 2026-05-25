@@ -20,7 +20,8 @@ talkOptions = 0;
 talkOptionsPosition = 0;
 talkOptHeight = 38;
 //talkOptGap = 4;
-
+typist = scribble_typist();
+typist.in(global.textSpeed, 0);
 
 //How many characters of the current string should be drawn
 currentStringDrawnNo = 1;
