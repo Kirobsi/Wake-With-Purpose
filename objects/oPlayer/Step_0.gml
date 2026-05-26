@@ -62,11 +62,11 @@ else
 }
 
 //Invincibility frames flash
-if(alarm[0] != -1 && alarm[0] mod 2 == 0)
+if(alarm[0] != -1 && alarm[0] mod 30 <= 14)
 {
 	image_blend = c_teal;
 }
-else if(alarm[0] != -1 && alarm[0] mod 2 == 1)
+else if(alarm[0] != -1 && alarm[0] mod 30 > 14)
 {
 	image_blend = c_white;
 }
