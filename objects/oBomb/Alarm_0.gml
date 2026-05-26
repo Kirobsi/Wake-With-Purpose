@@ -1,4 +1,4 @@
-instance_create_layer(x, y, "Instances", oBombExploding);
+instance_create_layer(x, y, "Instances", oBombExplodingCore);
 audio_play_sound(snd_Explode, 0, 0);
 bombstate = 0;
 x = xstart;
