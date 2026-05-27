@@ -34,8 +34,10 @@ if(!(position_meeting(x-8,y+1,oTerrain) || position_meeting(x+7,y+1,oTerrain)))
 else if (!jumpDelay && jumping) {
 	jumping = false;
 	touchedSpring = false;
-	audio_play_sound(snd_PlrLand,0,0)
-	instance_create_layer(x, y, "UI", oParticle, {sprite_index : sParticleLandJump});
+	if(!place_meeting(x, y, oTerrainSemiSolid)) {
+		audio_play_sound(snd_PlrLand,0,0)
+		instance_create_layer(x, y, "UI", oParticle, {sprite_index : sParticleLandJump});
+	}
 }
 
 #endregion
