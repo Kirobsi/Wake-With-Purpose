@@ -1,1 +1,2 @@
-game_restart();
+fadeOut = true;
+funnyCounter = 45;

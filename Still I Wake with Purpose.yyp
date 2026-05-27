@@ -49,6 +49,7 @@
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"LiberationSerifFontLicense.txt","CopyToMask":-1,"filePath":"datafiles","name":"LiberationSerifFontLicense.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"scribble_license.txt","CopyToMask":-1,"filePath":"datafiles","name":"scribble_license.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -57,7 +58,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Still I Wake with Purpose",
   "resources":[

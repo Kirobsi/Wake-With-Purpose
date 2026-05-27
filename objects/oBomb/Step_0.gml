@@ -42,11 +42,11 @@ switch(alarm[0]) {
 
 if(sprite_index == sBombLit) {
 	switch(image_index) {
-		case 0: instance_create_layer(bbox_left + 18, bbox_top, "Instances_1", oBombSpark); break;
-		case 1: instance_create_layer(bbox_left + 16, bbox_top, "Instances_1", oBombSpark); break;
-		case 2: instance_create_layer(bbox_left + 16, bbox_top + 2, "Instances_1", oBombSpark); break;
-		case 3: instance_create_layer(bbox_left + 14, bbox_top + 2, "Instances_1", oBombSpark); break;
-		case 4: instance_create_layer(bbox_left + 14, bbox_top + 4, "Instances_1", oBombSpark); break;
-		case 5: instance_create_layer(bbox_left + 14, bbox_top + 6, "Instances_1", oBombSpark); break;
+		case 0: instance_create_layer(bbox_left + 16, bbox_top, "Instances_1", oBombSpark); break;
+		case 1: instance_create_layer(bbox_left + 14, bbox_top, "Instances_1", oBombSpark); break;
+		case 2: instance_create_layer(bbox_left + 14, bbox_top + 2, "Instances_1", oBombSpark); break;
+		case 3: instance_create_layer(bbox_left + 12, bbox_top + 2, "Instances_1", oBombSpark); break;
+		case 4: instance_create_layer(bbox_left + 12, bbox_top + 4, "Instances_1", oBombSpark); break;
+		case 5: instance_create_layer(bbox_left + 12, bbox_top + 6, "Instances_1", oBombSpark); break;
 	}
 }
