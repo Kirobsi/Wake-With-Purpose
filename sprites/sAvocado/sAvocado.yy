@@ -12,22 +12,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"82070656-0204-4316-a35c-71e7cb40efc6","name":"82070656-0204-4316-a35c-71e7cb40efc6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"8523e66a-b36e-4292-ae8e-3c6271414405","name":"8523e66a-b36e-4292-ae8e-3c6271414405","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"572bbe45-2865-4dc5-ba0e-811f19c0ec79","name":"572bbe45-2865-4dc5-ba0e-811f19c0ec79","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":16,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"45696b93-d2e3-4e94-ade2-446feba87cc9","blendMode":0,"displayName":"default","isLocked":false,"name":"45696b93-d2e3-4e94-ade2-446feba87cc9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"bcc9d5c7-2e63-444d-a5c8-e290fc038a54","blendMode":0,"displayName":"default","isLocked":false,"name":"bcc9d5c7-2e63-444d-a5c8-e290fc038a54","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sAvocado",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Ingredients",
-    "path":"folders/Food/Ingredients.yy",
+    "name":"Food",
+    "path":"folders/Food.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -50,7 +49,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":2.0,
+    "length":1.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -71,8 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"82070656-0204-4316-a35c-71e7cb40efc6","path":"sprites/sAvocado/sAvocado.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7bd46476-5ae6-4dac-ac98-058d61019137","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8523e66a-b36e-4292-ae8e-3c6271414405","path":"sprites/sAvocado/sAvocado.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"15c90ea6-1c4a-4805-9d35-b5169220f652","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"572bbe45-2865-4dc5-ba0e-811f19c0ec79","path":"sprites/sAvocado/sAvocado.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"be08b4f5-7160-4ccb-9a8e-2a52d9dab401","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

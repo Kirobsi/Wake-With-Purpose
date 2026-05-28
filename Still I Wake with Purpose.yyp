@@ -11,7 +11,6 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Food","folderPath":"folders/Food.yy","name":"Food","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Ingredients","folderPath":"folders/Food/Ingredients.yy","name":"Ingredients","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GameManager","folderPath":"folders/GameManager.yy","name":"GameManager","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"TextboxSprites","folderPath":"folders/GameManager/TextboxSprites.yy","name":"TextboxSprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"MiscAssets","folderPath":"folders/MiscAssets.yy","name":"MiscAssets","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -49,6 +48,7 @@
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"LiberationSerifFontLicense.txt","CopyToMask":-1,"filePath":"datafiles","name":"LiberationSerifFontLicense.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"scribble_license.txt","CopyToMask":-1,"filePath":"datafiles","name":"scribble_license.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

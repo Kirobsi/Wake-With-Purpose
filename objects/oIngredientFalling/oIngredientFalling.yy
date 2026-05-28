@@ -11,8 +11,8 @@
   "name":"oIngredientFalling",
   "overriddenProperties":[],
   "parent":{
-    "name":"Ingredients",
-    "path":"folders/Food/Ingredients.yy",
+    "name":"Food",
+    "path":"folders/Food.yy",
   },
   "parentObjectId":{
     "name":"oIngredient",

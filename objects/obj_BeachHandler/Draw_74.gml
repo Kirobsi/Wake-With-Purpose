@@ -6,10 +6,10 @@ if (!surface_exists(siblifSurface)) {siblifSurface = surface_create(960, 540);}	
 
 surface_set_target(siblifSurface);
 draw_clear_alpha(c_black, 0);
-draw_sprite_ext(global.lastSibDraw, global.siblifFatStage[global.lastNum], global.sibPos, 16, 2, 2, 0, c_white, 1);
-draw_sprite_ext(global.thirdSibDraw, global.siblifFatStage[global.threNum], global.sibPos, 16, 2, 2, 0, c_white, 1);
-draw_sprite_ext(global.secondSibDraw, global.siblifFatStage[global.twoNum], global.sibPos, 16, 2, 2, 0, c_white, 1);
-draw_sprite_ext(global.topSibDraw, global.siblifFatStage[global.topNum], global.sibPos, 16, 2, 2, 0, c_white, 1);
+draw_sprite_ext(global.lastSibDraw, global.siblifFatStage[global.lastNum], global.sibPos, 540, 2, 2, 0, c_white, 1);
+draw_sprite_ext(global.thirdSibDraw, global.siblifFatStage[global.threNum], global.sibPos, 540, 2, 2, 0, c_white, 1);
+draw_sprite_ext(global.secondSibDraw, global.siblifFatStage[global.twoNum], global.sibPos, 540, 2, 2, 0, c_white, 1);
+draw_sprite_ext(global.topSibDraw, global.siblifFatStage[global.topNum], global.sibPos, 540, 2, 2, 0, c_white, 1);
 draw_set_alpha(siblifAlpha);
 surface_reset_target();
 
