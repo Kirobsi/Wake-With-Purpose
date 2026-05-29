@@ -251,8 +251,8 @@
   "size":24.0,
   "styleName":"Regular",
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"Fonts",
+    "path":"texturegroups/Fonts",
   },
   "TTFName":"",
   "usesSDF":true,
