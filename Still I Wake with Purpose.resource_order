@@ -240,6 +240,7 @@
     {"name":"sLeaf","order":8,"path":"sprites/sLeaf/sLeaf.yy",},
     {"name":"sLeaveArea","order":6,"path":"sprites/sLeaveArea/sLeaveArea.yy",},
     {"name":"sLost","order":10,"path":"sprites/sLost/sLost.yy",},
+    {"name":"sMountainParallax","order":13,"path":"sprites/sMountainParallax/sMountainParallax.yy",},
     {"name":"sMuffin","order":11,"path":"sprites/sMuffin/sMuffin.yy",},
     {"name":"sMushroom","order":12,"path":"sprites/sMushroom/sMushroom.yy",},
     {"name":"sMushroomAlt","order":13,"path":"sprites/sMushroomAlt/sMushroomAlt.yy",},
