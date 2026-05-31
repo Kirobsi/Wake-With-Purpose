@@ -35,6 +35,7 @@
   "ResourceOrderSettings":[
     {"name":"ResultsText","order":2,"path":"fonts/ResultsText/ResultsText.yy",},
     {"name":"scribble_fallback_font","order":24,"path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},
+    {"name":"oBackgroundClouds","order":14,"path":"objects/oBackgroundClouds/oBackgroundClouds.yy",},
     {"name":"obj_BeachHandler","order":3,"path":"objects/obj_BeachHandler/obj_BeachHandler.yy",},
     {"name":"obj_CalorieTally","order":8,"path":"objects/obj_CalorieTally/obj_CalorieTally.yy",},
     {"name":"obj_CaveHandler","order":25,"path":"objects/obj_CaveHandler/obj_CaveHandler.yy",},
@@ -220,6 +221,7 @@
     {"name":"snd_Spring","order":6,"path":"sounds/snd_Spring/snd_Spring.yy",},
     {"name":"snd_Talk","order":7,"path":"sounds/snd_Talk/snd_Talk.yy",},
     {"name":"sAvocado","order":4,"path":"sprites/sAvocado/sAvocado.yy",},
+    {"name":"sBackgroundClouds","order":15,"path":"sprites/sBackgroundClouds/sBackgroundClouds.yy",},
     {"name":"sBomb","order":12,"path":"sprites/sBomb/sBomb.yy",},
     {"name":"sBombBurst","order":28,"path":"sprites/sBombBurst/sBombBurst.yy",},
     {"name":"sBombExploding","order":14,"path":"sprites/sBombExploding/sBombExploding.yy",},

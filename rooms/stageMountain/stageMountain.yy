@@ -377,7 +377,8 @@
     {"name":"inst_C361D1B","path":"rooms/stageMountain/stageMountain.yy",},
     {"name":"inst_78FB5290","path":"rooms/stageMountain/stageMountain.yy",},
     {"name":"inst_70AA43FA","path":"rooms/stageMountain/stageMountain.yy",},
-    {"name":"inst_3E75B7D9","path":"rooms/stageMountain/stageMountain.yy",},
+    {"name":"Sea","path":"rooms/stageMountain/stageMountain.yy",},
+    {"name":"inst_43A3DF1D","path":"rooms/stageMountain/stageMountain.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -1460,7 +1461,8 @@
           22,21,22,36,-89,-2147483648,21,34,35,34,35,34,35,34,35,34,35,21,22,21,22,21,22,21,22,21,22,49,-76,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tilesetMountain2","path":"tilesets/tilesetMountain2/tilesetMountain2.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Parallax","depth":1100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_3E75B7D9","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3E75B7D9","objectId":{"name":"oParallax","path":"objects/oParallax/oParallax.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"Sea","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Sea","objectId":{"name":"oParallax","path":"objects/oParallax/oParallax.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"inst_43A3DF1D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_43A3DF1D","objectId":{"name":"oBackgroundClouds","path":"objects/oBackgroundClouds/oBackgroundClouds.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Parallax","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":1200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":125,"SerialiseWidth":110,"TileCompressedData":[
           -1163,-2147483648,-43,0,-67,-2147483648,-43,0,-67,-2147483648,-43,0,-67,-2147483648,-43,0,-67,-2147483648,
