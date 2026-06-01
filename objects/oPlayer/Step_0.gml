@@ -56,7 +56,7 @@ else if (!jumpDelay && jumping) {
 if(abs(phy_speed_x) > 1)
 {
 	sprite_index = sPlayerWalk;
-	image_xscale = sign(phy_speed_x) * 2;
+	if(alarm[0] < 100) image_xscale = sign(phy_speed_x) * 2;
 }
 else
 {
@@ -66,11 +66,11 @@ else
 //Invincibility frames flash
 if(alarm[0] != -1 && alarm[0] mod 30 <= 14)
 {
-	image_blend = c_teal;
+	image_blend = c_white;
 }
 else if(alarm[0] != -1 && alarm[0] mod 30 > 14)
 {
-	image_blend = c_white;
+	image_blend = c_teal;
 }
 else
 {
