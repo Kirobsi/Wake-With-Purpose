@@ -1,4 +1,4 @@
-localState = obj_System.caveState;
+localState = 2;
 
 if(localState >= 1)
 {

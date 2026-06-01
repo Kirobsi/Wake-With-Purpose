@@ -1,4 +1,4 @@
-x -= 1;
+x += 1;
 
 if(bbox_right == room_width) {
 	with(oCloudGenerator) {
