@@ -7,7 +7,7 @@ var ypos = ycam - ((sheight - 540) * (ycam / room_height));
 x = xpos;
 y = ypos;
 
-for (var i = 0; i <= (tiling + 1); i++) {
-	x += (sprite_width * i);
+for (var i = 0; i <= (tiling); i++) {
+	x = xpos + (sprite_width * i);
 	draw_self();
 }
