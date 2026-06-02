@@ -230,7 +230,6 @@
     {"name":"sCaveParallax","order":26,"path":"sprites/sCaveParallax/sCaveParallax.yy",},
     {"name":"sCaveParallaxL2","order":35,"path":"sprites/sCaveParallaxL2/sCaveParallaxL2.yy",},
     {"name":"sCaveParallaxL3","order":36,"path":"sprites/sCaveParallaxL3/sCaveParallaxL3.yy",},
-    {"name":"sCaveParallaxL4","order":37,"path":"sprites/sCaveParallaxL4/sCaveParallaxL4.yy",},
     {"name":"sCavePhaseBlocker","order":23,"path":"sprites/sCavePhaseBlocker/sCavePhaseBlocker.yy",},
     {"name":"sCloud","order":8,"path":"sprites/sCloud/sCloud.yy",},
     {"name":"sCloudberry","order":6,"path":"sprites/sCloudberry/sCloudberry.yy",},

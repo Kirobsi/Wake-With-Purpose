@@ -1,4 +1,4 @@
-sprite_index = sCaveParallaxL4
+sprite_index = sCaveParallaxL3
 swidth = 1700;
-sheight = 640;
+sheight = 616;
 tiling = 2;
