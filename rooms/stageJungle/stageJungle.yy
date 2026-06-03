@@ -161,6 +161,9 @@
     {"name":"inst_1657667F","path":"rooms/stageJungle/stageJungle.yy",},
     {"name":"inst_316741E8","path":"rooms/stageJungle/stageJungle.yy",},
     {"name":"inst_4426E7F4","path":"rooms/stageJungle/stageJungle.yy",},
+    {"name":"JBack","path":"rooms/stageJungle/stageJungle.yy",},
+    {"name":"JMid","path":"rooms/stageJungle/stageJungle.yy",},
+    {"name":"JFront","path":"rooms/stageJungle/stageJungle.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -491,7 +494,7 @@
           80,29,30,47,40,82,77,78,79,80,81,82,77,78,79,80,81,82,77,78,79,80,81,82,77,78,79,80,81,82,77,78,79,80,
           81,82,77,78,79,80,81,82,77,78,79,80,81,82,77,78,79,80,65,66,67,68,69,70,77,78,79,80,81,82,77,78,79,80,
           81,82,77,78,79,80,81,82,77,78,79,80,81,82,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tilesetJungle","path":"tilesets/tilesetJungle/tilesetJungle.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tilesetJungle","path":"tilesets/tilesetJungle/tilesetJungle.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"MountainFG","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"MountainFG","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":63,"SerialiseWidth":107,"TileCompressedData":[
           -843,-2147483648,-13,0,-94,-2147483648,-13,0,-94,-2147483648,-13,0,-94,-2147483648,-13,0,-94,-2147483648,
           -13,0,-94,-2147483648,-13,0,-94,-2147483648,-13,0,-94,-2147483648,-13,0,-94,-2147483648,-13,0,-2869,
@@ -520,7 +523,12 @@
           9,40,41,42,41,42,41,42,41,42,-98,-2147483648,9,18,19,20,19,20,19,20,19,20,-98,-2147483648,9,29,30,31,
           30,31,30,31,30,31,-98,-2147483648,9,40,41,42,41,42,41,42,41,42,-5350,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tilesetCave2","path":"tilesets/tilesetCave2/tilesetCave2.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4279713024,"depth":1100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"$GMRInstanceLayer":"","%Name":"Parallax","depth":1100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v4","%Name":"JBack","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"JBack","objectId":{"name":"oParallax","path":"objects/oParallax/oParallax.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"JMid","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"JMid","objectId":{"name":"oParallax","path":"objects/oParallax/oParallax.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"JFront","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"JFront","objectId":{"name":"oParallax","path":"objects/oParallax/oParallax.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":32.0,},
+      ],"layers":[],"name":"Parallax","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4279713024,"depth":1200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"stageJungle",
   "parent":{
