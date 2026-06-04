@@ -317,6 +317,7 @@
     {"id":{"name":"spr_TalkOption","path":"sprites/spr_TalkOption/spr_TalkOption.yy",},},
     {"id":{"name":"spr_Tent","path":"sprites/spr_Tent/spr_Tent.yy",},},
     {"id":{"name":"spr_Textbox","path":"sprites/spr_Textbox/spr_Textbox.yy",},},
+    {"id":{"name":"sRopeHolder","path":"sprites/sRopeHolder/sRopeHolder.yy",},},
     {"id":{"name":"sSlope","path":"sprites/sSlope/sSlope.yy",},},
     {"id":{"name":"sSlot","path":"sprites/sSlot/sSlot.yy",},},
     {"id":{"name":"sSnowCone","path":"sprites/sSnowCone/sSnowCone.yy",},},

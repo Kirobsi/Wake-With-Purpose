@@ -266,6 +266,7 @@
     {"name":"spr_SiblifRide","order":10,"path":"sprites/spr_SiblifRide/spr_SiblifRide.yy",},
     {"name":"spr_TalkOption","order":1,"path":"sprites/spr_TalkOption/spr_TalkOption.yy",},
     {"name":"spr_Tent","order":4,"path":"sprites/spr_Tent/spr_Tent.yy",},
+    {"name":"sRopeHolder","order":18,"path":"sprites/sRopeHolder/sRopeHolder.yy",},
     {"name":"sSlope","order":6,"path":"sprites/sSlope/sSlope.yy",},
     {"name":"sSlot","order":17,"path":"sprites/sSlot/sSlot.yy",},
     {"name":"sSnowCone","order":18,"path":"sprites/sSnowCone/sSnowCone.yy",},

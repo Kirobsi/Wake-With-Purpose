@@ -28,11 +28,11 @@
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,
-  "tileHeight":64,
+  "tileHeight":32,
   "tilehsep":0,
   "tilevsep":0,
   "tileWidth":32,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":5,
+  "tile_count":10,
 }
