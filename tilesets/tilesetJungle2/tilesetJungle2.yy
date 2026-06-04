@@ -1,13 +1,18 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"tilesetJungle",
-  "autoTileSets":[],
+  "%Name":"tilesetJungle2",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
+        25,47,45,0,21,0,0,0,23,0,0,0,0,0,0,0,35,0,0,0,46,0,0,0,33,0,0,0,22,0,0,0,0,60,12,0,15,0,51,0,48,0,0,
+        72,0,73,0,
+      ],},
+  ],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"tilesetJungle",
+  "name":"tilesetJungle2",
   "out_columns":10,
   "out_tilehborder":2,
   "out_tilevborder":2,
@@ -18,8 +23,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"tilespriteJungle",
-    "path":"sprites/tilespriteJungle/tilespriteJungle.yy",
+    "name":"tilespriteJungle2",
+    "path":"sprites/tilespriteJungle2/tilespriteJungle2.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
