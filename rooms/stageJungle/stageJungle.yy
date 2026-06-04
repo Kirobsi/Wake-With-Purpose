@@ -386,7 +386,7 @@
         {"$GMRInstance":"v4","%Name":"inst_1657667F","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1657667F","objectId":{"name":"oTerrainSemiSolid","path":"objects/oTerrainSemiSolid/oTerrainSemiSolid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":0.5,"x":608.0,"y":594.0,},
         {"$GMRInstance":"v4","%Name":"inst_316741E8","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_316741E8","objectId":{"name":"oTerrainSemiSolid","path":"objects/oTerrainSemiSolid/oTerrainSemiSolid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":0.5,"x":672.0,"y":530.0,},
         {"$GMRInstance":"v4","%Name":"inst_E19A983","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_E19A983","objectId":{"name":"oTerrain","path":"objects/oTerrain/oTerrain.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.000002,"scaleY":2.0,"x":448.0,"y":448.0,},
-      ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+      ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRTileLayer":"","%Name":"MainTilesBG","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"MainTilesBG","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":63,"SerialiseWidth":107,"TileCompressedData":[
           -2,0,38,63,64,75,76,77,78,79,80,77,78,79,80,63,64,63,64,65,66,67,68,65,66,67,68,65,66,67,68,65,66,67,
           68,63,64,84,85,86,87,-54,0,-13,-2147483648,40,65,66,67,68,63,64,89,90,91,92,89,90,91,92,75,76,75,76,
@@ -546,7 +546,7 @@
           -2147483648,52,56,-8,-2147483648,7,12,13,14,47,25,52,56,-6,-2147483648,10,52,53,43,41,42,43,5,6,7,8,
           -6,-2147483648,12,4,5,6,7,17,18,6,7,19,17,43,44,-10,-2147483648,14,4,5,17,18,7,5,6,7,29,30,31,29,30,
           44,-19,-2147483648,10,40,30,31,6,7,42,43,41,42,32,-13,-2147483648,5,36,38,37,38,37,-10,-2147483648,8,
-          29,17,18,19,17,54,55,56,-6,-2147483648,12,52,53,54,55,53,54,17,17,53,54,55,56,-10,-2147483648,14,16,
+          28,17,18,19,17,54,55,56,-6,-2147483648,12,52,53,54,55,53,54,17,17,53,54,55,56,-10,-2147483648,14,16,
           17,53,54,55,53,54,55,53,54,55,53,54,56,-19,-2147483648,10,52,54,55,53,54,55,53,54,55,56,-6,-2147483648,
           2,4,8,-5,-2147483648,5,24,26,25,26,25,-3,-2147483648,12,4,5,6,7,5,6,7,31,29,30,31,20,-15,-2147483648,
           2,40,44,-14,-2147483648,2,40,44,-18,-2147483648,8,4,5,6,7,5,6,7,8,-21,-2147483648,2,52,56,-5,-2147483648,
