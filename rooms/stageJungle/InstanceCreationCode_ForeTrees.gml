@@ -1,5 +1,5 @@
 sprite_index = sJungleParallaxL3
-swidth = 2000;
-sheight = 1016;
+swidth = 1960;
+sheight = 898;
 tiling = 1;
-yoffset = 0;
+yoffset = 185;

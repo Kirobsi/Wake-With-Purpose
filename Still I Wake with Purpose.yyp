@@ -48,6 +48,7 @@
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":".~lock.strings.csv#","CopyToMask":-1,"filePath":"datafiles","name":".~lock.strings.csv#","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"LiberationSerifFontLicense.txt","CopyToMask":-1,"filePath":"datafiles","name":"LiberationSerifFontLicense.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"other_strings.csv","CopyToMask":-1,"filePath":"datafiles","name":"other_strings.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"scribble_license.txt","CopyToMask":-1,"filePath":"datafiles","name":"scribble_license.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -96,6 +97,7 @@
     {"id":{"name":"oLeafController","path":"objects/oLeafController/oLeafController.yy",},},
     {"id":{"name":"oLeaveArea","path":"objects/oLeaveArea/oLeaveArea.yy",},},
     {"id":{"name":"oLeaveBeach","path":"objects/oLeaveBeach/oLeaveBeach.yy",},},
+    {"id":{"name":"oLightShafts","path":"objects/oLightShafts/oLightShafts.yy",},},
     {"id":{"name":"oLostIngredient","path":"objects/oLostIngredient/oLostIngredient.yy",},},
     {"id":{"name":"oParallax","path":"objects/oParallax/oParallax.yy",},},
     {"id":{"name":"oParticle","path":"objects/oParticle/oParticle.yy",},},

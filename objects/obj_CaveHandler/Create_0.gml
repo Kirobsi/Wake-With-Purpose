@@ -11,7 +11,7 @@ deleteWalls = true;
 
 instance_create_layer(x, y, "UI", oTitleCard,
 {
-	cardtext : "Bottom Cave"
+	cardtext : global.allStrings[# 0, 1498]
 });
 fade_from_black(75);
 

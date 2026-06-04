@@ -1,16 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oParallax",
+  "%Name":"oLightShafts",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oParallax",
+  "name":"oLightShafts",
   "overriddenProperties":[],
   "parent":{
-    "name":"Common",
-    "path":"folders/Stage/Common.yy",
+    "name":"Jungle",
+    "path":"folders/Stage/Jungle.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sJungleParallaxL1",
+    "path":"sprites/sJungleParallaxL1/sJungleParallaxL1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
