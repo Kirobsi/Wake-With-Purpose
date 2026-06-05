@@ -465,13 +465,13 @@ Die,localState++,obj_BeachHandler,,,,,,,,,
 Die,localState++,obj_BeachHandler,,,,,,,,,
 0,~SNACK WANDERER~,,,,,,,,,,
 0,CREDITS:,,,,,,,,,,
-0,"Kirobsi
+0,"Kirobsi [spr_kiwi_icon]
 Project lead, systems programmer, supplemental gameplay programmer,
 writer, & creator of beach music and Kiwi sprite",,,,,,,,,,
-0,"Enkah
+0,"Enkah [spr_enkah_icon]
 Main artist, Siblif Design.
 Also provided lots of valuable feedback that steered the game much more towards fats erotica than whatever esoteric thing my (Kiwi's) creative impulses suggested.",,,,,,,,,,
-0,"Jamorphous
+0,"Jamorphous [spr_jam_icon]
 Gameplay programmer, supplemental systems programmer
 sound designer, level designer, composer of level music",,,,,,,,,,
 0,THE END,,,,,,,,,,

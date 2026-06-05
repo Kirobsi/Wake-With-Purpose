@@ -931,6 +931,9 @@ else if (global.gameState == 7) {
 		case 15:
 		
 			localState++;
+			scribble_whitelist_sprite(spr_enkah_icon);
+			scribble_whitelist_sprite(spr_kiwi_icon);
+			scribble_whitelist_sprite(spr_jam_icon);
 			create_textbox(462,false,false,fa_center,true,331,-160,900);
 		
 		break;
