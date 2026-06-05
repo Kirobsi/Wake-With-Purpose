@@ -10,7 +10,7 @@ deleteFood = true;
 
 instance_create_layer(x, y, "UI", oTitleCard,
 {
-	cardtext : "Topping Mountain"
+	cardtext : global.allStrings[# 0, 1500]
 });
 fade_from_black(75);
 

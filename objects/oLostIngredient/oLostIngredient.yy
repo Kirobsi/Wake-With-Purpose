@@ -10,8 +10,8 @@
   "name":"oLostIngredient",
   "overriddenProperties":[],
   "parent":{
-    "name":"Ingredients",
-    "path":"folders/Food/Ingredients.yy",
+    "name":"Food",
+    "path":"folders/Food.yy",
   },
   "parentObjectId":null,
   "persistent":false,

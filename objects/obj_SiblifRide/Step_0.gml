@@ -10,16 +10,27 @@ if (fadeIn) {
 	}
 }
 
-else if (global.jumpKeyPressed) {fadeOut = true;}
+else if (global.jumpKeyPressed) {
+	promptAlpha = 1;
+	alarm_set(0, 120);
+}
 
 if (fadeOut) {
-	if (drawAlpha < 1) {
-		drawAlpha = funnyCounter / 180;
-		funnyCounter++;
+	if (promptAlpha > 0) {
+		promptAlpha = funnyCounter / 45;
+		funnyCounter--;
 	}
 	else {
-		drawAlpha = 1;
+		promptAlpha = 0;
 		fadeOut = false;
-		alarm_set(0, 40);
 	}
+	//if (drawAlpha < 1) {
+	//	drawAlpha = funnyCounter / 180;
+	//	funnyCounter++;
+	//}
+	//else {
+	//	drawAlpha = 1;
+	//	fadeOut = false;
+	//	alarm_set(0, 40);
+	//}
 }

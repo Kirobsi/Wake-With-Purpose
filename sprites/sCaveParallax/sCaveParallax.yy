@@ -1,10 +1,10 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sCaveParallax",
   "bboxMode":0,
-  "bbox_bottom":719,
+  "bbox_bottom":289,
   "bbox_left":0,
-  "bbox_right":1199,
+  "bbox_right":299,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"682eb20a-c162-4a8f-81ed-5c13b0422d5d","name":"682eb20a-c162-4a8f-81ed-5c13b0422d5d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f5a0f0a4-177c-4d02-9311-8d0c28b5f726","name":"f5a0f0a4-177c-4d02-9311-8d0c28b5f726","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":720,
+  "height":290,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"1444df7c-d7c3-4903-8372-76cef8e6e52f","blendMode":0,"displayName":"default","isLocked":false,"name":"1444df7c-d7c3-4903-8372-76cef8e6e52f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"81766295-4f58-4363-8ac0-611e76ea7500","blendMode":0,"displayName":"default","isLocked":false,"name":"81766295-4f58-4363-8ac0-611e76ea7500","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sCaveParallax",
   "nineSlice":null,
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"682eb20a-c162-4a8f-81ed-5c13b0422d5d","path":"sprites/sCaveParallax/sCaveParallax.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a658b1b9-88fa-4edd-9feb-3f08c844f73d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f5a0f0a4-177c-4d02-9311-8d0c28b5f726","path":"sprites/sCaveParallax/sCaveParallax.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d12217c8-1e54-4ca5-a8d0-702c500587fb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -88,5 +88,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1200,
+  "width":300,
 }

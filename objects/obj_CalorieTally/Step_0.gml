@@ -45,17 +45,17 @@ else if (internalState == 5) {
 		alarm_set(0, 59);
 	}
 	if (calorieTally >= 5000) {
-		rankText = "That shark will be a whale before you know it!"
+		rankText = global.allStrings[# 1, 1482];
 	}
 	else if (calorieTally >= 4000) {
-		rankText = "This'll do a number on her waistline!";
+		rankText = global.allStrings[# 1, 1483];
 	}
 	else if (calorieTally >= 3000) {
-		rankText = "This should fatten her up."
+		rankText = global.allStrings[# 1, 1484];
 	}
 	else if (calorieTally >= 1500) {
-		rankText = "She won't be gaining much today..."
-	} else {rankText = "Did you really try...?"}
+		rankText = global.allStrings[# 1, 1485];
+	} else {rankText = global.allStrings[# 1, 1486];}
 }
 
 else if (internalState == 6) {

@@ -34,8 +34,10 @@ if(!(position_meeting(x-8,y+1,oTerrain) || position_meeting(x+7,y+1,oTerrain)))
 else if (!jumpDelay && jumping) {
 	jumping = false;
 	touchedSpring = false;
-	audio_play_sound(snd_PlrLand,0,0)
-	instance_create_layer(x, y, "UI", oParticle, {sprite_index : sParticleLandJump});
+	if(!place_meeting(x, y, oTerrainSemiSolid)) {
+		audio_play_sound(snd_PlrLand,0,0)
+		instance_create_layer(x, y, "UI", oParticle, {sprite_index : sParticleLandJump});
+	}
 }
 
 #endregion
@@ -54,7 +56,7 @@ else if (!jumpDelay && jumping) {
 if(abs(phy_speed_x) > 1)
 {
 	sprite_index = sPlayerWalk;
-	image_xscale = sign(phy_speed_x) * 2;
+	if(alarm[0] < 100) image_xscale = sign(phy_speed_x) * 2;
 }
 else
 {
@@ -62,9 +64,13 @@ else
 }
 
 //Invincibility frames flash
-if(alarm[0] != -1)
+if(alarm[0] != -1 && alarm[0] mod 30 <= 14)
 {
-	image_blend = c_blue;
+	image_blend = c_white;
+}
+else if(alarm[0] != -1 && alarm[0] mod 30 > 14)
+{
+	image_blend = c_teal;
 }
 else
 {

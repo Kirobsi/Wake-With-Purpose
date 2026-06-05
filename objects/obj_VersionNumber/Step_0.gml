@@ -1,0 +1,1 @@
+if (global.gameState == 9999) {instance_destroy();}

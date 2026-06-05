@@ -1,5 +1,7 @@
 ini_open("save.ini"); //open save ini for saving/loading
 
+scribble_font_set_default("MainText");
+
 global.gameState = 0; //to track how far through boot you are
 global.cycles = 1;	//which cycle the player/game is on
 global.volumeLevel = ini_read_real("volume", "level", 30); //default volume of the game
@@ -45,6 +47,7 @@ beachState = 0;
 global.NoFoodMode = false;
 
 caveState = 0;
+cavegatelowered = false; // whether or not the yellow gate has been lowered in Cave
 jungleState = 0;
 mountainState = 0;
 
@@ -55,7 +58,7 @@ mountainFoodTaken = [0];
 
 global.siblifFatStage = [0, 0, 0, 0];	//boob, belly, butt, base
 global.siblifCalories = [0, 0, 0, 0];	//boob, belly, butt, total
-global.dialogueFlag1 = false;
+global.dialogueFlag1 = false;			//general purpose, reusable dialogue flag
 
 //stupid render order stuff eugh I wasn't thinking about how different poses could mean different layering needs
 global.topSibDraw = spr_SiblifBoobs;
@@ -66,7 +69,7 @@ global.topNum = 0;
 global.twoNum = 1;
 global.threNum = 2;
 global.lastNum = 3;
-global.sibPos = 440;
+global.sibPos = 544;
 
 songPlaying = mus_None;
 

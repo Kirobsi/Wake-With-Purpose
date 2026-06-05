@@ -1,6 +1,6 @@
 sprite_index = sFlankSteak;
 
-name = "Flank Steak";
+name = global.allStrings[# 0, 1504];
 
 calorieType = 2;
 calorieCount = 500;

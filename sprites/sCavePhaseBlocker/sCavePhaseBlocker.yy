@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sCavePhaseBlocker",
   "bboxMode":0,
   "bbox_bottom":127,
@@ -12,14 +12,15 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6b624842-2fc5-47dc-89fb-009fca1dfbdf","name":"6b624842-2fc5-47dc-89fb-009fca1dfbdf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6b624842-2fc5-47dc-89fb-009fca1dfbdf","name":"6b624842-2fc5-47dc-89fb-009fca1dfbdf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":128,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"2f04be26-eb55-4b77-a612-785ef4d1e48e","blendMode":0,"displayName":"default","isLocked":false,"name":"2f04be26-eb55-4b77-a612-785ef4d1e48e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f386ebff-c25a-45cb-99e0-a895220076b5","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"f386ebff-c25a-45cb-99e0-a895220076b5","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"2f04be26-eb55-4b77-a612-785ef4d1e48e","blendMode":0,"displayName":"default","isLocked":false,"name":"2f04be26-eb55-4b77-a612-785ef4d1e48e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"sCavePhaseBlocker",
   "nineSlice":null,

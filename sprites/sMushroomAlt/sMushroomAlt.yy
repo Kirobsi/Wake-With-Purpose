@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sMushroomAlt",
   "bboxMode":0,
   "bbox_bottom":14,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3b0dc4bb-e538-4ee5-9dd0-2bbebfc83f37","name":"3b0dc4bb-e538-4ee5-9dd0-2bbebfc83f37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"218da051-b3d2-4f29-a4e4-7a535263988c","name":"218da051-b3d2-4f29-a4e4-7a535263988c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3b0dc4bb-e538-4ee5-9dd0-2bbebfc83f37","name":"3b0dc4bb-e538-4ee5-9dd0-2bbebfc83f37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"218da051-b3d2-4f29-a4e4-7a535263988c","name":"218da051-b3d2-4f29-a4e4-7a535263988c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Ingredients",
-    "path":"folders/Food/Ingredients.yy",
+    "name":"Food",
+    "path":"folders/Food.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

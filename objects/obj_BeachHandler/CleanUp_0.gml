@@ -4,3 +4,6 @@ show_debug_message("Global game state: " + string(global.gameState))
 
 //Fade out ambience
 audio_sound_gain(amb_Beach, 0, 2000);
+
+//get rid of siblif render surface
+surface_free(siblifSurface);

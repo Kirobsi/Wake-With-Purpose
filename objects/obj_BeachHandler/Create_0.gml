@@ -1,5 +1,6 @@
 visible = true;
 drawAlpha = 1;
+siblifSurface = -1;
 fadeFromBlack = true;
 fadeToBlack = false;
 

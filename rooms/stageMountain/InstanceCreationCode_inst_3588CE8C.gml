@@ -1,6 +1,6 @@
 sprite_index = sStrawberry;
 
-name = "Strawberry";
+name = global.allStrings[# 0, 1506];
 
 calorieType = 2;
 calorieCount = 1500;

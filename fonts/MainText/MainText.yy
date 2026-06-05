@@ -239,7 +239,10 @@
   "sdfSpread":8,
   "size":16.0,
   "styleName":"Regular",
-  "textureGroupId":null,
+  "textureGroupId":{
+    "name":"Fonts",
+    "path":"texturegroups/Fonts",
+  },
   "TTFName":"",
   "usesSDF":true,
 }

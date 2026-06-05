@@ -1,5 +1,5 @@
-image_xscale = lerp(image_xscale, 1, 0.5);
-image_yscale = lerp(image_yscale, 1, 0.5);
+image_xscale = lerp(image_xscale, 2, 1);
+image_yscale = lerp(image_yscale, 2, 1);
 
 if(bombstate == 0)
 {
@@ -25,13 +25,28 @@ else if(bombstate == 2)
 	ysp += 0.5;
 	if(place_meeting(x, y, oTerrain))
 	{
-		instance_create_layer(x, y, "Instances", oBombExploding);
-		audio_play_sound(snd_Explode, 0, 0);
-		bombstate = 0;
-		x = xstart;
-		y = ystart;
-		image_xscale = 0;
-		image_yscale = 0;
-		ysp = -5;
+		alarm_set(0, 60);
+		bombstate = 3;
+		sprite_index = sBombLit;
+	}
+}
+
+switch(alarm[0]) {
+	case 60: image_index = 0; break;
+	case 50: image_index = 1; break;
+	case 40: image_index = 2; break;
+	case 30: image_index = 3; break;
+	case 20: image_index = 4; break;
+	case 10: image_index = 5; break;
+}
+
+if(sprite_index == sBombLit) {
+	switch(image_index) {
+		case 0: instance_create_layer(bbox_left + 16, bbox_top, "Instances_1", oBombSpark); break;
+		case 1: instance_create_layer(bbox_left + 14, bbox_top, "Instances_1", oBombSpark); break;
+		case 2: instance_create_layer(bbox_left + 14, bbox_top + 2, "Instances_1", oBombSpark); break;
+		case 3: instance_create_layer(bbox_left + 12, bbox_top + 2, "Instances_1", oBombSpark); break;
+		case 4: instance_create_layer(bbox_left + 12, bbox_top + 4, "Instances_1", oBombSpark); break;
+		case 5: instance_create_layer(bbox_left + 12, bbox_top + 6, "Instances_1", oBombSpark); break;
 	}
 }

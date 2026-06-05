@@ -1,6 +1,6 @@
 sprite_index = sKiwiFruit;
 
-name = "Kiwi Fruit";
+name = global.allStrings[# 0, 1509];
 
 calorieType = 1;
 calorieCount = 500;

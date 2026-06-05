@@ -8,7 +8,7 @@ if (global.gameState == 0) {
 		global.keyIndex[key_rebind_count] = keyboard_key; //set pressed key to its respective input
 		key_rebind_count++; //increment index counter
 		global.jumpKeyPressed = true; //advance string
-		if (key_rebind_count > 6) //if it's too high, reset & turn off rebind mode
+		if (key_rebind_count > 5) //if it's too high, reset & turn off rebind mode
 		{
 			key_rebind_count = 0;
 			rebind_mode = false;
@@ -25,8 +25,8 @@ if (global.gameState == 0) {
 	else if (global.jumpKeyPressed) {
 		global.gameState = 0.5;
 		instance_destroy(obj_Textbox);
-		instance_create_layer(x, y, "UI", obj_TextSpeedKnob)
 		create_textbox(10,false,false,fa_center,true,331,-130,900);
+		instance_create_layer(480, 180, "UI", obj_TextSpeedKnob);
 	}
 }
 
@@ -44,8 +44,8 @@ else if (global.gameState == 0.5) {
 		global.gameState = 1;
 		instance_destroy(obj_Textbox);
 		instance_destroy(obj_TextSpeedKnob);
-		instance_create_layer(x, y, "UI", obj_VolumeKnob)
 		create_textbox(1,false,false,fa_center,true,331,-130,900);
+		instance_create_layer(480, 180, "UI", obj_VolumeKnob);
 	}
 }
 
@@ -92,7 +92,7 @@ if (!instance_exists(obj_Textbox) && global.gameState == 1.5) {
 
 #region DEBUG FUNCTIONS, REMOVE FOR RELEASE
 
-if (keyboard_check_pressed(vk_f2)) {
+if (keyboard_check(vk_f2)) {
 	game_restart();
 }
 /*
@@ -119,5 +119,5 @@ else if (keyboard_check_pressed(vk_f6)) {
 	global.canControlPlayer = false;
 	room_goto(rmEndScreen);
 }
-
+*/
 #endregion

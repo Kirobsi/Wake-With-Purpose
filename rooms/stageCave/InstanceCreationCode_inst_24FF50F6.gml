@@ -1,6 +1,6 @@
 sprite_index = sMushroom;
 
-name = "Button Mushroom";
+name = global.allStrings[# 0, 1503];
 
 calorieType = 2;
 calorieCount = 500;

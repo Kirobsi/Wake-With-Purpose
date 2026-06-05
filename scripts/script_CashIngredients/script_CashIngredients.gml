@@ -57,7 +57,7 @@ function calculate_siblif_size(_localCalories) {
 		
 		if (i != primaryCalories) {numStages[i] = clamp(numStages[i], 0, 2);}
 		else if (numStages[i] > 5) {numStages[i] = 5} //fat stage cap
-		show_debug_message("Fat type " + string(i) + " is stage # " + string(numStages[i]))
+		show_debug_message("Fat type " + string(i) + " is stage #" + string(numStages[i]))
 	}
 	
 	show_debug_message("The primary calorie type is " + string(primaryCalories));
@@ -74,11 +74,11 @@ function calculate_siblif_size(_localCalories) {
 		}
 	
 		if (global.siblifFatStage[3] == 1) {
-			global.sibPos = 458;
+			global.sibPos = 398;
 		}
 		
 		else if (global.siblifFatStage[3] == 2) {
-			global.sibPos = 502;
+			global.sibPos = 430;
 		}
 		
 		else if (global.siblifFatStage[3] == 3) {
@@ -90,7 +90,7 @@ function calculate_siblif_size(_localCalories) {
 			global.twoNum = 0;
 			global.threNum = 3;
 			global.lastNum = 1;
-			global.sibPos = 480;
+			global.sibPos = 474;
 		}
 	}
 	

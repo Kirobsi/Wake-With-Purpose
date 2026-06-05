@@ -1,6 +1,6 @@
 sprite_index = sMuffin;
 
-name = "Muffin";
+name = global.allStrings[# 0, 1507];
 
 calorieType = 1;
 calorieCount = 500;

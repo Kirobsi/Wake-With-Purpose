@@ -5,7 +5,7 @@ deleteFood = true;
 
 instance_create_layer(x, y, "UI", oTitleCard,
 {
-	cardtext : "Belly of the Island"
+	cardtext : global.allStrings[# 0, 1499]
 });
 fade_from_black(75);
 
