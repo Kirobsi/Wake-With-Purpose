@@ -1,7 +1,6 @@
 x += 1;
 
 if(bbox_left > room_width) {
-	show_debug_message("esgt")
 	instance_destroy();
 }
 
