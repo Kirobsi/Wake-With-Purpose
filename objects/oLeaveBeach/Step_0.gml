@@ -1,4 +1,4 @@
-if (place_meeting(x, y, oPlayer))
+if (place_meeting(x, y, oPlayer) && layer_get_visible("LeaveArea"))
 {
 	if (stringnum == 1488 && array_length(obj_System.mountainFoodTaken) >= 29) {
 		stringnum = 1489;	//switch to "too few ingredients" string
