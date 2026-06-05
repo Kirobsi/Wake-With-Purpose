@@ -42,7 +42,7 @@
     ],
     "top":0,
   },
-  "origin":0,
+  "origin":2,
   "parent":{
     "name":"Mountain",
     "path":"folders/Stage/Mountain.yy",
@@ -94,7 +94,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":256,
     "yorigin":0,
   },
   "swatchColours":null,
