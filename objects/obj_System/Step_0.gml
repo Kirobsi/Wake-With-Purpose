@@ -68,10 +68,6 @@ else if (global.gameState == 1) {
 		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step
 		global.talkSound = 1.8;	//turn on talk sounds
 		alarm_set(0, 45);	//show first real textbox
-		
-		//save all settings to the ini
-		save_to_ini();
-		ini_close();
 	}
 }
 

@@ -10,10 +10,12 @@ image_index *= hasBackground;
 
 #region Text Crawl
 
-if (typist.get_state() != 1) {
-	if (global.textSpeed != 0) {
-		if (global.jumpKeyPressed) {typist.skip(true);}
-		
+if (currentStringDrawnNo < string_length(currentString) + 1) {
+	if (global.textSpeed != 0 && !global.jumpKeyPressed) {
+		for (var i = 0; i < global.textSpeed; i++) {
+			currentStringDrawn = string_concat(currentStringDrawn, string_char_at(currentString, currentStringDrawnNo));
+			currentStringDrawnNo++;
+		}
 		//play talk sound
 		if(!audio_is_playing(snd_Talk))
 		{
@@ -31,7 +33,8 @@ if (typist.get_state() != 1) {
 		}
 	}
 	else {
-		typist.skip(true);
+		currentStringDrawn = currentString;
+		currentStringDrawnNo = string_length(currentString) + 1;
 		global.jumpKeyPressed = false;
 	}
 }
@@ -41,9 +44,9 @@ if (typist.get_state() != 1) {
 
 #region Dialogue Options
 
-else if (global.allStrings[# 2, dialogueRow] != "" && canOptions) {	
+else if (ds_grid_get(global.allStrings, 2, dialogueRow) != "" && canOptions) {	
 	for (var i = 1; i * 2 < ds_grid_width(global.allStrings); i++;) {
-		if (global.allStrings[# i * 2, dialogueRow] == "") {
+		if (ds_grid_get(global.allStrings, i * 2, dialogueRow) == "") {
 			canOptions = false;
 			break
 		}
@@ -59,31 +62,32 @@ else if (global.allStrings[# 2, dialogueRow] != "" && canOptions) {
 
 #region Press jump to advance
 
-if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || typist.get_state() >= 1)) {
+if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || currentStringDrawnNo >= string_length(currentString) + 1)) {
     if (talkOptions > 0) {
-		dialogueRow = real(global.allStrings[# ((talkOptionsPosition + 1) * 2) + 1, dialogueRow])
+		dialogueRow = real(ds_grid_get(global.allStrings, ((talkOptionsPosition + 1) * 2) + 1, dialogueRow))
 		talkOptions = 0;
 	} else {dialogueRow ++;}
+	if (ds_grid_get(global.allStrings, 0, dialogueRow) == "goto") {dialogueRow = real(ds_grid_get(global.allStrings, 1, dialogueRow))};
 	
-	if (global.allStrings[# 0, dialogueRow] == "goto") {dialogueRow = real(global.allStrings[# 1, dialogueRow])};
-	
-	if (global.allStrings[# 0, dialogueRow] == "Die") {
+	if (ds_grid_get(global.allStrings, 0, dialogueRow) == "Die") {
 		instance_destroy();	//stop if 'end conversation' code
 		return	//prevent rest of this code from running
 	}
 	
-	currentString = scribble(global.allStrings[# 1, dialogueRow]);
-	characterName = global.allStrings[# 0, dialogueRow];
+	currentString = ds_grid_get(global.allStrings, 1, dialogueRow);
+    currentStringDrawn = "";
+    currentStringDrawnNo = 1;
+	characterName = ds_grid_get(global.allStrings, 0, dialogueRow);
 	
 	//figure out name and pronouns
-	pronounChecker = global.allStrings[# 0, dialogueRow]
+	pronounChecker = ds_grid_get(global.allStrings, 0, dialogueRow)
 
 	if (pronounChecker != "") {
-		pronounString = global.allStrings[# 1, 16 - real(pronounChecker)];
-		characterName = global.allStrings[# 0, 16 - real(pronounChecker)];
+		pronounString = ds_grid_get(global.allStrings, 1, 16 - real(pronounChecker));
+		characterName = ds_grid_get(global.allStrings, 0, 16 - real(pronounChecker));
 	}
 	
-	if (global.allStrings[# 0, dialogueRow] == "0") {image_index = 2 * hasBackground;}
+	if (ds_grid_get(global.allStrings, 0, dialogueRow) == "0") {image_index = 2 * hasBackground;}
 	else {image_index = 1 * hasBackground;}
 	
 	talkOptions = 0;

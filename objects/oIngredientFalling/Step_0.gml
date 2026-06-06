@@ -1,9 +1,9 @@
 if(place_meeting(x, y, oPlayer))
 {
 	showtext = true;
-	_string = global.allStrings[# 0, 1515];
+	_string = ds_grid_get(global.allStrings, 0, 1515);
 	if (oPlayer.filledslots > 9) {
-		_string = global.allStrings[# 0, 1516];
+		_string = ds_grid_get(global.allStrings, 0, 1516);
 	}
 	
 	else if(global.interactKey)

@@ -10,7 +10,7 @@
 function create_textbox(text_row, _autoRestoreControl = true, _hasBackground = true, _hAlignment = fa_left, _canAdvance = true, position_x = 14, position_y = 14, _width = 632) {
 	instance_create_layer(0, 0, "UI", obj_Textbox, {
 		dialogueRow : text_row,
-		currentString : scribble(global.allStrings[# 1, text_row]),
+		currentString : ds_grid_get(global.allStrings, 1, text_row),
 		autoRestoreControl : _autoRestoreControl,
 		hasBackground : _hasBackground,
 		hAlignment : _hAlignment,
@@ -34,7 +34,7 @@ function create_textbox(text_row, _autoRestoreControl = true, _hasBackground = t
 function create_misc_textbox(text_row, _autoRestoreControl = true, _hasBackground = true, _hAlignment = fa_left, _canAdvance = true, position_x = 14, position_y = 14, _width = 632) {
 	instance_create_layer(0, 0, "UI", obj_Textbox_Misc, {
 		dialogueRow : text_row,
-		currentString : scribble(global.miscStrings[# 1, text_row]),
+		currentString : ds_grid_get(global.miscStrings, 1, text_row),
 		autoRestoreControl : _autoRestoreControl,
 		hasBackground : _hasBackground,
 		hAlignment : _hAlignment,

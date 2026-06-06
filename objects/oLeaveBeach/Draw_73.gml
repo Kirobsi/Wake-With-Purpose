@@ -7,6 +7,6 @@ font_enable_effects(MainText, true, {
     dropShadowOffsetX : 2,
     dropShadowColour : c_black
 })
-draw_text_color(480, 432, global.allStrings[# 0, stringnum], c_white, c_white, c_white, c_white, showtext);
+draw_text_color(480, 432, ds_grid_get(global.allStrings, 0, stringnum), c_white, c_white, c_white, c_white, showtext);
 
 font_enable_effects(MainText, false);

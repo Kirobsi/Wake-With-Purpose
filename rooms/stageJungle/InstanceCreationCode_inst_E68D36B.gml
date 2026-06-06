@@ -1,6 +1,6 @@
 sprite_index = sFlankSteak;
 
-name = global.allStrings[# 0, 1504];
+name = ds_grid_get(global.allStrings, 0, 1504);
 
 calorieType = 2;
 calorieCount = 1500;

@@ -13,8 +13,8 @@ font_enable_effects(ResultsText, true, {
 	dropShadowOffsetX : 4,
 	dropShadowColour : c_black
 })
-if (text1) {draw_text_ext(480, 134, global.allStrings[# 0, 1480] + string(global.cycles) + global.allStrings[# 1, 1480], 24, 856);}
-if (text2) {draw_text_ext(480, 352, global.allStrings[# 0, 1481] + string(risingCalories) + global.allStrings[# 1, 1481], 24, 856);}
+if (text1) {draw_text_ext(480, 134, ds_grid_get(global.allStrings, 0, 1480) + string(global.cycles) + ds_grid_get(global.allStrings, 1, 1480), 24, 856);}
+if (text2) {draw_text_ext(480, 352, ds_grid_get(global.allStrings, 0, 1481) + string(risingCalories) + ds_grid_get(global.allStrings, 0, 1481), 24, 856);}
 draw_set_colour(c_yellow);
 if (text3) {draw_text_ext(480, 422, rankText, 24, 856);}
 
