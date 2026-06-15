@@ -1,0 +1,1 @@
+global.leftKey = true;

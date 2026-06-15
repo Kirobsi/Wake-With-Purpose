@@ -2,6 +2,7 @@
   "FolderOrderSettings":[
     {"name":"Food","order":6,"path":"folders/Food.yy",},
     {"name":"GameManager","order":2,"path":"folders/GameManager.yy",},
+    {"name":"MobileControls","order":13,"path":"folders/GameManager/MobileControls.yy",},
     {"name":"TextboxSprites","order":4,"path":"folders/GameManager/TextboxSprites.yy",},
     {"name":"MiscAssets","order":3,"path":"folders/MiscAssets.yy",},
     {"name":"Player","order":4,"path":"folders/Player.yy",},
@@ -52,6 +53,7 @@
     {"name":"oBombExploding","order":15,"path":"objects/oBombExploding/oBombExploding.yy",},
     {"name":"oBombExplodingCore","order":29,"path":"objects/oBombExplodingCore/oBombExplodingCore.yy",},
     {"name":"oBombSpark","order":30,"path":"objects/oBombSpark/oBombSpark.yy",},
+    {"name":"oButtonLeft","order":4,"path":"objects/oButtonLeft/oButtonLeft.yy",},
     {"name":"oCamera","order":2,"path":"objects/oCamera/oCamera.yy",},
     {"name":"oCavePhaseBlocker","order":24,"path":"objects/oCavePhaseBlocker/oCavePhaseBlocker.yy",},
     {"name":"oCloud","order":9,"path":"objects/oCloud/oCloud.yy",},
