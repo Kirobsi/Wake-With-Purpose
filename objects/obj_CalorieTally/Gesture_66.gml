@@ -1,0 +1,1 @@
+if (internalState == 7) {internalState++}

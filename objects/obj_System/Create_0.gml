@@ -6,11 +6,6 @@ global.cycles = 1;	//which cycle the player/game is on
 global.volumeLevel = ini_read_real("volume", "level", 30); //default volume of the game
 audio_group_set_gain(audiogroup_default, global.volumeLevel / 100, 10) //actually use the volume
 
-/// Variables for controlling on-screen button visibility
-global.verVisible = 0;
-global.horVisible = 1;
-global.ActionVisible = 0;
-
 global.allStrings = load_csv("strings.csv"); //load strings file
 global.textSpeed = ini_read_real("text", "textspeed", 3); //Set text scroll speed
 
@@ -59,10 +54,9 @@ songPlaying = mus_None;
 
 global.talkSound = false;
 
-if (os_type == os_android)	//need to set all these to prevent instant crash >w>
-{
-	global.gameState = 0.5; //to track how far through boot you are
-	
+if (os_type == os_android)
+{	
+	//need to set all these to prevent instant crash >w>
 	global.upKey = false;
 	global.upKeyPressed = false;
 	global.downKey = false;
@@ -77,11 +71,28 @@ if (os_type == os_android)	//need to set all these to prevent instant crash >w>
 	global.interactKey = false;
 	global.interactKeyPressed = false;
 	
+	global.keyIndex = [
+	ini_read_real("buttons", "up", 38),
+	ini_read_real("buttons", "down", 40),
+	ini_read_real("buttons", "left", 37),
+	ini_read_real("buttons", "right", 39),
+	ini_read_real("buttons", "jump", 90),
+	ini_read_real("buttons", "interact", 88)];
+	
+	global.gameState = -1; //to track how far through boot you are
 	create_textbox(10,false,false,fa_center,true,331,-130,900);
 	instance_create_layer(480, 180, "UI", obj_TextSpeedKnob);
-	instance_create_layer(0, 0, "Instances", oButtonLeft);
-	//instance_create_layer(0, 0, "Instances", oButtonRight);
-	global.horVisible = true;
+	
+	gesture_drag_time(0); // make it so 'drags' start instantly
+	instance_create_layer(0, 0, "Instances", oButtonLeftRight);
+	instance_create_layer(0, 0, "Instances", oButtonJump);
+	instance_create_layer(0, 0, "Instances", oButtonInteract);
+	instance_create_layer(0, 0, "Instances", oButtonUpDown);
+	
+	/// Variables for controlling on-screen button visibility
+	global.verVisible = 0;
+	global.horVisible = 1;
+	global.actVisible = 0;
 }
 
 else

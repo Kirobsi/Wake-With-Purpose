@@ -42,6 +42,8 @@ if (typist.get_state() != 1) {
 #region Dialogue Options
 
 else if (global.allStrings[# 2, dialogueRow] != "" && canOptions) {	
+	if (os_type == os_android) {global.verVisible = true;}
+	
 	for (var i = 1; i * 2 < ds_grid_width(global.allStrings); i++;) {
 		if (global.allStrings[# i * 2, dialogueRow] == "") {
 			canOptions = false;
@@ -63,6 +65,7 @@ if(global.jumpKeyPressed && canAdvance && (global.gameState <= 1 || typist.get_s
     if (talkOptions > 0) {
 		dialogueRow = real(global.allStrings[# ((talkOptionsPosition + 1) * 2) + 1, dialogueRow])
 		talkOptions = 0;
+		if (os_type == os_android) {global.verVisible = false;}
 	} else {dialogueRow ++;}
 	
 	if (global.allStrings[# 0, dialogueRow] == "goto") {dialogueRow = real(global.allStrings[# 1, dialogueRow])};

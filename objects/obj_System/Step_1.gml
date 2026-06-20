@@ -1,7 +1,10 @@
 #region input gatherer
 if (os_type == os_android)
 {
-	
+	if (global.canControlPlayer) {
+		global.horVisible = true;
+		global.actVisible = true;
+	}
 }
 
 else

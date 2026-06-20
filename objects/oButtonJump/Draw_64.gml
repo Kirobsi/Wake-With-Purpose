@@ -1,0 +1,1 @@
+draw_sprite_ext(sMobileButtons, 2, xpos, ypos, 2, 2, 0, daColour, global.actVisible);

@@ -1,1 +1,0 @@
-draw_sprite_ext(sMobileButtons, 0, xpos, ypos, 2, 2, 0, daColour, global.horVisible);
