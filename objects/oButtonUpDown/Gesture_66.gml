@@ -12,7 +12,7 @@ touchIndex = event_data[? "touch"];
 			UColour = #C3C360;
 		}
 
-		else {
+		else if (event_data[? "guiposY"] <= 380) {
 			global.downKeyPressed = true;
 			global.downKey = true;
 			alarm_set(1, 1);
