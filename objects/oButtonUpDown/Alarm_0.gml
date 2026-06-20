@@ -1,0 +1,1 @@
+global.upKeyPressed = false;

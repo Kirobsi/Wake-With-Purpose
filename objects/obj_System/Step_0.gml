@@ -25,7 +25,7 @@ if (global.gameState == 0) {
 	else if (global.jumpKeyPressed) {
 		global.gameState = 0.5;
 		instance_destroy(obj_Textbox);
-		create_textbox(10,false,false,fa_center,true,331,-130,900);
+		create_textbox(9,false,false,fa_center,true,331,-130,900);
 		instance_create_layer(480, 180, "UI", obj_TextSpeedKnob);
 	}
 }
@@ -35,6 +35,7 @@ if (global.gameState == 0) {
 
 #region Text Speed startup
 
+//	PC
 else if (global.gameState == 0.5) {
 	if (global.leftKeyPressed) {global.textSpeed -= 1};
 	if (global.rightKeyPressed) {global.textSpeed += 1};
@@ -49,11 +50,29 @@ else if (global.gameState == 0.5) {
 	}
 }
 
+//	Android
+else if (global.gameState == -1) {
+	if (global.leftKeyPressed) {global.textSpeed -= 1};
+	if (global.rightKeyPressed) {global.textSpeed += 1};
+	global.textSpeed = clamp(global.textSpeed, 0, 10);
+	
+	if (global.jumpKeyPressed) {
+		global.gameState = -2;
+		instance_destroy(obj_Textbox);
+		instance_destroy(obj_TextSpeedKnob);
+		create_textbox(11,false,false,fa_center,true,331,-130,900);
+		instance_create_layer(480, 180, "UI", obj_VolumeKnob);
+		global.verVisible = true;
+		global.horVisible = true;
+	}
+}
+
 #endregion
 
 
 #region Volume startup
 
+//	PC
 else if (global.gameState == 1) {
 	if (global.leftKeyPressed) {global.volumeLevel -= 1};
 	if (global.rightKeyPressed) {global.volumeLevel += 1};
@@ -68,6 +87,31 @@ else if (global.gameState == 1) {
 		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step
 		global.talkSound = 1.8;	//turn on talk sounds
 		alarm_set(0, 45);	//show first real textbox
+		
+		//save all settings to the ini
+		save_to_ini();
+		ini_close();
+	}
+}
+
+//	Android
+else if (global.gameState == -2) {
+	if (global.leftKeyPressed) {global.volumeLevel -= 1};
+	if (global.rightKeyPressed) {global.volumeLevel += 1};
+	if (global.upKeyPressed) {global.volumeLevel += 10};
+	if (global.downKeyPressed) {global.volumeLevel -= 10};
+	global.volumeLevel = clamp(global.volumeLevel, 0, 100);
+	audio_group_set_gain(audiogroup_default,global.volumeLevel / 100,10)
+	if (global.jumpKeyPressed) {
+		global.gameState = 9999;
+		instance_destroy(obj_Textbox);
+		instance_destroy(obj_VolumeKnob);
+		global.jumpKeyPressed = false; //prevent next textbox from triggering if spawned on same step
+		global.talkSound = 1.8;	//turn on talk sounds
+		alarm_set(0, 45);	//show first real textbox
+		
+		global.horVisible = false;
+		global.verVisible = false;
 		
 		//save all settings to the ini
 		save_to_ini();

@@ -2,33 +2,12 @@ ini_open("save.ini"); //open save ini for saving/loading
 
 scribble_font_set_default("MainText");
 
-global.gameState = 0; //to track how far through boot you are
 global.cycles = 1;	//which cycle the player/game is on
 global.volumeLevel = ini_read_real("volume", "level", 30); //default volume of the game
 audio_group_set_gain(audiogroup_default, global.volumeLevel / 100, 10) //actually use the volume
 
-//array for storing all the 'key codes.' [ Up, Down, Left, Right, Jump, Interact, Pause ]
-/*global.keyIndex = [38,
-40,
-37,
-39,
-90,
-88,
-13];*/
-global.keyIndex = [
-ini_read_real("buttons", "up", 38),
-ini_read_real("buttons", "down", 40),
-ini_read_real("buttons", "left", 37),
-ini_read_real("buttons", "right", 39),
-ini_read_real("buttons", "jump", 90),
-ini_read_real("buttons", "interact", 88),
-ini_read_real("buttons", "pause", 13)];
-key_rebind_count = 0;	//variable to track how many keys have been rebound
-rebind_mode = false;	//variable to track whether rebinding is active
-
 global.allStrings = load_csv("strings.csv"); //load strings file
 global.textSpeed = ini_read_real("text", "textspeed", 3); //Set text scroll speed
-create_textbox(2,false,false,fa_center,true,331,-160,900); //create a textbox for controls adjustment
 
 draw_set_font(MainText);
 draw_set_halign(fa_center);
@@ -74,3 +53,68 @@ global.sibPos = 544;
 songPlaying = mus_None;
 
 global.talkSound = false;
+
+if (os_type == os_android)
+{	
+	//need to set all these to prevent instant crash >w>
+	global.upKey = false;
+	global.upKeyPressed = false;
+	global.downKey = false;
+	global.downKeyPressed = false;
+	global.leftKey = false;
+	global.leftKeyPressed = false;
+	global.rightKey = false;
+	global.rightKeyPressed = false;
+	global.jumpKey = false;
+	global.jumpKeyPressed = false;
+	global.jumpKeyReleased = false;
+	global.interactKey = false;
+	global.interactKeyPressed = false;
+	
+	global.keyIndex = [
+	ini_read_real("buttons", "up", 38),
+	ini_read_real("buttons", "down", 40),
+	ini_read_real("buttons", "left", 37),
+	ini_read_real("buttons", "right", 39),
+	ini_read_real("buttons", "jump", 90),
+	ini_read_real("buttons", "interact", 88)];
+	
+	global.gameState = -1; //to track how far through boot you are
+	create_textbox(10,false,false,fa_center,true,331,-130,900);
+	instance_create_layer(480, 180, "UI", obj_TextSpeedKnob);
+	
+	gesture_drag_time(0); // make it so 'drags' start instantly
+	instance_create_layer(0, 0, "Instances", oButtonLeftRight);
+	instance_create_layer(0, 0, "Instances", oButtonJump);
+	instance_create_layer(0, 0, "Instances", oButtonInteract);
+	instance_create_layer(0, 0, "Instances", oButtonUpDown);
+	
+	/// Variables for controlling on-screen button visibility
+	global.verVisible = 0;
+	global.horVisible = 1;
+	global.actVisible = 0;
+}
+
+else
+{
+	global.gameState = 0; //to track how far through boot you are
+	
+	//array for storing all the 'key codes.' [ Up, Down, Left, Right, Jump, Interact ]
+	/*global.keyIndex = [38,
+	40,
+	37,
+	39,
+	90,
+	88];*/
+	global.keyIndex = [
+	ini_read_real("buttons", "up", 38),
+	ini_read_real("buttons", "down", 40),
+	ini_read_real("buttons", "left", 37),
+	ini_read_real("buttons", "right", 39),
+	ini_read_real("buttons", "jump", 90),
+	ini_read_real("buttons", "interact", 88)];
+	key_rebind_count = 0;	//variable to track how many keys have been rebound
+	rebind_mode = false;	//variable to track whether rebinding is active
+	
+	create_textbox(2,false,false,fa_center,true,331,-160,900); //create a textbox for controls adjustment
+}

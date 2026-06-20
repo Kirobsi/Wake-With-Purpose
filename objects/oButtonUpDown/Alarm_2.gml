@@ -1,0 +1,1 @@
+global.jumpKeyPressed = false; //this is for textbox advancing, it is intentional!

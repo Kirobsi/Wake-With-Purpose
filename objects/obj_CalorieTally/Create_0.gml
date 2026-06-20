@@ -12,4 +12,9 @@ rankText = "";
 fadeOutRectangle = false;
 global.canControlPlayer = false;
 
+if (os_type == os_android) {
+	global.horVisible = false;
+	global.actVisible = false;
+}
+
 invIndex = 0;

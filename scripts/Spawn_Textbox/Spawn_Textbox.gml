@@ -20,6 +20,11 @@ function create_textbox(text_row, _autoRestoreControl = true, _hasBackground = t
 		boxWidth : _width
 	})
 	global.canControlPlayer = false;
+	
+	if (os_type == os_android) {
+		global.horVisible = false;
+		global.actVisible = false;
+	}
 }
 
 /// @description Show a textbox starting on the specified other_strings.CSV row
@@ -44,4 +49,9 @@ function create_misc_textbox(text_row, _autoRestoreControl = true, _hasBackgroun
 		boxWidth : _width
 	})
 	global.canControlPlayer = false;
+	
+	if (os_type == os_android) {
+		global.horVisible = false;
+		global.actVisible = false;
+	}
 }

@@ -16,3 +16,9 @@ for (var i = talkOptions - 1; i >= 0; i--) {
 }
 
 #endregion
+
+// Draw up/down buttons, so that they actually render above
+if (os_type == os_android) {
+	draw_sprite_ext(sMobileButtons, 1, oButtonUpDown.xpos, oButtonUpDown.yposU, 2,  2, 0, oButtonUpDown.UColour, global.verVisible);
+	draw_sprite_ext(sMobileButtons, 1, oButtonUpDown.xpos, oButtonUpDown.yposD, 2, -2, 0, oButtonUpDown.DColour, global.verVisible);
+}
